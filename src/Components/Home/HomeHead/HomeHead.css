@@ -1,14 +1,9 @@
-.homeCover{
+.HomeHead{
     width: 100%;
     height: auto;
     background-image: url('../../../Images/HomeBackground.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-color: #202434;
-}
-.homecoverBottom{
-    width: 100%;
-    height: auto;
     background-color: #202434;
 }
