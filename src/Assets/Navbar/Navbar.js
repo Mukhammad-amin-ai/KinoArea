@@ -8,9 +8,6 @@ import {
 } from "@mui/material";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "boxicons";
-import logo from "../../Images/Логотип.png";
-// import Afisha from "../../Components/Afisha/Afisha";
 export default class Navbar extends Component {
   state = {
     borderBottom: "",
@@ -204,14 +201,41 @@ export default class Navbar extends Component {
         gap={"100px"}
       >
         <Box width={"130px"} height={"100%"}>
-          <Link to={"./"} onClick={this.logoClick}>
-            <img src={logo} alt="#" />
+          <Link
+            to={"./"}
+            onClick={this.logoClick}
+            style={{ textDecoration: "none", color: "white" }}
+          >
+
+            <Box
+              width={"200px"}
+              height={"50px"}
+              display={"flex"}
+              alignItems={"center"}
+              gap={'10px'}
+            >
+              <Typography fontSize={"25px"} >
+                <i class="bx bxs-film"></i>
+              </Typography>
+              <Typography fontSize={"25px"} color={"blue"}>
+                Kino <span style={{ color: "white" }}>area</span>
+              </Typography>
+            </Box>
           </Link>
           <Box width={"100%"} display={"flex"} justifyContent={"space-around"}>
-            <box-icon type="logo" name="vk"></box-icon>
-            <box-icon type="logo" name="instagram"></box-icon>
-            <box-icon type="logo" name="facebook"></box-icon>
-            <box-icon type="logo" name="twitter"></box-icon>
+            <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+              <i class="bx bxl-vk"></i>
+            </Button>
+
+            <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+              <i class="bx bxl-instagram"></i>
+            </Button>
+            <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+              <i class="bx bxl-facebook"></i>
+            </Button>
+            <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+              <i class="bx bxl-twitter"></i>
+            </Button>
           </Box>
         </Box>
         <Box
@@ -341,9 +365,15 @@ export default class Navbar extends Component {
         <Box width={"180px"} height={"53px"} display={"flex"} gap={"10px"}>
           <Button
             variant="contained"
-            sx={{ width: "55px", height: "53px", bgcolor: "white" }}
+            sx={{
+              width: "55px",
+              height: "53px",
+              bgcolor: "white",
+              color: "black",
+              fontSize: "30px",
+            }}
           >
-            <box-icon name="search"></box-icon>
+            <i class="bx bx-search"></i>
           </Button>
           <Button
             variant="contained"

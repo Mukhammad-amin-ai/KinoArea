@@ -1,12 +1,34 @@
 import { Box, Button, Typography } from "@mui/material";
 import React, { Component } from "react";
-import videoPlayer from "../../../Images/videoPlayer 1.png";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import { Link } from "react-router-dom";
+import videoPlayer from "../../../Images/videoPlayer 1.png";
+import pagImg1 from "../../../Images/pagination image 1.png";
+import pagImg4 from "../../../Images/pagination image 3.png";
+import pagImg3 from "../../../Images/pagination  image 4.png";
+import pagImg2 from "../../../Images/pagination  image 5.png";
+
 export default class HomeTrailer extends Component {
+  state = {
+    dataScroll: [
+      {
+        img: pagImg1,
+      },
+      {
+        img: pagImg2,
+      },
+      {
+        img: pagImg4,
+      },
+      {
+        img: pagImg3,
+      },
+    ],
+  };
+
   render() {
     return (
-      <Box width={"100%"} height={"150vh"} bgcolor={"#1E2538"}>
+      <Box width={"100%"} height={"200vh"} bgcolor={"#1E2538"}>
         <Box width={"80%"} height={"100%"} marginLeft={"10%"}>
           <Box
             width={"100%"}
@@ -147,17 +169,88 @@ export default class HomeTrailer extends Component {
                 width={"20%"}
                 height={"85px"}
                 display={"flex"}
-                justifyContent={'center'}
-                gap={'10px'}
+                justifyContent={"center"}
+                gap={"10px"}
               >
-                <Button sx={{ width:'58.87px' , height:'58.87px',borderRadius:'10px',bgcolor:'#1B2133'}} >
-                  <box-icon color='#fff' type="solid" name="like"></box-icon>
+                <Button
+                  sx={{
+                    width: "58.87px",
+                    height: "58.87px",
+                    borderRadius: "10px",
+                    bgcolor: "#1B2133",
+                  }}
+                >
+                  <box-icon color="#fff" type="solid" name="like"></box-icon>
                 </Button>
-                <Button sx={{ width:'58.87px' , height:'58.87px',borderRadius:'10px',bgcolor:'#1B2133'}}>
-                  <box-icon color='#fff'  type="solid" name="dislike"></box-icon>
+                <Button
+                  sx={{
+                    width: "58.87px",
+                    height: "58.87px",
+                    borderRadius: "10px",
+                    bgcolor: "#1B2133",
+                  }}
+                >
+                  <box-icon color="#fff" type="solid" name="dislike"></box-icon>
                 </Button>
               </Box>
             </Box>
+          </Box>
+          <Box width={"100%"} height={"300px"}>
+            <Box
+              width={"100%"}
+              height={"100%"}
+              display={"flex"}
+              gap={"20px"}
+              overflow={" scroll hidden"}
+              sx={{ overflowX: "auto", WebkitOverflowScrolling: "touch", }}
+            >
+              {this.state.dataScroll.length !== 0
+                ? this.state.dataScroll.map((item) => (
+                    <Box
+                      width={"449px"}
+                      height={"252px"}
+                      position={"relative"}
+                      
+                      sx={{
+                        borderRadius: "10px",
+                        "&:hover div":{display:'flex'}
+                      }}
+                    >
+                      <Box
+                        width={"100%"}
+                        height={"245px"}
+                        borderRadius={'10px'}
+                        position={"absolute"}
+                        bgcolor={"rgba(54, 87, 203, 0.65)"}
+                        zIndex={2}
+                        display={'none'}
+                      >
+                        <Typography
+                          position={"absolute"}
+                          top={"35%"}
+                          left={"35%"}
+                        >
+                          <Button sx={{borderRadius:'50%'}}>
+                          <PlayArrowIcon
+                            sx={{
+                              fontSize: "80px",
+                              color: "#fff",
+                            }}
+                          />
+                          </Button>
+                        </Typography>
+                      </Box>
+                      <img
+                        style={{ borderRadius: "10px" }}
+                        src={item.img}
+                        alt="#"
+                      />
+                    </Box>
+                  ))
+                : ""}
+            </Box>
+
+            
           </Box>
         </Box>
       </Box>

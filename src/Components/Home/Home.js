@@ -8,6 +8,8 @@ import Novosti from "../Novosti/Novosti";
 import Podborka from "../Podborka/Podborka";
 import HomeHead from "./HomeHead/HomeHead";
 import HomeTrailer from "./HomeTrailer/HomeTrailer";
+import Popular from "./Popular/Popular";
+import PopularActers from "./PopularActers/PopularActers";
 export default class Home extends Component {
   render() {
     return (
@@ -21,7 +23,9 @@ export default class Home extends Component {
             <Route path="/podborka" element={<Podborka />} />
             <Route path="/kategorii" element={<Kategotii />} />
           </Routes>
-        <HomeTrailer/>
+        {/* <HomeTrailer/> */}
+        {/* <Popular/>/ */}
+        {/* <PopularActers/> */}
       </>
     );
   }

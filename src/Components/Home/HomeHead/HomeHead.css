@@ -7,3 +7,6 @@
     background-attachment: fixed;
     background-color: #202434;
 }
+::-webkit-scrollbar{
+    width: 0;
+}

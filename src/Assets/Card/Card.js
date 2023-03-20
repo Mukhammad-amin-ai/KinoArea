@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Card extends Component {
   render() {
@@ -21,6 +22,7 @@ export default class Card extends Component {
             alignItems={"center"}
             justifyContent={"center"}
           >
+            <Link style={{textDecoration:'none',color:'blue'}}>
             <Box
               width={"224px"}
               height={"60px"}
@@ -29,9 +31,12 @@ export default class Card extends Component {
               display={"flex"}
               alignItems={"center"}
               justifyContent={"center"}
-            >
+              >
+
               <Typography variant="p">Карточка фильма</Typography>
             </Box>
+              </Link>
+
           </Box>
           <img
             width={"90%"}

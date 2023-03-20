@@ -3,6 +3,11 @@ import React, { Component } from "react";
 import Navbar from "../../../Assets/Navbar/Navbar";
 import HomeCards from "../HomeCards/HomeCards";
 import HomeTrailer from "../HomeTrailer/HomeTrailer";
+import LatestNews from "../LatestNews/LatestNews";
+import MostPopular from "../MostPopular/MostPopular";
+import Popular from "../Popular/Popular";
+import PopularActers from "../PopularActers/PopularActers";
+import Waitlist from "../Waitlist/Waitlist";
 import './HomeHead.css'
 export default class Home_head extends Component {
   render() {
@@ -108,9 +113,14 @@ export default class Home_head extends Component {
                 </List>
               </Box>
             </Box>
-            <HomeCards />
-            {/* <HomeTrailer /> */}
           </Box>
+            <HomeCards />
+            <HomeTrailer />
+            <Popular/>
+            <PopularActers/>
+            <LatestNews/>
+            <Waitlist/>
+            <MostPopular/>
         </div>
       </>
     );
