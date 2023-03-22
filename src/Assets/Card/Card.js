@@ -5,7 +5,21 @@ import { Link } from "react-router-dom";
 export default class Card extends Component {
   render() {
     return (
-      <Box width={"23%"} height={"60vh"} position={"relative"}>
+      <Box
+        position={"relative"}
+        sx={{
+          width: {
+            md: "202px",
+            lg: "339px",
+            xl: "339px",
+          },
+          height: {
+            md: "311px",
+            lg: "520px",
+            xl: "520px",
+          },
+        }}
+      >
         <Box
           width={"100%"}
           height={"70%"}
@@ -22,21 +36,36 @@ export default class Card extends Component {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            <Link style={{textDecoration:'none',color:'blue'}}>
-            <Box
-              width={"224px"}
-              height={"60px"}
-              bgcolor={"#fff"}
-              borderRadius={"10px"}
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"center"}
+            <Link style={{ textDecoration: "none", color: "blue" }}>
+              <Box
+                height={"60px"}
+                sx={{
+                  width:{
+                    md:"160px",
+                    lg:'224px',
+                    xl:'224px'
+                  },
+                  height:{
+                    md:"49px",
+                    lg:'71px',
+                    xl:'71px'
+                  }
+                }}
+                bgcolor={"#fff"}
+                borderRadius={"10px"}
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"center"}
               >
-
-              <Typography variant="p">Карточка фильма</Typography>
-            </Box>
-              </Link>
-
+                <Typography variant="p"sx={{
+                  fontSize:{
+                    md:'14px',
+                    lg:'18px',
+                    xl:'18px'
+                  }
+                }}>Карточка фильма</Typography>
+              </Box>
+            </Link>
           </Box>
           <img
             width={"90%"}
@@ -47,8 +76,18 @@ export default class Card extends Component {
           />
         </Box>
         <Box
-          width={"62px"}
-          height={"33px"}
+          sx={{
+            width: {
+              md: "44px",
+              lg: "62px",
+              xl: "62px",
+            },
+            height: {
+              md: "24px",
+              lg: "33px",
+              xl: "33px",
+            },
+          }}
           bgcolor={this.props.bgcolor}
           position={"absolute"}
           top={"5px"}
@@ -61,8 +100,18 @@ export default class Card extends Component {
             justifyContent={"center"}
             alignItems={"center"}
             fontFamily={"Qanales"}
-            fontSize={"18px"}
-            lineHeight={"33px"}
+            sx={{
+              fontSize: {
+                md: "15px",
+                lg: "18px",
+                xl: "18px",
+              },
+              lineHeight: {
+                md: "20px",
+                lg: "33px",
+                xl: "33px",
+              },
+            }}
             fontWeight={"700"}
             color={"#fff"}
           >
@@ -77,7 +126,13 @@ export default class Card extends Component {
         >
           <Typography
             variant="p"
-            fontSize={"18px"}
+            sx={{
+              fontSize: {
+                md: "15px",
+                lg: "18px",
+                xl: "18px",
+              },
+            }}
             fontFamily={"Qanales"}
             fontWeight={"700"}
             color={"#fff"}
@@ -86,7 +141,13 @@ export default class Card extends Component {
           </Typography>
           <Typography
             variant="p"
-            fontSize={"15px"}
+            sx={{
+              fontSize: {
+                md: "12px",
+                lg: "15px",
+                xl: "15px",
+              },
+            }}
             fontFamily={"Qanales"}
             fontWeight={"700"}
             color={"#F2F60F"}

@@ -123,7 +123,11 @@ export default class Popular extends Component {
 
                 {this.state.listItemMassive.length !== 0
                   ? this.state.listItemMassive.map((item) => (
-                      <ListItem>
+                      <ListItem sx={{
+                        display:{
+                          md:'none'
+                        }
+                      }}>
                         <ListItemButton>
                           <Typography
                             variant="h2"
@@ -131,7 +135,7 @@ export default class Popular extends Component {
                             fontFamily={"Qanelas"}
                             fontWeight={"700"}
                           >
-                            2020
+                            {item.Typography}
                           </Typography>
                         </ListItemButton>
                       </ListItem>

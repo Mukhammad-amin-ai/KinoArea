@@ -7,9 +7,7 @@ import Kategotii from "../Kategorii/Kategotii";
 import Novosti from "../Novosti/Novosti";
 import Podborka from "../Podborka/Podborka";
 import HomeHead from "./HomeHead/HomeHead";
-import HomeTrailer from "./HomeTrailer/HomeTrailer";
-import Popular from "./Popular/Popular";
-import PopularActers from "./PopularActers/PopularActers";
+
 export default class Home extends Component {
   render() {
     return (

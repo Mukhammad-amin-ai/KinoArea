@@ -81,12 +81,11 @@ export default class HomeCards extends Component {
     return (
       <>
         <Box
-          width={"80%"}
+          width={"90%"}
           height={"100%"}
-          marginLeft={"10%"}
+          marginLeft={"8%"}
           display={"flex"}
           flexWrap={"wrap"}
-          justifyContent={"space-evenly"}
         >
           {this.state.data.length !== 0
             ? this.state.data.map((item) => (
@@ -99,8 +98,18 @@ export default class HomeCards extends Component {
                 />
               ))
             : ""}
-            <Box width={'100%'} height="60px" display={'flex'} justifyContent={'center'} >
-              <Button sx={{ width:'200px',border:'1px solid white',color:'white'}}>
+            <Box width={'100%'} height="200px" display={'flex'} alignItems={'center'} justifyContent={'center'} >
+              <Button sx={{ width:{
+                md:"164px",
+                lg:'200px',
+                xl:'200px'
+              },
+              height:{
+                md:"54px",
+                lg:'71px',
+                xl:'71px'
+              },
+              border:'1px solid white',color:'white'}}>
                 <Typography variant="p">
                 Все новинки
                 </Typography>

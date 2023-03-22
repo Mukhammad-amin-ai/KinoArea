@@ -8,6 +8,7 @@ import {
 } from "@mui/material";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 export default class Navbar extends Component {
   state = {
     borderBottom: "",
@@ -193,200 +194,468 @@ export default class Navbar extends Component {
   render() {
     return (
       <Box
-        width={"80%"}
-        height={"10%"}
-        marginLeft={"10%"}
+        width={"100%"}
+        height={"100%"}
         display={"flex"}
-        alignItems={"center"}
-        gap={"100px"}
+        flexDirection={"column"}
       >
-        <Box width={"130px"} height={"100%"}>
-          <Link
-            to={"./"}
-            onClick={this.logoClick}
-            style={{ textDecoration: "none", color: "white" }}
-          >
-
-            <Box
-              width={"200px"}
-              height={"50px"}
-              display={"flex"}
-              alignItems={"center"}
-              gap={'10px'}
+        <Box
+          sx={{
+            display: {
+              xs: "none",
+              sm: "none",
+              md: "none",
+              lg: "flex",
+              xl: "flex",
+            },
+          }}
+          width={"80%"}
+          height={"10%"}
+          marginLeft={"10%"}
+          display={"flex"}
+          alignItems={"center"}
+          gap={"100px"}
+        >
+          <Box width={"130px"} height={"100%"}>
+            <Link
+              to={"./"}
+              onClick={this.logoClick}
+              style={{ textDecoration: "none", color: "white" }}
             >
-              <Typography fontSize={"25px"} >
-                <i class="bx bxs-film"></i>
-              </Typography>
-              <Typography fontSize={"25px"} color={"blue"}>
-                Kino <span style={{ color: "white" }}>area</span>
-              </Typography>
-            </Box>
-          </Link>
-          <Box width={"100%"} display={"flex"} justifyContent={"space-around"}>
-            <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
-              <i class="bx bxl-vk"></i>
-            </Button>
+              <Box
+                width={"200px"}
+                height={"50px"}
+                display={"flex"}
+                alignItems={"center"}
+                gap={"10px"}
+              >
+                <Typography fontSize={"25px"}>
+                  <i class="bx bxs-film"></i>
+                </Typography>
+                <Typography fontSize={"25px"} color={"blue"}>
+                  Kino <span style={{ color: "white" }}>area</span>
+                </Typography>
+              </Box>
+            </Link>
+            <Box
+              width={"100%"}
+              display={"flex"}
+              justifyContent={"space-around"}
+            >
+              <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+                <i class="bx bxl-vk"></i>
+              </Button>
 
-            <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
-              <i class="bx bxl-instagram"></i>
+              <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+                <i class="bx bxl-instagram"></i>
+              </Button>
+              <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+                <i class="bx bxl-facebook"></i>
+              </Button>
+              <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+                <i class="bx bxl-twitter"></i>
+              </Button>
+            </Box>
+          </Box>
+          <Box
+            width={"760px"}
+            height={"100%"}
+            display={"flex"}
+            alignItems={"center"}
+          >
+            <List sx={{ display: "flex", color: "#fff" }}>
+              <ListItem>
+                <Link
+                  to={"/afisha"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.afishaClick}
+                    sx={{ borderBottom: this.state.borderBottom }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Афиша
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  to={"/film"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.filmClick}
+                    sx={{ borderBottom: this.state.borderFilm }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Фильмы
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  to={"/aktyori"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.aktyorClick}
+                    sx={{ borderBottom: this.state.borderAktyor }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Актёры
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  to={"/novosti"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.novostiClick}
+                    sx={{ borderBottom: this.state.borderNovosti }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Новости
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  to={"/podborka"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.podborkaClick}
+                    sx={{ borderBottom: this.state.borderPodborka }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Подборки
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  to={"/kategorii"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.kategoriiClick}
+                    sx={{ borderBottom: this.state.borderKategotii }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Категории
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+            </List>
+          </Box>
+          <Box width={"180px"} height={"53px"} display={"flex"} gap={"10px"}>
+            <Button
+              variant="contained"
+              sx={{
+                bgcolor: "white",
+                color: "black",
+                fontSize: "30px",
+              }}
+            >
+              <i class="bx bx-search"></i>
             </Button>
-            <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
-              <i class="bx bxl-facebook"></i>
-            </Button>
-            <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
-              <i class="bx bxl-twitter"></i>
+            <Button
+              variant="contained"
+              sx={{
+                width: "138px",
+                height: "53px",
+                bgcolor: "#3657CB",
+              }}
+            >
+              <Typography
+                fontSize={"17px"}
+                fontFamily={"Qanelas"}
+                fontWeight={"700"}
+              >
+                Войти
+              </Typography>
             </Button>
           </Box>
         </Box>
         <Box
-          width={"760px"}
-          height={"100%"}
+          sx={{
+            display: {
+              xs: "flex",
+              sm: "flex",
+              md: "flex",
+              lg: "none",
+              xl: "none",
+            },
+          }}
+          width={"80%"}
+          height={"10%"}
+          marginLeft={"10%"}
           display={"flex"}
+          justifyContent={'space-evenly'}
           alignItems={"center"}
+          gap={"100px"}
         >
-          <List sx={{ display: "flex", color: "#fff" }}>
-            <ListItem>
-              <Link
-                to={"/afisha"}
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <ListItemButton
-                  onClick={this.afishaClick}
-                  sx={{ borderBottom: this.state.borderBottom }}
-                >
-                  <Typography
-                    fontSize={"17px"}
-                    fontFamily={"Qanelas"}
-                    fontWeight={"700"}
-                  >
-                    Афиша
-                  </Typography>
-                </ListItemButton>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link
-                to={"/film"}
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <ListItemButton
-                  onClick={this.filmClick}
-                  sx={{ borderBottom: this.state.borderFilm }}
-                >
-                  <Typography
-                    fontSize={"17px"}
-                    fontFamily={"Qanelas"}
-                    fontWeight={"700"}
-                  >
-                    Фильмы
-                  </Typography>
-                </ListItemButton>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link
-                to={"/aktyori"}
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <ListItemButton
-                  onClick={this.aktyorClick}
-                  sx={{ borderBottom: this.state.borderAktyor }}
-                >
-                  <Typography
-                    fontSize={"17px"}
-                    fontFamily={"Qanelas"}
-                    fontWeight={"700"}
-                  >
-                    Актёры
-                  </Typography>
-                </ListItemButton>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link
-                to={"/novosti"}
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <ListItemButton
-                  onClick={this.novostiClick}
-                  sx={{ borderBottom: this.state.borderNovosti }}
-                >
-                  <Typography
-                    fontSize={"17px"}
-                    fontFamily={"Qanelas"}
-                    fontWeight={"700"}
-                  >
-                    Новости
-                  </Typography>
-                </ListItemButton>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link
-                to={"/podborka"}
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <ListItemButton
-                  onClick={this.podborkaClick}
-                  sx={{ borderBottom: this.state.borderPodborka }}
-                >
-                  <Typography
-                    fontSize={"17px"}
-                    fontFamily={"Qanelas"}
-                    fontWeight={"700"}
-                  >
-                    Подборки
-                    {/* Категории */}
-                  </Typography>
-                </ListItemButton>
-              </Link>
-            </ListItem>
-            <ListItem>
-              <Link
-                to={"/kategorii"}
-                style={{ textDecoration: "none", color: "white" }}
-              >
-                <ListItemButton
-                  onClick={this.kategoriiClick}
-                  sx={{ borderBottom: this.state.borderKategotii }}
-                >
-                  <Typography
-                    fontSize={"17px"}
-                    fontFamily={"Qanelas"}
-                    fontWeight={"700"}
-                  >
-                    Категории
-                  </Typography>
-                </ListItemButton>
-              </Link>
-            </ListItem>
-          </List>
-        </Box>
-        <Box width={"180px"} height={"53px"} display={"flex"} gap={"10px"}>
-          <Button
-            variant="contained"
-            sx={{
-              width: "55px",
-              height: "53px",
-              bgcolor: "white",
-              color: "black",
-              fontSize: "30px",
-            }}
-          >
-            <i class="bx bx-search"></i>
-          </Button>
-          <Button
-            variant="contained"
-            sx={{ width: "138px", height: "53px", bgcolor: "#3657CB" }}
-          >
-            <Typography
-              fontSize={"17px"}
-              fontFamily={"Qanelas"}
-              fontWeight={"700"}
+           <Button
+              variant="contained"
+              sx={{
+                width:{
+                  md:'44px',
+                  lg:'53px',
+                  xl:'53px',
+
+                } ,
+                height:{
+                  md:'44px',
+                  lg:'53px',
+                  xl:'53px',
+
+                },
+                bgcolor: "white",
+                color: "black",
+                fontSize: "30px",
+              }}
             >
-              Войти
-            </Typography>
-          </Button>
+              <i class="bx bx-search"></i>
+            </Button>
+          <Box
+            width={"523px"}
+            height={"200px"}
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+
+          >
+          <Box width={"130px"} height={"100%"}>
+            <Link
+              to={"./"}
+              onClick={this.logoClick}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <Box
+                width={"200px"}
+                height={"50px"}
+                display={"flex"}
+                alignItems={"center"}
+                gap={"10px"}
+              >
+                <Typography fontSize={"25px"}>
+                  <i class="bx bxs-film"></i>
+                </Typography>
+                <Typography fontSize={"25px"} color={"blue"}>
+                  Kino <span style={{ color: "white" }}>area</span>
+                </Typography>
+              </Box>
+            </Link>
+            <Box
+              width={"100%"}
+              display={"flex"}
+              justifyContent={"space-around"}
+            >
+              <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+                <i class="bx bxl-vk"></i>
+              </Button>
+
+              <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+                <i class="bx bxl-instagram"></i>
+              </Button>
+              <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+                <i class="bx bxl-facebook"></i>
+              </Button>
+              <Button sx={{ maxWidth: "auto", fontSize: "20px" }}>
+                <i class="bx bxl-twitter"></i>
+              </Button>
+            </Box>
+          </Box>
+
+          <Box
+            width={"760px"}
+            height={"100%"}
+            display={"flex"}
+            alignItems={"center"}
+          >
+            <List sx={{ display: "flex", color: "#fff" }}>
+              <ListItem>
+                <Link
+                  to={"/afisha"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.afishaClick}
+                    sx={{ borderBottom: this.state.borderBottom }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Афиша
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  to={"/film"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.filmClick}
+                    sx={{ borderBottom: this.state.borderFilm }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Фильмы
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  to={"/aktyori"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.aktyorClick}
+                    sx={{ borderBottom: this.state.borderAktyor }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Актёры
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  to={"/novosti"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.novostiClick}
+                    sx={{ borderBottom: this.state.borderNovosti }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Новости
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  to={"/podborka"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.podborkaClick}
+                    sx={{ borderBottom: this.state.borderPodborka }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Подборки
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+              <ListItem>
+                <Link
+                  to={"/kategorii"}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
+                  <ListItemButton
+                    onClick={this.kategoriiClick}
+                    sx={{ borderBottom: this.state.borderKategotii }}
+                  >
+                    <Typography
+                      fontSize={"17px"}
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                    >
+                      Категории
+                    </Typography>
+                  </ListItemButton>
+                </Link>
+              </ListItem>
+            </List>
+          </Box>
+
+          </Box>
+            <Button
+              variant="contained"
+              sx={{
+                width:{
+                  md:'100px',
+                  lg:'138px',
+                  xl:'138px',
+
+                },
+                height:{
+                  md:'42px',
+                  lg:'53px',
+                  xl:'53px',
+
+                },
+                bgcolor: "#3657CB",
+              }}
+            >
+              <Typography
+                sx={{fontSize:{
+                  md:'14px',
+                  lg:'17px',
+                  xl:'17px'
+                }}}
+                fontFamily={"Qanelas"}
+                fontWeight={"700"}
+              >
+                Войти
+              </Typography>
+            </Button>
+
+           
         </Box>
       </Box>
     );

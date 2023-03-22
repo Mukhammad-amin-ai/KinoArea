@@ -1,5 +1,6 @@
 import { Box, List, ListItem, ListItemButton, Typography } from "@mui/material";
 import React, { Component } from "react";
+import Footer from "../../../Assets/Footer/Footer";
 import Navbar from "../../../Assets/Navbar/Navbar";
 import HomeCards from "../HomeCards/HomeCards";
 import HomeTrailer from "../HomeTrailer/HomeTrailer";
@@ -8,7 +9,7 @@ import MostPopular from "../MostPopular/MostPopular";
 import Popular from "../Popular/Popular";
 import PopularActers from "../PopularActers/PopularActers";
 import Waitlist from "../Waitlist/Waitlist";
-import './HomeHead.css'
+import "./HomeHead.css";
 export default class Home_head extends Component {
   render() {
     return (
@@ -17,29 +18,59 @@ export default class Home_head extends Component {
           <Box width={"100%"} height={"30%"}>
             <Navbar />
             <Box
-              width={"80%"}
+              width={"100%"}
               height={"100%"}
-              marginLeft={"10%"}
               display={"flex"}
+              justifyContent={"center"}
+              sx={{
+                flexDirection: {
+                  md: "column",
+                  lg: "unset",
+                  xl: "unset",
+                },
+              }}
             >
               <Box
-                width={"30%"}
                 height={"100%"}
                 display={"flex"}
+                justifyContent={'center'}
                 alignItems={"center"}
+                sx={{
+                  width: {
+                    md: "310px",
+                    lg: "433px",
+                    xl: "433px",
+                  },
+                }}
               >
                 <Typography
                   variant="h2"
-                  fontSize={"50px"}
                   fontFamily={"Qanelas"}
                   fontWeight={"900"}
                   color={"#fff"}
+                  sx={{
+                    fontSize: {
+                      md: "40px",
+                      lg: "50px",
+                      xl: "50px",
+                    },
+                  }}
                 >
                   Сейчас в кино
                 </Typography>
               </Box>
 
-              <Box width={"50%"} height={"100%"} display={"flex"}>
+              <Box
+                height={"100%"}
+                display={"flex"}
+                sx={{
+                  width: {
+                    md: "615px",
+                    lg: "765px",
+                    xl: "765px",
+                  },
+                }}
+              >
                 <List
                   sx={{
                     display: "flex",
@@ -114,13 +145,14 @@ export default class Home_head extends Component {
               </Box>
             </Box>
           </Box>
-            <HomeCards />
-            <HomeTrailer />
-            <Popular/>
-            <PopularActers/>
-            <LatestNews/>
-            <Waitlist/>
-            <MostPopular/>
+          <HomeCards />
+          <HomeTrailer />
+          <Popular />
+          <PopularActers />
+          <LatestNews />
+          <Waitlist />
+          <MostPopular />
+          <Footer />
         </div>
       </>
     );

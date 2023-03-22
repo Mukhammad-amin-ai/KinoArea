@@ -28,6 +28,11 @@ export default class PopularActers extends Component {
           marginLeft={"8%"}
           display={"flex"}
           justifyContent={"space-evenly"}
+          sx={{
+            flexDirection:{
+              md:'column'
+            }
+          }}
         >
           <Box
             width={"45%"}

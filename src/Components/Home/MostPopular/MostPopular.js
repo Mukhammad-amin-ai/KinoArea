@@ -10,7 +10,6 @@ import most5 from "../../../Images/most 5.png";
 export default class MostPopular extends Component {
   state = {
     mostPopular: [
-    
       {
         img: most1,
         name1: "1. Бладшот",
