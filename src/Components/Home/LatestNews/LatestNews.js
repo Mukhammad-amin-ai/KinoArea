@@ -36,8 +36,8 @@ export default class LatestNews extends Component {
 
   render() {
     return (
-      <Box width={"100%"} height={"920px"} bgcolor={"#1E2538"}>
-        <Box width={"80%"} marginLeft={"10%"} height={"100%"}>
+      <Box width={"100%"} height={"1200px"} bgcolor={"#1E2538"}>
+        <Box width={"90%"} marginLeft={"5%"} height={"100%"}>
           <Box
             width={"100%"}
             height={"300px"}
@@ -47,23 +47,35 @@ export default class LatestNews extends Component {
           >
             <Typography
               variant="h3"
-              fontSize={"65px"}
               fontFamily={"Qanales"}
               fontWeight={"900"}
               color={"#fff"}
+              sx={{
+                fontSize: {
+                  md: 40,
+                  lg: 65,
+                  xl: 65,
+                },
+              }}
             >
               Последние новости
             </Typography>
             <Link style={{ textDecoration: "none" }}>
               <Typography
                 variant="p"
-                fontSize={"22px"}
                 fontFamily={"Qanales"}
                 fontWeight={"900"}
                 color={"#fff"}
                 display={"flex"}
                 alignItems={"center"}
                 gap={"10px"}
+                sx={{
+                  fontSize: {
+                    md: 18,
+                    lg: 22,
+                    xl: 22,
+                  },
+                }}
               >
                 Все новости
                 <box-icon
@@ -76,17 +88,35 @@ export default class LatestNews extends Component {
           </Box>
           <Box
             width={"100%"}
-            height={"600px"}
+            height={"1200px"}
             display={"flex"}
             alignItems={"center"}
-            gap={"2.5%"}
+            gap={"20px"}
+            sx={{
+              flexDirection:{
+                md:'column',
+                lg:'unset',
+                xl:'unset'
+              }
+            }}
           >
             <Box
-              width={"75%"}
               height={"100%"}
               position={"relative"}
               borderRadius={"10px"}
               overflow={"hidden"}
+              sx={{
+                width: {
+                  md: 850,
+                  lg: 1159,
+                  xl: 1159,
+                },
+                height: {
+                  md: 566,
+                  lg: 772,
+                  xl: 772,
+                },
+              }}
             >
               <img width={"100%"} height={"100%"} src={news1} alt="news" />
               <Box
@@ -100,6 +130,13 @@ export default class LatestNews extends Component {
                 left={"20px"}
                 color={"#fff"}
                 fontFamily={"Qanales"}
+                sx={{
+                  fontSize:{
+                    md:15,
+                    lg:15,
+                    xl:15
+                  }
+                }}
               >
                 15 Апр 2020
                 <Typography display={"flex"}>
@@ -118,10 +155,16 @@ export default class LatestNews extends Component {
               >
                 <Typography
                   variant="h3"
-                  fontSize={"30px"}
                   fontWeight={"900"}
                   color={"#fff"}
                   fontFamily={"Qanales"}
+                  sx={{
+                    fontSize:{
+                      md:25,
+                      lg:30,
+                      xl:30
+                    }
+                  }}
                 >
                   Не время умирать. Перенос релиза фильма
                 </Typography>
@@ -132,6 +175,13 @@ export default class LatestNews extends Component {
                   fontWeight={"500"}
                   color={"#fff"}
                   fontFamily={"Qanales"}
+                  sx={{
+                    fontSize:{
+                      md:15,
+                      lg:18,
+                      xl:18
+                    }
+                  }}
                 >
                   Но действия представителей оппозиции в равной степени
                   предоставлены сами себе. В рамках спецификации современных
@@ -142,22 +192,46 @@ export default class LatestNews extends Component {
               </Box>
             </Box>
             <Box
-              width={"22%"}
               height={"100%"}
               display={"flex"}
-              flexDirection={"column"}
               gap={"13px"}
+              sx={{
+                width: {
+                  md: 850,
+                  lg: 254,
+                  xl: 254,
+                },
+                height:{
+                  md:'auto',
+                  lg:'100%',
+                  xl:'100%'
+                },
+                flexDirection:{
+                  md:'unset',
+                  lg:'column',
+                  xl:'column'
+                }
+              }}
             >
               {this.state.newsData.length !== 0
                 ? this.state.newsData.map((item) => (
                     <Box
-                      width={"100%"}
-                      height={"182px"}
                       borderRadius={"10px"}
                       overflow={"hidden"}
                       position={"relative"}
                       color={"#fff"}
                       sx={{
+                        width: {
+                          md: 205,
+                          lg: 254,
+                          xl: 254,
+                        },
+                        height: {
+                          md: 147,
+                          lg: 182,
+                          xl: 182,
+                        },
+
                         ":hover div": {
                           display: "flex",
                         },
@@ -176,19 +250,35 @@ export default class LatestNews extends Component {
                         position={"absolute"}
                       >
                         <Box
-                          width={"180px"}
-                          height={"53px"}
                           display={"flex"}
                           justifyContent={"center"}
                           alignItems={"center"}
                           borderRadius={"10px"}
                           bgcolor={"transparent"}
                           border={"3px solid #fff"}
+                          sx={{
+                            width:{
+                              md:150,
+                              lg:180,
+                              xl:180
+                            },
+                            height:{
+                              md:49,
+                              lg:53,
+                              xl:53
+                            }
+                          }}
                         >
                           <Typography
                             variant="h5"
-                            fontSize={"18px"}
                             fontFamily={"Qanelas"}
+                            sx={{
+                              fontSize:{
+                                md:15,
+                                lg:18,
+                                xl:18
+                              }
+                            }}
                           >
                             Читать новость
                           </Typography>
@@ -204,8 +294,14 @@ export default class LatestNews extends Component {
                         position={"absolute"}
                         top={"10px"}
                         left={"10px"}
-                        fontSize={"15px"}
                         fontFamily={"Qanelas"}
+                        sx={{
+                          fontSize:{
+                            md:13,
+                            lg:15,
+                            xl:15
+                          }
+                        }}
                       >
                         {item.time}
                       </Typography>
@@ -215,6 +311,13 @@ export default class LatestNews extends Component {
                         left={"10px"}
                         fontSize={"18px"}
                         fontFamily={"Qanelas"}
+                        sx={{
+                          fontSize:{
+                            md:15,
+                            lg:18,
+                            xl:18
+                          }
+                        }}
                       >
                         {item.news}
                       </Typography>

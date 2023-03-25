@@ -21,6 +21,14 @@ export default class PopularActers extends Component {
         display={"flex"}
         flexDirection="column"
         gap={"40px"}
+        sx={{
+          height:{
+
+            md:500,
+            lg:800,
+            xl:800
+          }
+        }}
       >
         <Box
           width={"80%"}
@@ -29,9 +37,11 @@ export default class PopularActers extends Component {
           display={"flex"}
           justifyContent={"space-evenly"}
           sx={{
-            flexDirection:{
-              md:'column'
-            }
+            flexDirection: {
+              md: "column",
+              lg: "unset",
+              xl: "unset",
+            },
           }}
         >
           <Box
@@ -41,6 +51,13 @@ export default class PopularActers extends Component {
             alignItems={"center"}
           >
             <Typography
+              sx={{
+                fontSize: {
+                  md: "35px",
+                  lg: "50px",
+                  xl: "50px",
+                },
+              }}
               variant="h3"
               fontSize={"50px"}
               fontFamily={"Qanelas"}
@@ -55,26 +72,45 @@ export default class PopularActers extends Component {
             display={"flex"}
             alignItems={"center"}
             justifyContent={"center"}
+            sx={{
+              justifyContent: {
+                md: "start",
+                lg: "center",
+                xl: "center",
+              },
+            }}
           >
             <List
               sx={{
-                width: "150px",
-                display: "fex",
+                width: "200px",
+                display: "flex",
                 color: "#6D717D",
               }}
             >
               <ListItem sx={{ ":hover div": { color: "#fff" } }}>
-                <ListItemButton>
+                <ListItemButton
+                  sx={{
+                    width: "80px",
+                  }}
+                >
                   <Typography>За год</Typography>
                 </ListItemButton>
               </ListItem>
               <ListItem sx={{ ":hover div": { color: "#fff" } }}>
-                <ListItemButton>
+                <ListItemButton
+                  sx={{
+                    width: "110px",
+                  }}
+                >
                   <Typography>За месяц</Typography>
                 </ListItemButton>
               </ListItem>
               <ListItem sx={{ ":hover div": { color: "#fff" } }}>
-                <ListItemButton>
+                <ListItemButton
+                  sx={{
+                    width: "120px",
+                  }}
+                >
                   <Typography>За неделю</Typography>
                 </ListItemButton>
               </ListItem>
@@ -82,23 +118,71 @@ export default class PopularActers extends Component {
           </Box>
         </Box>
         <Box
+        sx={{
+          height:{
+            md:266,
+            lg:444,
+            xl:444
+          }
+        }}
           width={"100%"}
-          height={"444px"}
           display={"flex"}
           justifyContent={"space-evenly"}
-          // gap={'20px'}
         >
-          <Box width={"400px"} height={"444px"}>
-            <Card sx={{ width: 444, position: "relative" }}>
+          <Box
+            sx={{
+              width: {
+                md: 266,
+                lg: 444,
+                xl: 444,
+              },
+              height: {
+                md: 266,
+                lg: 444,
+                xl: 444,
+              },
+            }}
+          >
+            <Card
+              sx={{
+                width: {
+                  md: 266,
+                  lg: 444,
+                  xl: 444,
+                },
+                height: {
+                  md: 266,
+                  lg: 444,
+                  xl: 444,
+                },
+                position: "relative",
+              }}
+            >
               <CardMedia
                 component="img"
-                sx={{ height: 444 }}
+                sx={{
+                  width: {
+                    md: 266,
+                    lg: 444,
+                    xl: 444,
+                  },
+                  height: {
+                    md: 266,
+                    lg: 444,
+                    xl: 444,
+                  },
+                }}
                 image={popular1}
               />
               <Typography
                 variant="h4"
-                fontSize={"15px"}
-                sx={{ cursor: "default" }}
+                sx={{
+                  fontSize: {
+                    md: 12,
+                    lg: 15,
+                    xl: 15,
+                  },
+                }}
                 fontFamily={"Qanelas"}
                 color={"#F2F60F;"}
                 position={"absolute"}
@@ -111,8 +195,14 @@ export default class PopularActers extends Component {
                 width={"300px"}
                 height={"100px"}
                 position={"absolute"}
-                bottom={"0"}
                 left={"40px"}
+                sx={{
+                  bottom: {
+                    md: -20,
+                    lg: 0,
+                    xl: 0,
+                  },
+                }}
               >
                 <Typography
                   variant="h2"
@@ -120,7 +210,13 @@ export default class PopularActers extends Component {
                   fontFamily={"Qanales"}
                   fontWeight={"700"}
                   color={"#fff"}
-                  sx={{ cursor: "default" }}
+                  sx={{
+                    fontSize: {
+                      md: 20,
+                      lg: 27,
+                      xl: 27,
+                    },
+                  }}
                 >
                   Квентин Тарантино
                 </Typography>
@@ -130,7 +226,13 @@ export default class PopularActers extends Component {
                   fontFamily={"Qanales"}
                   fontWeight={"600"}
                   color={"rgba(255, 255, 255, 0.35);"}
-                  sx={{ cursor: "default" }}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 20,
+                      xl: 20,
+                    },
+                  }}
                 >
                   Quentin Tarantino
                 </Typography>
@@ -139,7 +241,13 @@ export default class PopularActers extends Component {
                   fontSize={"15px"}
                   fontFamily={"Qanales"}
                   fontWeight={"500"}
-                  sx={{ cursor: "default" }}
+                  sx={{
+                    fontSize: {
+                      md: 12,
+                      lg: 15,
+                      xl: 15,
+                    },
+                  }}
                   color={"#F2F60F"}
                 >
                   57 лет
@@ -147,17 +255,60 @@ export default class PopularActers extends Component {
               </Box>
             </Card>
           </Box>
-          <Box width={"400px"} height={"444px"}>
-            <Card sx={{ width: 444, position: "relative" }}>
+          <Box
+            sx={{
+              width: {
+                md: 266,
+                lg: 444,
+                xl: 444,
+              },
+              height: {
+                md: 266,
+                lg: 444,
+                xl: 444,
+              },
+            }}
+          >
+            <Card
+              sx={{
+                width: {
+                  md: 266,
+                  lg: 444,
+                  xl: 444,
+                },
+                height: {
+                  md: 266,
+                  lg: 444,
+                  xl: 444,
+                },
+                position: "relative",
+              }}
+            >
               <CardMedia
                 component="img"
-                sx={{ height: 444 }}
+                sx={{
+                  width: {
+                    md: 266,
+                    lg: 444,
+                    xl: 444,
+                  },
+                  height: {
+                    md: 266,
+                    lg: 444,
+                    xl: 444,
+                  },
+                }}
                 image={popular2}
               />
               <Typography
                 variant="h4"
-                fontSize={"15px"}
-                sx={{ cursor: "default" }}
+                sx={{
+                  fontSize: {
+                    md: 12,
+                    lg: 15,
+                    xl: 15,
+                  },
+                }}
                 fontFamily={"Qanelas"}
                 color={"#F2F60F;"}
                 position={"absolute"}
@@ -170,26 +321,42 @@ export default class PopularActers extends Component {
                 width={"300px"}
                 height={"100px"}
                 position={"absolute"}
-                bottom={"0"}
+                sx={{
+                  bottom: {
+                    md: -20,
+                    lg: 0,
+                    xl: 0,
+                  },
+                }}
                 left={"40px"}
               >
                 <Typography
                   variant="h2"
-                  fontSize={"27px"}
                   fontFamily={"Qanales"}
                   fontWeight={"700"}
                   color={"#fff"}
-                  sx={{ cursor: "default" }}
+                  sx={{
+                    fontSize: {
+                      md: 20,
+                      lg: 27,
+                      xl: 27,
+                    },
+                  }}
                 >
                   Джейсон Стейтем
                 </Typography>
                 <Typography
                   variant="h2"
-                  fontSize={"20px"}
                   fontFamily={"Qanales"}
                   fontWeight={"600"}
                   color={"rgba(255, 255, 255, 0.35);"}
-                  sx={{ cursor: "default" }}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 20,
+                      xl: 20,
+                    },
+                  }}
                 >
                   Jason Statham
                 </Typography>
@@ -198,7 +365,13 @@ export default class PopularActers extends Component {
                   fontSize={"15px"}
                   fontFamily={"Qanales"}
                   fontWeight={"500"}
-                  sx={{ cursor: "default" }}
+                  sx={{
+                    fontSize: {
+                      md: 12,
+                      lg: 15,
+                      xl: 15,
+                    },
+                  }}
                   color={"#F2F60F"}
                 >
                   52 года
@@ -207,9 +380,19 @@ export default class PopularActers extends Component {
             </Card>
           </Box>
           <Box
-            width={"496px"}
-            height={"444px"}
-            borderRadius={'10px'}
+            sx={{
+              width: {
+                md: 296,
+                lg: 496,
+                xl: 496,
+              },
+              height: {
+                md: 266,
+                lg: 444,
+                xl: 444,
+              },
+            }}
+            borderRadius={"10px"}
             bgcolor={"#1B2133"}
             display={"flex"}
             flexDirection={"column"}
@@ -228,8 +411,14 @@ export default class PopularActers extends Component {
                   variant="h4"
                   color={"#fff"}
                   fontFamily={"Qanelas"}
-                  fontSize={"20px"}
                   fontWeight={"600"}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 20,
+                      xl: 20,
+                    },
+                  }}
                 >
                   Тинто Брасс
                 </Typography>
@@ -237,8 +426,14 @@ export default class PopularActers extends Component {
                   variant="h4"
                   color={"#3B486B"}
                   fontFamily={"Qanelas"}
-                  fontSize={"15px"}
                   fontWeight={"600"}
+                  sx={{
+                    fontSize: {
+                      md: 11,
+                      lg: 15,
+                      xl: 15,
+                    },
+                  }}
                 >
                   Tinto Brass
                 </Typography>
@@ -247,7 +442,13 @@ export default class PopularActers extends Component {
                   fontSize={"15px"}
                   fontFamily={"Qanales"}
                   fontWeight={"500"}
-                  sx={{ cursor: "default" }}
+                  sx={{
+                    fontSize: {
+                      md: 11,
+                      lg: 15,
+                      xl: 15,
+                    },
+                  }}
                   color={"#F2F60F"}
                 >
                   87 лет
@@ -257,7 +458,13 @@ export default class PopularActers extends Component {
                 variant="h4"
                 color={"#F2F60F"}
                 fontFamily={"Qanelas"}
-                fontSize={"15px"}
+                sx={{
+                  fontSize: {
+                    md: 15,
+                    lg: 20,
+                    xl: 20,
+                  },
+                }}
                 fontWeight={"600"}
               >
                 3-е место
@@ -277,17 +484,29 @@ export default class PopularActers extends Component {
                   variant="h4"
                   color={"#fff"}
                   fontFamily={"Qanelas"}
-                  fontSize={"20px"}
                   fontWeight={"600"}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 20,
+                      xl: 20,
+                    },
+                  }}
                 >
-                 Джеки Чан
+                  Джеки Чан
                 </Typography>
                 <Typography
                   variant="h4"
                   color={"#3B486B"}
                   fontFamily={"Qanelas"}
-                  fontSize={"15px"}
                   fontWeight={"600"}
+                  sx={{
+                    fontSize: {
+                      md: 11,
+                      lg: 15,
+                      xl: 15,
+                    },
+                  }}
                 >
                   Jackie Chan
                 </Typography>
@@ -296,17 +515,29 @@ export default class PopularActers extends Component {
                   fontSize={"15px"}
                   fontFamily={"Qanales"}
                   fontWeight={"500"}
-                  sx={{ cursor: "default" }}
+                  sx={{
+                    fontSize: {
+                      md: 11,
+                      lg: 15,
+                      xl: 15,
+                    },
+                  }}
                   color={"#F2F60F"}
                 >
-                 66 лет
+                  66 лет
                 </Typography>
               </Box>
               <Typography
                 variant="h4"
                 color={"#F2F60F"}
                 fontFamily={"Qanelas"}
-                fontSize={"15px"}
+                sx={{
+                  fontSize: {
+                    md: 15,
+                    lg: 20,
+                    xl: 20,
+                  },
+                }}
                 fontWeight={"600"}
               >
                 4-е место
@@ -326,16 +557,28 @@ export default class PopularActers extends Component {
                   variant="h4"
                   color={"#fff"}
                   fontFamily={"Qanelas"}
-                  fontSize={"20px"}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 20,
+                      xl: 20,
+                    },
+                  }}
                   fontWeight={"600"}
                 >
-                 Том Харди
+                  Том Харди
                 </Typography>
                 <Typography
                   variant="h4"
                   color={"#3B486B"}
                   fontFamily={"Qanelas"}
-                  fontSize={"15px"}
+                  sx={{
+                    fontSize: {
+                      md: 11,
+                      lg: 15,
+                      xl: 15,
+                    },
+                  }}
                   fontWeight={"600"}
                 >
                   Tom Hardy
@@ -345,17 +588,29 @@ export default class PopularActers extends Component {
                   fontSize={"15px"}
                   fontFamily={"Qanales"}
                   fontWeight={"500"}
-                  sx={{ cursor: "default" }}
+                  sx={{
+                    fontSize: {
+                      md: 11,
+                      lg: 15,
+                      xl: 15,
+                    },
+                  }}
                   color={"#F2F60F"}
                 >
-                 42 года
+                  42 года
                 </Typography>
               </Box>
               <Typography
                 variant="h4"
                 color={"#F2F60F"}
                 fontFamily={"Qanelas"}
-                fontSize={"15px"}
+                sx={{
+                  fontSize: {
+                    md: 15,
+                    lg: 20,
+                    xl: 20,
+                  },
+                }}
                 fontWeight={"600"}
               >
                 5-е место
@@ -374,26 +629,44 @@ export default class PopularActers extends Component {
                   variant="h4"
                   color={"#fff"}
                   fontFamily={"Qanelas"}
-                  fontSize={"20px"}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 20,
+                      xl: 20,
+                    },
+                  }}
                   fontWeight={"600"}
                 >
-                 Акшай Кумар
+                  Акшай Кумар
                 </Typography>
                 <Typography
                   variant="h4"
                   color={"#3B486B"}
                   fontFamily={"Qanelas"}
-                  fontSize={"15px"}
+                  sx={{
+                    fontSize: {
+                      md: 11,
+                      lg: 15,
+                      xl: 15,
+                    },
+                  }}
                   fontWeight={"600"}
                 >
-                 Akshay Kumar
+                  Akshay Kumar
                 </Typography>
                 <Typography
                   variant="h2"
                   fontSize={"15px"}
                   fontFamily={"Qanales"}
                   fontWeight={"500"}
-                  sx={{ cursor: "default" }}
+                  sx={{
+                    fontSize: {
+                      md: 11,
+                      lg: 15,
+                      xl: 15,
+                    },
+                  }}
                   color={"#F2F60F"}
                 >
                   52 года
@@ -403,13 +676,18 @@ export default class PopularActers extends Component {
                 variant="h4"
                 color={"#F2F60F"}
                 fontFamily={"Qanelas"}
-                fontSize={"15px"}
+                sx={{
+                  fontSize: {
+                    md: 15,
+                    lg: 20,
+                    xl: 20,
+                  },
+                }}
                 fontWeight={"600"}
               >
                 6-е место
               </Typography>
             </Box>
-            
           </Box>
         </Box>
       </Box>

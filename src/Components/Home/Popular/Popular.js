@@ -81,7 +81,19 @@ export default class Popular extends Component {
           flexDirection={"column"}
           justifyContent={"center"}
         >
-          <Box width={"100%"} height={"100px"} display={"flex"} gap={"10px"}>
+          <Box
+            width={"100%"}
+            height={"100px"}
+            display={"flex"}
+            gap={"10px"}
+            sx={{
+              flexDirection: {
+                md: "column",
+                lg: "unset",
+                xl: "unset",
+              },
+            }}
+          >
             <Box
               width={"40%"}
               height={"100%"}
@@ -94,6 +106,13 @@ export default class Popular extends Component {
                 fontFamily={"Qanelas"}
                 fontSize={"45px"}
                 fontWeight={"900"}
+                sx={{
+                  fontSize: {
+                    md: "32px",
+                    lg: "45px",
+                    xl: "45px",
+                  },
+                }}
               >
                 Популярные фильмы
               </Typography>
@@ -112,9 +131,15 @@ export default class Popular extends Component {
                   <ListItemButton sx={{ width: "120px" }}>
                     <Typography
                       variant="h2"
-                      fontSize={"18px"}
                       fontFamily={"Qanelas"}
                       fontWeight={"700"}
+                      sx={{
+                        fontSize: {
+                          md: "15px",
+                          lg: "18px",
+                          xl: "18px",
+                        },
+                      }}
                     >
                       Всё время
                     </Typography>
@@ -123,15 +148,17 @@ export default class Popular extends Component {
 
                 {this.state.listItemMassive.length !== 0
                   ? this.state.listItemMassive.map((item) => (
-                      <ListItem sx={{
-                        display:{
-                          md:'none'
-                        }
-                      }}>
+                      <ListItem>
                         <ListItemButton>
                           <Typography
                             variant="h2"
-                            fontSize={"18px"}
+                            sx={{
+                              fontSize: {
+                                md: "15px",
+                                lg: "18px",
+                                xl: "18px",
+                              },
+                            }}
                             fontFamily={"Qanelas"}
                             fontWeight={"700"}
                           >
@@ -153,6 +180,13 @@ export default class Popular extends Component {
           >
             <Box
               width={"100%"}
+              sx={{
+                height:{
+                  md:"50%",
+                  lg:'90%',
+                  xl:'90%'
+                }
+              }}
               height={"90%"}
               display={"flex"}
               alignItems={"end"}

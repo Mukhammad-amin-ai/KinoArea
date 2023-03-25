@@ -39,17 +39,29 @@ export default class HomeTrailer extends Component {
           >
             <Typography
               variant="h3"
-              fontSize={"65px"}
               fontFamily={"Qanales"}
               fontWeight={"900"}
               color={"#fff"}
+              sx={{
+                fontSize: {
+                  md: "40",
+                  lg: "65px",
+                  xl: "65px",
+                },
+              }}
             >
               Новые трейлеры
             </Typography>
             <Link style={{ textDecoration: "none" }}>
               <Typography
                 variant="p"
-                fontSize={"22px"}
+                sx={{
+                  fontSize: {
+                    md: "18px",
+                    lg: "22px",
+                    xl: "22px",
+                  },
+                }}
                 fontFamily={"Qanales"}
                 fontWeight={"900"}
                 color={"#fff"}
@@ -58,16 +70,23 @@ export default class HomeTrailer extends Component {
                 gap={"10px"}
               >
                 Все трейлеры
-                <box-icon
-                  size="sm"
-                  color="white"
-                  name="right-arrow-alt"
-                ></box-icon>
+                <i class="bx bx-right-arrow-alt"></i>
               </Typography>
             </Link>
           </Box>
           <Box width={"100%"} height={"848px"}>
-            <Box width={"100%"} height={"80%"} position={"relative"}>
+            <Box
+              width={"100%"}
+              height={"80%"}
+              sx={{
+                height: {
+                  mf: "450px",
+                  lh: "700px",
+                  xl: "700px",
+                },
+              }}
+              position={"relative"}
+            >
               <img
                 width={"100%"}
                 style={{ borderRadius: "10px" }}
@@ -114,6 +133,13 @@ export default class HomeTrailer extends Component {
                   <Typography
                     variant="hp"
                     fontSize={"45px"}
+                    sx={{
+                      fontSize:{
+                        md:"34px",
+                        lg:'45px',
+                        xl:'45px'
+                      }
+                    }}
                     fontFamily={"Qaneles"}
                     fontWeight={"900"}
                     color={"#fff"}
@@ -127,40 +153,32 @@ export default class HomeTrailer extends Component {
                   display={"flex"}
                   alignItems={"center"}
                 >
-                  <Link>
+                  <Link style={{ textDecoration: "none" }}>
                     <Button>
-                      <box-icon
-                        color="#6D7792"
-                        type="logo"
-                        name="vk"
-                      ></box-icon>
+                      <Typography>
+                        <i class="bx bxl-vk"></i>
+                      </Typography>
                     </Button>
                   </Link>
                   <Link>
                     <Button>
-                      <box-icon
-                        color="#6D7792"
-                        type="logo"
-                        name="instagram"
-                      ></box-icon>
+                      <Typography>
+                        <i class="bx bxl-instagram"></i>
+                      </Typography>
                     </Button>
                   </Link>
                   <Link>
                     <Button>
-                      <box-icon
-                        color="#6D7792"
-                        type="logo"
-                        name="facebook"
-                      ></box-icon>
+                      <Typography>
+                        <i class="bx bxl-facebook"></i>
+                      </Typography>
                     </Button>
                   </Link>
                   <Link>
                     <Button>
-                      <box-icon
-                        color="#6D7792"
-                        type="logo"
-                        name="twitter"
-                      ></box-icon>
+                      <Typography>
+                        <i class="bx bxl-twitter"></i>
+                      </Typography>
                     </Button>
                   </Link>
                 </Box>
@@ -180,7 +198,7 @@ export default class HomeTrailer extends Component {
                     bgcolor: "#1B2133",
                   }}
                 >
-                  <box-icon color="#fff" type="solid" name="like"></box-icon>
+                  <i class="bx bx-like"></i>
                 </Button>
                 <Button
                   sx={{
@@ -190,58 +208,62 @@ export default class HomeTrailer extends Component {
                     bgcolor: "#1B2133",
                   }}
                 >
-                  <box-icon color="#fff" type="solid" name="dislike"></box-icon>
+                  <i class="bx bx-dislike"></i>
                 </Button>
               </Box>
             </Box>
           </Box>
-          <Box width={"100%"} height={"300px"}>
+          {/* <Box width={"100%"} height={"300px"}>
             <Box
               width={"100%"}
               height={"100%"}
               display={"flex"}
-              gap={"20px"}
-              overflow={" scroll hidden"}
-              sx={{ overflowX: "auto", WebkitOverflowScrolling: "touch", }}
+              overflow={"auto"}
+              gap={'12px'}
+              padding={'10px'}
+              sx={{scrollSnapType:'x mandatory',scrollPadding:'10px'}}
             >
               {this.state.dataScroll.length !== 0
                 ? this.state.dataScroll.map((item) => (
                     <Box
-                      width={"449px"}
-                      height={"252px"}
+                      width={"342px"}
+                      height={"245px"}
                       position={"relative"}
-                      
                       sx={{
+                        flex:"0 0 100%",
+                        scrollSnapAlign:"start",
+                        scrollSnapStop:"always",
                         borderRadius: "10px",
-                        "&:hover div":{display:'flex'}
+                        "&:hover div": { display: "flex" },
                       }}
                     >
                       <Box
                         width={"100%"}
                         height={"245px"}
-                        borderRadius={'10px'}
+                        borderRadius={"10px"}
                         position={"absolute"}
                         bgcolor={"rgba(54, 87, 203, 0.65)"}
                         zIndex={2}
-                        display={'none'}
+                        display={"none"}
                       >
                         <Typography
                           position={"absolute"}
                           top={"35%"}
                           left={"35%"}
                         >
-                          <Button sx={{borderRadius:'50%'}}>
-                          <PlayArrowIcon
-                            sx={{
-                              fontSize: "80px",
-                              color: "#fff",
-                            }}
-                          />
+                          <Button sx={{ borderRadius: "50%" }}>
+                            <PlayArrowIcon
+                              sx={{
+                                fontSize: "80px",
+                                color: "#fff",
+                              }}
+                            />
                           </Button>
                         </Typography>
                       </Box>
                       <img
-                        style={{ borderRadius: "10px" }}
+                        
+                        style={{borderRadius: "10px" }}
                         src={item.img}
                         alt="#"
                       />
@@ -249,9 +271,7 @@ export default class HomeTrailer extends Component {
                   ))
                 : ""}
             </Box>
-
-            
-          </Box>
+          </Box> */}
         </Box>
       </Box>
     );

@@ -38,7 +38,6 @@ export default class Card extends Component {
           >
             <Link style={{ textDecoration: "none", color: "blue" }}>
               <Box
-                height={"60px"}
                 sx={{
                   width:{
                     md:"160px",
