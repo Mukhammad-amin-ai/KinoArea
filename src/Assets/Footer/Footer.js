@@ -24,7 +24,11 @@ export default class Footer extends Component {
           gap={"100px"}
           justifyContent={"center"}
         >
-          <Box width={"100%"} height={"548px"} position={"relative"}>
+          <Box width={"100%"} sx={{
+            md:396,
+            lg:548,
+            xl:548,
+          }} position={"relative"}>
             <Box
               width={"100%"}
               height={"100%"}
@@ -53,18 +57,31 @@ export default class Footer extends Component {
 
               <Typography
                 color={"#fff"}
-                fontSize={"50px"}
                 fontFamily={"Qanales"}
                 fontWeight={"700"}
+                sx={{
+                  fontSize:{
+
+                    md:35,
+                    lg:50,
+                    xl:50
+                  }
+                }}
               >
                 Подпишитесь на E-mail рассылку
               </Typography>
               <Typography
                 color={"#fff"}
-                fontSize={"22px"}
                 fontFamily={"Qanales"}
                 fontWeight={"500"}
                 textAlign={"center"}
+                sx={{
+                  fontSize:{
+                    md:17,
+                    lg:22,
+                    xl:22,
+                  }
+                }}
               >
                 Если хотиет быть в курсе последних новостей и новинок кино -{" "}
                 <br />
@@ -81,19 +98,44 @@ export default class Footer extends Component {
                   variant="filled"
                   label="Введите свой E-mail адрес"
                   sx={{
+                    fontSize:{
+                      md:15,
+                      lg:18,
+                      xl:18
+                    },
                     display: "flex",
                     justifyContent: "center",
                     borderRadius: "10px",
-                    width: "415px",
-                    height: "70px",
-                    padding: "0 10px 0 10px",
+                    width: {
+                      md:378,
+                      lg:415,
+                      xl:415
+                    },
+                    height: {
+                      md:62,
+                      lg:70,
+                      xl:70,
+                    },
+                    padding: {
+                      md:'0 8px 0 8px',
+                      lg:'0 10px 0 10px',
+                      xl:'0 10px 0 10px'
+                    },
                     backgroundColor: "#fff",
                   }}
                 />
                 <Button
                   sx={{
-                    width: "181px",
-                    heigh: "70px",
+                    width: {
+                      md:164,
+                      lg:181,
+                      xl:181,
+                    },
+                    height: {
+                      md:62,
+                      lg:70,
+                      xl:70
+                    },
                     bgcolor: "#F2F60F",
                     borderRadius: "10px",
                     ":hover": { bgcolor: "#F2F60F" },
@@ -104,8 +146,12 @@ export default class Footer extends Component {
                     fontSize={"18px"}
                     fontFamily={"Qanales"}
                     fontWeight={"700"}
+                    sx={{
+                      md:15,
+                      lg:18,
+                      xl:18,
+                    }}
                   >
-                    {" "}
                     Подписаться
                   </Typography>
                 </Button>
@@ -122,12 +168,18 @@ export default class Footer extends Component {
                   fontSize={"18px"}
                   fontFamily={"Qanales"}
                   fontWeight={"500"}
+                  sx={{
+                    fontSize:{
+                      md:15,
+                      lg:18,
+                      xl:18
+                    }
+                  }}
                 >
-                  Соглашаюсь на условия{" "}
+                  Соглашаюсь на условия
                   <span
                     style={{ textDecoration: "underline", color: "#F2F60F" }}
                   >
-                    {" "}
                     политики конфиденциальности
                   </span>
                 </Typography>
@@ -204,12 +256,17 @@ export default class Footer extends Component {
                   >
                     <ListItemButton
                       onClick={this.afishaClick}
-                      // sx={{ borderBottom: this.state.borderBottom }}
                     >
                       <Typography
-                        fontSize={"17px"}
                         fontFamily={"Qanelas"}
                         fontWeight={"700"}
+                        sx={{
+                          fontSize:{
+                            md:13,
+                            lg:17,
+                            xl:17
+                          }
+                        }}
                       >
                         Афиша
                       </Typography>
@@ -223,12 +280,17 @@ export default class Footer extends Component {
                   >
                     <ListItemButton
                       onClick={this.filmClick}
-                      // sx={{ borderBottom: this.state.borderFilm }}
                     >
                       <Typography
-                        fontSize={"17px"}
                         fontFamily={"Qanelas"}
                         fontWeight={"700"}
+                        sx={{
+                          fontSize:{
+                            md:13,
+                            lg:17,
+                            xl:17
+                          }
+                        }}
                       >
                         Фильмы
                       </Typography>
@@ -242,12 +304,17 @@ export default class Footer extends Component {
                   >
                     <ListItemButton
                       onClick={this.aktyorClick}
-                      // sx={{ borderBottom: this.state.borderAktyor }}
                     >
                       <Typography
-                        fontSize={"17px"}
                         fontFamily={"Qanelas"}
                         fontWeight={"700"}
+                        sx={{
+                          fontSize:{
+                            md:13,
+                            lg:17,
+                            xl:17
+                          }
+                        }}
                       >
                         Актёры
                       </Typography>
@@ -261,12 +328,17 @@ export default class Footer extends Component {
                   >
                     <ListItemButton
                       onClick={this.novostiClick}
-                      // sx={{ borderBottom: this.state.borderNovosti }}
                     >
                       <Typography
-                        fontSize={"17px"}
                         fontFamily={"Qanelas"}
                         fontWeight={"700"}
+                        sx={{
+                          fontSize:{
+                            md:13,
+                            lg:17,
+                            xl:17
+                          }
+                        }}
                       >
                         Новости
                       </Typography>
@@ -280,15 +352,19 @@ export default class Footer extends Component {
                   >
                     <ListItemButton
                       onClick={this.podborkaClick}
-                      // sx={{ borderBottom: this.state.borderPodborka }}
                     >
                       <Typography
-                        fontSize={"17px"}
                         fontFamily={"Qanelas"}
                         fontWeight={"700"}
+                        sx={{
+                          fontSize:{
+                            md:13,
+                            lg:17,
+                            xl:17
+                          }
+                        }}
                       >
                         Подборки
-                        {/* Категории */}
                       </Typography>
                     </ListItemButton>
                   </Link>
@@ -300,12 +376,17 @@ export default class Footer extends Component {
                   >
                     <ListItemButton
                       onClick={this.kategoriiClick}
-                      // sx={{ borderBottom: this.state.borderKategotii }}
                     >
                       <Typography
-                        fontSize={"17px"}
                         fontFamily={"Qanelas"}
                         fontWeight={"700"}
+                        sx={{
+                          fontSize:{
+                            md:13,
+                            lg:17,
+                            xl:17
+                          }
+                        }}
                       >
                         Категории
                       </Typography>
@@ -324,17 +405,26 @@ export default class Footer extends Component {
               gap={"20px"}
             >
               <Typography
-                fontSize={"15"}
+                  sx={{
+                    fontSize:{
+                      md:13,
+                      lg:17,
+                      xl:17
+                    }
+                  }}
                 color={" rgba(227, 230, 240, 0.72)"}
                 fontFamily={"Qanales"}
               >
                 2020 © Kinoarea. Все права защищены
               </Typography>
               <Typography
-                fontSize={"15"}
                 color={" rgba(227, 230, 240, 0.72)"}
                 fontFamily={"Qanales"}
-                sx={{textDecoration:'underline'}}
+                sx={{textDecoration:'underline',fontSize:{
+                  md:13,
+                  lg:17,
+                  xl:17
+                }}}
               >
                 Политика конфиденциальности
               </Typography>

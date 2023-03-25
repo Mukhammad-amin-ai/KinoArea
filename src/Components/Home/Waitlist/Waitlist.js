@@ -58,14 +58,20 @@ export default class Waitlist extends Component {
           >
             <Typography
               variant="h1"
-              fontSize={"65px"}
               color={"#fff"}
               fontFamily={"Qanelas"}
+              sx={{
+                fontSize:{
+                  md:40,
+                  lg:65,
+                  xl:65
+                }
+              }}
             >
               Ожидаемые новинки
             </Typography>
             <Box width={"30%"} display={"flex"} justifyContent={"end"}>
-              <Stack spacing={2}>
+              {/* <Stack spacing={2}>
                 <Pagination
                   count={5}
                   color={"primary"}
@@ -79,7 +85,7 @@ export default class Waitlist extends Component {
                     />
                   )}
                 />
-              </Stack>
+              </Stack> */}
             </Box>
           </Box>
           <Box

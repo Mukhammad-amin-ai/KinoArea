@@ -6,7 +6,6 @@ import most3 from "../../../Images/most 3.png";
 import most4 from "../../../Images/most 4.png";
 import most5 from "../../../Images/most 5.png";
 
-
 export default class MostPopular extends Component {
   state = {
     mostPopular: [
@@ -40,12 +39,17 @@ export default class MostPopular extends Component {
         money: "$1.8 млн",
         month: "$78.7 млн за 11 недель",
       },
-      
     ],
   };
   render() {
     return (
-      <Box width={"100%"} height={"300px"} bgcolor={"#151A26"}>
+      <Box width={"100%"} height={"300px"} sx={{
+        height:{
+          md:600,
+          lg:300,
+          xl:300
+        }
+      }} bgcolor={"#151A26"}>
         <Box width={"80%"} height={"100%"} marginLeft={"10%"}>
           <Box
             width={"100%"}
@@ -53,6 +57,13 @@ export default class MostPopular extends Component {
             display={"flex"}
             alignItems={"center"}
             justifyContent={"space-between"}
+            sx={{
+              display:{
+                md:'none',
+                lg:'flex',
+                xl:'flex'
+              }
+            }}
           >
             <Box
               width={"60%"}
@@ -89,46 +100,207 @@ export default class MostPopular extends Component {
               >
                 <Typography
                   variant="p"
-                  fontSize={"18px"}
                   color={"#6D717D"}
-                  sx={{ ":hover": { color: "#fff" } }}
+                  sx={{
+                    
+                    ":hover": { color: "#fff" },
+                  }}
                 >
                   Россия
                 </Typography>
               </Button>
               <Button
                 sx={{
-                  width: "160px",
+                  width: {
+                    md:200,
+                    lg:160,
+                    xl:160
+                  },
                   height: "50px",
                 }}
               >
                 <Typography
                   variant="p"
-                  fontSize={"18px"}
                   color={"#6D717D"}
-                  sx={{ ":hover": { color: "#fff" } }}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 18,
+                      xl: 18,
+                    },
+                    ":hover": { color: "#fff" },
+                  }}
                 >
                   Весь мир
                 </Typography>
               </Button>
               <Button
                 sx={{
-                  width: "160px",
+                  width: {
+                    md:260,
+                    lg:160,
+                    xl:160
+                  },
                   height: "50px",
                 }}
               >
                 <Typography
                   variant="p"
-                  fontSize={"18px"}
                   color={"#6D717D"}
-                  sx={{ ":hover": { color: "#fff" } }}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 18,
+                      xl: 18,
+                    },
+                    ":hover": { color: "#fff" },
+                  }}
                 >
                   США и Канада
                 </Typography>
               </Button>
             </Box>
           </Box>
-          <Box width={"100%"} height={"60%"} display={'flex'} alignItems={'center'} >
+            <Box
+            width={"100%"}
+            height={"100px"}
+            sx={{
+              display:{
+                md:'flex',
+                lg:'none',
+                xl:'none'
+              }
+            }}
+            justifyContent={"space-between"}
+          >
+            <Box width={'535px'} height={'100%'} display={'flex'} flexDirection={'column'}>
+
+            <Box
+              width={"100%"}
+              height={"100%"}
+              display={"flex"}
+              alignItems={"center"}
+              gap={"10px"}
+              color={"#fff"}
+              >
+              <Typography
+              variant="h1"
+              fontSize={"65px"}
+              fontFamily={"Qanales"}
+              fontWeight={"900"}
+              sx={{
+                fontSize: {
+                  md: 40,
+                  lg: 65,
+                  xl: 65,
+                  },
+                }}
+                >
+                Кассовые сборы
+                </Typography>
+            </Box>
+            <Box
+              width={"100%"}
+              height={"100%"}
+              display={"flex"}
+              alignItems={"center"}
+              justifyContent={"start"}
+            >
+              <Button
+              sx={{
+                  width: "160px",
+                  height: "50px",
+                }}
+              >
+                <Typography
+                variant="p"
+                  color={"#6D717D"}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 18,
+                      xl: 18,
+                    },
+                    ":hover": { color: "#fff" },
+                  }}
+                >
+                  Россия
+                </Typography>
+                </Button>
+                <Button
+                sx={{
+                  width:'160px',
+                  height: "50px",
+                }}
+                >
+                <Typography
+                  variant="p"
+                  color={"#6D717D"}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 18,
+                      xl: 18,
+                    },
+                    ":hover": { color: "#fff" },
+                  }}
+                  >
+                  Весь мир
+                </Typography>
+                </Button>
+              <Button
+              sx={{
+                width:'160px',
+                height: "50px",
+                }}
+              >
+                <Typography
+                  variant="p"
+                  color={"#6D717D"}
+                  sx={{
+                    fontSize: {
+                      md: 15,
+                      lg: 18,
+                      xl: 18,
+                    },
+                    ":hover": { color: "#fff" },
+                  }}
+                >
+                  США и Канада
+                </Typography>
+              </Button>
+            </Box>
+          </Box>
+                  <Typography variant="h1" fontSize={"20px"} color={'white'}>
+                    13 марта — 15 марта
+                  </Typography>
+          </Box>
+         
+         
+         
+          <Box
+            width={"100%"}
+            height={"60%"}
+            display={"flex"}
+            alignItems={"center"}
+            sx={{
+              height:{
+                md:'80%',
+                lg:'60%',
+                xl:'60%'
+              },
+              justifyContent:{
+                md:'space-between',
+                lg:'unset',
+                xl:'unset'
+              },
+              flexWrap:{
+                md:'wrap',
+                lg:'unset',
+                xl:'unset'
+              }
+            }}
+          >
             {this.state.mostPopular.length !== 0
               ? this.state.mostPopular.map((item) => (
                   <Box

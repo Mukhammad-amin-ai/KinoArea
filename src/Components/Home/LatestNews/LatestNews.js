@@ -90,7 +90,7 @@ export default class LatestNews extends Component {
             width={"100%"}
             height={"1200px"}
             display={"flex"}
-            alignItems={"center"}
+            alignItems={"stretch"}
             gap={"20px"}
             sx={{
               flexDirection:{
