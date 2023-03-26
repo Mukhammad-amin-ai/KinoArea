@@ -23,9 +23,8 @@ export default class PopularActers extends Component {
         gap={"40px"}
         sx={{
           height:{
-
             md:500,
-            lg:800,
+            lg:650,
             xl:800
           }
         }}
@@ -54,14 +53,14 @@ export default class PopularActers extends Component {
               sx={{
                 fontSize: {
                   md: "35px",
-                  lg: "50px",
+                  lg: "45px",
                   xl: "50px",
                 },
               }}
               variant="h3"
-              fontSize={"50px"}
               fontFamily={"Qanelas"}
               color={"#fff"}
+              
             >
               Популярные персоны
             </Typography>
@@ -121,7 +120,7 @@ export default class PopularActers extends Component {
         sx={{
           height:{
             md:266,
-            lg:444,
+            lg:380,
             xl:444
           }
         }}
@@ -133,12 +132,12 @@ export default class PopularActers extends Component {
             sx={{
               width: {
                 md: 266,
-                lg: 444,
+                lg: 380,
                 xl: 444,
               },
               height: {
                 md: 266,
-                lg: 444,
+                lg: 380,
                 xl: 444,
               },
             }}
@@ -147,12 +146,12 @@ export default class PopularActers extends Component {
               sx={{
                 width: {
                   md: 266,
-                  lg: 444,
+                  lg: 380,
                   xl: 444,
                 },
                 height: {
                   md: 266,
-                  lg: 444,
+                  lg: 380,
                   xl: 444,
                 },
                 position: "relative",
@@ -163,12 +162,12 @@ export default class PopularActers extends Component {
                 sx={{
                   width: {
                     md: 266,
-                    lg: 444,
+                    lg: 380,
                     xl: 444,
                   },
                   height: {
                     md: 266,
-                    lg: 444,
+                    lg: 380,
                     xl: 444,
                   },
                 }}
@@ -259,12 +258,12 @@ export default class PopularActers extends Component {
             sx={{
               width: {
                 md: 266,
-                lg: 444,
+                lg: 380,
                 xl: 444,
               },
               height: {
                 md: 266,
-                lg: 444,
+                lg: 380,
                 xl: 444,
               },
             }}
@@ -273,12 +272,12 @@ export default class PopularActers extends Component {
               sx={{
                 width: {
                   md: 266,
-                  lg: 444,
+                  lg: 380,
                   xl: 444,
                 },
                 height: {
                   md: 266,
-                  lg: 444,
+                  lg: 380,
                   xl: 444,
                 },
                 position: "relative",
@@ -289,12 +288,12 @@ export default class PopularActers extends Component {
                 sx={{
                   width: {
                     md: 266,
-                    lg: 444,
+                    lg: 380,
                     xl: 444,
                   },
                   height: {
                     md: 266,
-                    lg: 444,
+                    lg: 380,
                     xl: 444,
                   },
                 }}
@@ -388,7 +387,7 @@ export default class PopularActers extends Component {
               },
               height: {
                 md: 266,
-                lg: 444,
+                lg: 380,
                 xl: 444,
               },
             }}

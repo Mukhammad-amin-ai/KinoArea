@@ -45,6 +45,7 @@ export default class MostPopular extends Component {
     return (
       <Box width={"100%"} height={"300px"} sx={{
         height:{
+          sm:800,
           md:600,
           lg:300,
           xl:300
@@ -59,6 +60,7 @@ export default class MostPopular extends Component {
             justifyContent={"space-between"}
             sx={{
               display:{
+                sm:'none',
                 md:'none',
                 lg:'flex',
                 xl:'flex'
@@ -166,6 +168,7 @@ export default class MostPopular extends Component {
             height={"100px"}
             sx={{
               display:{
+                sm:'flex',
                 md:'flex',
                 lg:'none',
                 xl:'none'
@@ -285,16 +288,19 @@ export default class MostPopular extends Component {
             alignItems={"center"}
             sx={{
               height:{
+                sm:'90%',
                 md:'80%',
                 lg:'60%',
                 xl:'60%'
               },
               justifyContent:{
+                sm:'space-between',
                 md:'space-between',
                 lg:'unset',
                 xl:'unset'
               },
               flexWrap:{
+                sm:'wrap',
                 md:'wrap',
                 lg:'unset',
                 xl:'unset'

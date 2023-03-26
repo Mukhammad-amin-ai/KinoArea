@@ -155,28 +155,28 @@ export default class HomeTrailer extends Component {
                 >
                   <Link style={{ textDecoration: "none" }}>
                     <Button>
-                      <Typography>
+                      <Typography sx={{color: '#6D7792',fontSize:20}}>
                         <i class="bx bxl-vk"></i>
                       </Typography>
                     </Button>
                   </Link>
-                  <Link>
+                  <Link >
                     <Button>
-                      <Typography>
+                      <Typography  sx={{color: '#6D7792',fontSize:20}} >
                         <i class="bx bxl-instagram"></i>
                       </Typography>
                     </Button>
                   </Link>
                   <Link>
                     <Button>
-                      <Typography>
+                      <Typography  sx={{color: '#6D7792',fontSize:20}}>
                         <i class="bx bxl-facebook"></i>
                       </Typography>
                     </Button>
                   </Link>
                   <Link>
                     <Button>
-                      <Typography>
+                      <Typography  sx={{color: '#6D7792',fontSize:20}}>
                         <i class="bx bxl-twitter"></i>
                       </Typography>
                     </Button>
@@ -196,6 +196,9 @@ export default class HomeTrailer extends Component {
                     height: "58.87px",
                     borderRadius: "10px",
                     bgcolor: "#1B2133",
+                    color:'#fff',
+                    fontSize:'20px'
+                    
                   }}
                 >
                   <i class="bx bx-like"></i>
@@ -206,6 +209,8 @@ export default class HomeTrailer extends Component {
                     height: "58.87px",
                     borderRadius: "10px",
                     bgcolor: "#1B2133",
+                    color:'#fff',
+                    fontSize:'20px'
                   }}
                 >
                   <i class="bx bx-dislike"></i>

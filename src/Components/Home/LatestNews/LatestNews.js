@@ -88,7 +88,7 @@ export default class LatestNews extends Component {
           </Box>
           <Box
             width={"100%"}
-            height={"1200px"}
+            height={"900px"}
             display={"flex"}
             alignItems={"stretch"}
             gap={"20px"}
@@ -97,7 +97,12 @@ export default class LatestNews extends Component {
                 md:'column',
                 lg:'unset',
                 xl:'unset'
-              }
+              },
+              // height:{
+              //   md:900,
+              //   lg:900,
+              //   xl:900
+              // }
             }}
           >
             <Box

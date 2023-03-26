@@ -10,12 +10,12 @@ export default class Card extends Component {
         sx={{
           width: {
             md: "202px",
-            lg: "339px",
+            lg: "260px",
             xl: "339px",
           },
           height: {
             md: "311px",
-            lg: "520px",
+            lg: "430px",
             xl: "520px",
           },
         }}

@@ -88,8 +88,9 @@ export default class Popular extends Component {
             gap={"10px"}
             sx={{
               flexDirection: {
+                sm:'column',
                 md: "column",
-                lg: "unset",
+                lg: "column",
                 xl: "unset",
               },
             }}
@@ -108,8 +109,9 @@ export default class Popular extends Component {
                 fontWeight={"900"}
                 sx={{
                   fontSize: {
+                    sm:20,
                     md: "32px",
-                    lg: "45px",
+                    lg: "37px",
                     xl: "45px",
                   },
                 }}
@@ -135,6 +137,7 @@ export default class Popular extends Component {
                       fontWeight={"700"}
                       sx={{
                         fontSize: {
+                          sm:15,
                           md: "15px",
                           lg: "18px",
                           xl: "18px",
@@ -154,6 +157,7 @@ export default class Popular extends Component {
                             variant="h2"
                             sx={{
                               fontSize: {
+                                sm:15,
                                 md: "15px",
                                 lg: "18px",
                                 xl: "18px",
@@ -217,7 +221,7 @@ export default class Popular extends Component {
                   count={5}
                   color={"primary"}
                   renderItem={(item) => (
-                    <PaginationItem
+                    <PaginationItem sx={{color:'white'}}
                       slots={{
                         previous: ArrowBackIcon,
                         next: ArrowForwardIcon,

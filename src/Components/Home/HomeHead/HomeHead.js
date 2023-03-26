@@ -24,16 +24,20 @@ export default class Home_head extends Component {
               justifyContent={"center"}
               sx={{
                 flexDirection: {
+                  sm: "column",
                   md: "column",
-                  lg: "unset",
+                  lg: "column",
                   xl: "unset",
+                },
+                alignItems: {
+                  sm: "center",
                 },
               }}
             >
               <Box
                 height={"100%"}
                 display={"flex"}
-                justifyContent={'center'}
+                justifyContent={"center"}
                 alignItems={"center"}
                 sx={{
                   width: {
@@ -51,7 +55,7 @@ export default class Home_head extends Component {
                   sx={{
                     fontSize: {
                       md: "40px",
-                      lg: "50px",
+                      lg: "45px",
                       xl: "50px",
                     },
                   }}
@@ -65,6 +69,7 @@ export default class Home_head extends Component {
                 display={"flex"}
                 sx={{
                   width: {
+                    sm: "100%",
                     md: "615px",
                     lg: "765px",
                     xl: "765px",
@@ -76,9 +81,21 @@ export default class Home_head extends Component {
                     display: "flex",
                     justifyContent: "center",
                     color: "#838D97",
+                    flexWrap: {
+                      sm: "wrap",
+                      md:'unset',
+                      lg:'unset',
+                      xl:'unset'
+                    },
                   }}
                 >
-                  <ListItem>
+                  <ListItem
+                    sx={{
+                      width: {
+                        sm: 100,
+                      },
+                    }}
+                  >
                     <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
@@ -87,7 +104,11 @@ export default class Home_head extends Component {
                       <Typography>Все</Typography>
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem  sx={{
+                      width: {
+                        sm: 130,
+                      },
+                    }}>
                     <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
@@ -96,7 +117,11 @@ export default class Home_head extends Component {
                       <Typography>Боевики </Typography>
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem  sx={{
+                      width: {
+                        sm: 180,
+                      },
+                    }}>
                     <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
@@ -105,7 +130,11 @@ export default class Home_head extends Component {
                       <Typography>Приключения </Typography>
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem  sx={{
+                      width: {
+                        sm: 150,
+                      },
+                    }}>
                     <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
@@ -114,7 +143,11 @@ export default class Home_head extends Component {
                       <Typography>Комедии</Typography>
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem  sx={{
+                      width: {
+                        sm: 150,
+                      },
+                    }}>
                     <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
@@ -123,16 +156,24 @@ export default class Home_head extends Component {
                       <Typography>Фантастика </Typography>
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem  sx={{
+                      width: {
+                        sm: 100,
+                      },
+                    }}>
                     <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
                       }}
                     >
-                      <Typography>Триллеры </Typography>
+                      <Typography >Триллеры </Typography>
                     </ListItemButton>
                   </ListItem>
-                  <ListItem>
+                  <ListItem  sx={{
+                      width: {
+                        sm: 100,
+                      },
+                    }}>
                     <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
