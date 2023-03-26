@@ -9,11 +9,13 @@ export default class Card extends Component {
         position={"relative"}
         sx={{
           width: {
+            sm:210,
             md: "202px",
             lg: "260px",
             xl: "339px",
           },
           height: {
+            sm:323,
             md: "311px",
             lg: "430px",
             xl: "520px",
@@ -40,11 +42,13 @@ export default class Card extends Component {
               <Box
                 sx={{
                   width:{
+                    sm:166,
                     md:"160px",
                     lg:'224px',
                     xl:'224px'
                   },
                   height:{
+                    sm:50,
                     md:"49px",
                     lg:'71px',
                     xl:'71px'
@@ -58,6 +62,7 @@ export default class Card extends Component {
               >
                 <Typography variant="p"sx={{
                   fontSize:{
+                    sm:14,
                     md:'14px',
                     lg:'18px',
                     xl:'18px'
@@ -77,11 +82,13 @@ export default class Card extends Component {
         <Box
           sx={{
             width: {
+              sm:45,
               md: "44px",
               lg: "62px",
               xl: "62px",
             },
             height: {
+              sm:24,
               md: "24px",
               lg: "33px",
               xl: "33px",
@@ -101,11 +108,13 @@ export default class Card extends Component {
             fontFamily={"Qanales"}
             sx={{
               fontSize: {
+                sm:12,
                 md: "15px",
                 lg: "18px",
                 xl: "18px",
               },
               lineHeight: {
+                sm:'25px',
                 md: "20px",
                 lg: "33px",
                 xl: "33px",
@@ -127,6 +136,7 @@ export default class Card extends Component {
             variant="p"
             sx={{
               fontSize: {
+                sm:15,
                 md: "15px",
                 lg: "18px",
                 xl: "18px",
@@ -142,6 +152,7 @@ export default class Card extends Component {
             variant="p"
             sx={{
               fontSize: {
+                sm:12,
                 md: "12px",
                 lg: "15px",
                 xl: "15px",

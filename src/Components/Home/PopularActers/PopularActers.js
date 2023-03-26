@@ -22,11 +22,11 @@ export default class PopularActers extends Component {
         flexDirection="column"
         gap={"40px"}
         sx={{
-          height:{
-            md:500,
-            lg:650,
-            xl:800
-          }
+          height: {
+            md: 500,
+            lg: 650,
+            xl: 800,
+          },
         }}
       >
         <Box
@@ -37,6 +37,7 @@ export default class PopularActers extends Component {
           justifyContent={"space-evenly"}
           sx={{
             flexDirection: {
+              sm: "column",
               md: "column",
               lg: "unset",
               xl: "unset",
@@ -52,6 +53,7 @@ export default class PopularActers extends Component {
             <Typography
               sx={{
                 fontSize: {
+                  sm: 29,
                   md: "35px",
                   lg: "45px",
                   xl: "50px",
@@ -60,7 +62,6 @@ export default class PopularActers extends Component {
               variant="h3"
               fontFamily={"Qanelas"}
               color={"#fff"}
-              
             >
               Популярные персоны
             </Typography>
@@ -73,6 +74,7 @@ export default class PopularActers extends Component {
             justifyContent={"center"}
             sx={{
               justifyContent: {
+                sm: "start",
                 md: "start",
                 lg: "center",
                 xl: "center",
@@ -117,275 +119,326 @@ export default class PopularActers extends Component {
           </Box>
         </Box>
         <Box
-        sx={{
-          height:{
-            md:266,
-            lg:380,
-            xl:444
-          }
-        }}
+          sx={{
+            height: {
+              md: 266,
+              lg: 380,
+              xl: 444,
+            },
+            flexDirection: {
+              sm: "column",
+              md: "unset",
+              lg: "unset",
+              xl: "unset",
+            },
+            gap: {
+              sm: 5,
+              md: 0,
+              lg: 0,
+              xl: 0,
+            },
+            alignItems: {
+              sm: "center",
+              md: "unset",
+              lg: "unset",
+              xl: "unset",
+            },
+          }}
           width={"100%"}
           display={"flex"}
           justifyContent={"space-evenly"}
         >
           <Box
-            sx={{
-              width: {
-                md: 266,
-                lg: 380,
-                xl: 444,
-              },
-              height: {
-                md: 266,
-                lg: 380,
-                xl: 444,
-              },
-            }}
+            width={"100%"}
+            height={"100%"}
+            display={"flex"}
+            justifyContent={"space-evenly"}
           >
-            <Card
+            <Box
               sx={{
                 width: {
+                  sm: 321,
                   md: 266,
                   lg: 380,
                   xl: 444,
                 },
                 height: {
+                  sm: 321,
                   md: 266,
                   lg: 380,
                   xl: 444,
                 },
-                position: "relative",
               }}
             >
-              <CardMedia
-                component="img"
+              <Card
                 sx={{
                   width: {
+                    sm: 321,
                     md: 266,
                     lg: 380,
                     xl: 444,
                   },
                   height: {
+                    sm: 321,
                     md: 266,
                     lg: 380,
                     xl: 444,
                   },
-                }}
-                image={popular1}
-              />
-              <Typography
-                variant="h4"
-                sx={{
-                  fontSize: {
-                    md: 12,
-                    lg: 15,
-                    xl: 15,
-                  },
-                }}
-                fontFamily={"Qanelas"}
-                color={"#F2F60F;"}
-                position={"absolute"}
-                top={"20px"}
-                left={"20px"}
-              >
-                1-е место
-              </Typography>
-              <Box
-                width={"300px"}
-                height={"100px"}
-                position={"absolute"}
-                left={"40px"}
-                sx={{
-                  bottom: {
-                    md: -20,
-                    lg: 0,
-                    xl: 0,
-                  },
+                  position: "relative",
                 }}
               >
-                <Typography
-                  variant="h2"
-                  fontSize={"27px"}
-                  fontFamily={"Qanales"}
-                  fontWeight={"700"}
-                  color={"#fff"}
+                <CardMedia
+                  component="img"
                   sx={{
-                    fontSize: {
-                      md: 20,
-                      lg: 27,
-                      xl: 27,
+                    width: {
+                      sm: 321,
+                      md: 266,
+                      lg: 380,
+                      xl: 444,
+                    },
+                    height: {
+                      sm: 321,
+                      md: 266,
+                      lg: 380,
+                      xl: 444,
                     },
                   }}
-                >
-                  Квентин Тарантино
-                </Typography>
+                  image={popular1}
+                />
                 <Typography
-                  variant="h2"
-                  fontSize={"20px"}
-                  fontFamily={"Qanales"}
-                  fontWeight={"600"}
-                  color={"rgba(255, 255, 255, 0.35);"}
+                  variant="h4"
                   sx={{
                     fontSize: {
-                      md: 15,
-                      lg: 20,
-                      xl: 20,
-                    },
-                  }}
-                >
-                  Quentin Tarantino
-                </Typography>
-                <Typography
-                  variant="h2"
-                  fontSize={"15px"}
-                  fontFamily={"Qanales"}
-                  fontWeight={"500"}
-                  sx={{
-                    fontSize: {
+                      sm: 12,
                       md: 12,
                       lg: 15,
                       xl: 15,
                     },
                   }}
-                  color={"#F2F60F"}
+                  fontFamily={"Qanelas"}
+                  color={"#F2F60F;"}
+                  position={"absolute"}
+                  top={"20px"}
+                  left={"20px"}
                 >
-                  57 лет
+                  1-е место
                 </Typography>
-              </Box>
-            </Card>
-          </Box>
-          <Box
-            sx={{
-              width: {
-                md: 266,
-                lg: 380,
-                xl: 444,
-              },
-              height: {
-                md: 266,
-                lg: 380,
-                xl: 444,
-              },
-            }}
-          >
-            <Card
+                <Box
+                  width={"300px"}
+                  height={"100px"}
+                  position={"absolute"}
+                  left={"40px"}
+                  sx={{
+                    bottom: {
+                      sm: -20,
+                      md: -20,
+                      lg: 0,
+                      xl: 0,
+                    },
+                  }}
+                >
+                  <Typography
+                    variant="h2"
+                    fontSize={"27px"}
+                    fontFamily={"Qanales"}
+                    fontWeight={"700"}
+                    color={"#fff"}
+                    sx={{
+                      fontSize: {
+                        sm: 20,
+                        md: 20,
+                        lg: 27,
+                        xl: 27,
+                      },
+                    }}
+                  >
+                    Квентин Тарантино
+                  </Typography>
+                  <Typography
+                    variant="h2"
+                    fontSize={"20px"}
+                    fontFamily={"Qanales"}
+                    fontWeight={"600"}
+                    color={"rgba(255, 255, 255, 0.35);"}
+                    sx={{
+                      fontSize: {
+                        sm: 15,
+                        md: 15,
+                        lg: 20,
+                        xl: 20,
+                      },
+                    }}
+                  >
+                    Quentin Tarantino
+                  </Typography>
+                  <Typography
+                    variant="h2"
+                    fontSize={"15px"}
+                    fontFamily={"Qanales"}
+                    fontWeight={"500"}
+                    sx={{
+                      fontSize: {
+                        sm: 12,
+                        md: 12,
+                        lg: 15,
+                        xl: 15,
+                      },
+                    }}
+                    color={"#F2F60F"}
+                  >
+                    57 лет
+                  </Typography>
+                </Box>
+              </Card>
+            </Box>
+            <Box
               sx={{
                 width: {
+                  sm: 321,
                   md: 266,
                   lg: 380,
                   xl: 444,
                 },
                 height: {
+                  sm: 321,
                   md: 266,
                   lg: 380,
                   xl: 444,
                 },
-                position: "relative",
               }}
             >
-              <CardMedia
-                component="img"
+              <Card
                 sx={{
                   width: {
+                    sm: 321,
                     md: 266,
                     lg: 380,
                     xl: 444,
                   },
                   height: {
+                    sm: 321,
                     md: 266,
                     lg: 380,
                     xl: 444,
                   },
+                  position: "relative",
                 }}
-                image={popular2}
-              />
-              <Typography
-                variant="h4"
-                sx={{
-                  fontSize: {
-                    md: 12,
-                    lg: 15,
-                    xl: 15,
-                  },
-                }}
-                fontFamily={"Qanelas"}
-                color={"#F2F60F;"}
-                position={"absolute"}
-                top={"20px"}
-                left={"20px"}
               >
-                2-е место
-              </Typography>
-              <Box
-                width={"300px"}
-                height={"100px"}
-                position={"absolute"}
-                sx={{
-                  bottom: {
-                    md: -20,
-                    lg: 0,
-                    xl: 0,
-                  },
-                }}
-                left={"40px"}
-              >
-                <Typography
-                  variant="h2"
-                  fontFamily={"Qanales"}
-                  fontWeight={"700"}
-                  color={"#fff"}
+                <CardMedia
+                  component="img"
                   sx={{
-                    fontSize: {
-                      md: 20,
-                      lg: 27,
-                      xl: 27,
+                    width: {
+                      sm: 321,
+
+                      md: 266,
+                      lg: 380,
+                      xl: 444,
+                    },
+                    height: {
+                      sm: 321,
+
+                      md: 266,
+                      lg: 380,
+                      xl: 444,
                     },
                   }}
-                >
-                  Джейсон Стейтем
-                </Typography>
+                  image={popular2}
+                />
                 <Typography
-                  variant="h2"
-                  fontFamily={"Qanales"}
-                  fontWeight={"600"}
-                  color={"rgba(255, 255, 255, 0.35);"}
+                  variant="h4"
                   sx={{
                     fontSize: {
-                      md: 15,
-                      lg: 20,
-                      xl: 20,
-                    },
-                  }}
-                >
-                  Jason Statham
-                </Typography>
-                <Typography
-                  variant="h2"
-                  fontSize={"15px"}
-                  fontFamily={"Qanales"}
-                  fontWeight={"500"}
-                  sx={{
-                    fontSize: {
+                      sm: 12,
                       md: 12,
                       lg: 15,
                       xl: 15,
                     },
                   }}
-                  color={"#F2F60F"}
+                  fontFamily={"Qanelas"}
+                  color={"#F2F60F;"}
+                  position={"absolute"}
+                  top={"20px"}
+                  left={"20px"}
                 >
-                  52 года
+                  2-е место
                 </Typography>
-              </Box>
-            </Card>
+                <Box
+                  width={"300px"}
+                  height={"100px"}
+                  position={"absolute"}
+                  sx={{
+                    bottom: {
+                      sm: -20,
+                      md: -20,
+                      lg: 0,
+                      xl: 0,
+                    },
+                  }}
+                  left={"40px"}
+                >
+                  <Typography
+                    variant="h2"
+                    fontFamily={"Qanales"}
+                    fontWeight={"700"}
+                    color={"#fff"}
+                    sx={{
+                      fontSize: {
+                        sm: 20,
+                        md: 20,
+                        lg: 27,
+                        xl: 27,
+                      },
+                    }}
+                  >
+                    Джейсон Стейтем
+                  </Typography>
+                  <Typography
+                    variant="h2"
+                    fontFamily={"Qanales"}
+                    fontWeight={"600"}
+                    color={"rgba(255, 255, 255, 0.35);"}
+                    sx={{
+                      fontSize: {
+                        sm: 15,
+                        md: 15,
+                        lg: 20,
+                        xl: 20,
+                      },
+                    }}
+                  >
+                    Jason Statham
+                  </Typography>
+                  <Typography
+                    variant="h2"
+                    fontSize={"15px"}
+                    fontFamily={"Qanales"}
+                    fontWeight={"500"}
+                    sx={{
+                      fontSize: {
+                        sm: 12,
+                        md: 12,
+                        lg: 15,
+                        xl: 15,
+                      },
+                    }}
+                    color={"#F2F60F"}
+                  >
+                    52 года
+                  </Typography>
+                </Box>
+              </Card>
+            </Box>
           </Box>
           <Box
             sx={{
               width: {
+                sm: 661,
                 md: 296,
                 lg: 496,
                 xl: 496,
               },
               height: {
+                sm: 321,
                 md: 266,
                 lg: 380,
                 xl: 444,
@@ -413,6 +466,7 @@ export default class PopularActers extends Component {
                   fontWeight={"600"}
                   sx={{
                     fontSize: {
+                      sm: 15,
                       md: 15,
                       lg: 20,
                       xl: 20,
@@ -428,6 +482,7 @@ export default class PopularActers extends Component {
                   fontWeight={"600"}
                   sx={{
                     fontSize: {
+                      sm: 11,
                       md: 11,
                       lg: 15,
                       xl: 15,
@@ -443,6 +498,7 @@ export default class PopularActers extends Component {
                   fontWeight={"500"}
                   sx={{
                     fontSize: {
+                      sm: 11,
                       md: 11,
                       lg: 15,
                       xl: 15,
@@ -459,6 +515,7 @@ export default class PopularActers extends Component {
                 fontFamily={"Qanelas"}
                 sx={{
                   fontSize: {
+                    sm: 15,
                     md: 15,
                     lg: 20,
                     xl: 20,
@@ -486,6 +543,7 @@ export default class PopularActers extends Component {
                   fontWeight={"600"}
                   sx={{
                     fontSize: {
+                      sm: 15,
                       md: 15,
                       lg: 20,
                       xl: 20,
@@ -501,6 +559,7 @@ export default class PopularActers extends Component {
                   fontWeight={"600"}
                   sx={{
                     fontSize: {
+                      sm: 11,
                       md: 11,
                       lg: 15,
                       xl: 15,
@@ -516,6 +575,7 @@ export default class PopularActers extends Component {
                   fontWeight={"500"}
                   sx={{
                     fontSize: {
+                      sm: 11,
                       md: 11,
                       lg: 15,
                       xl: 15,
@@ -532,6 +592,7 @@ export default class PopularActers extends Component {
                 fontFamily={"Qanelas"}
                 sx={{
                   fontSize: {
+                    sm: 15,
                     md: 15,
                     lg: 20,
                     xl: 20,
@@ -558,6 +619,7 @@ export default class PopularActers extends Component {
                   fontFamily={"Qanelas"}
                   sx={{
                     fontSize: {
+                      sm: 15,
                       md: 15,
                       lg: 20,
                       xl: 20,
@@ -573,6 +635,7 @@ export default class PopularActers extends Component {
                   fontFamily={"Qanelas"}
                   sx={{
                     fontSize: {
+                      sm: 11,
                       md: 11,
                       lg: 15,
                       xl: 15,
@@ -589,6 +652,7 @@ export default class PopularActers extends Component {
                   fontWeight={"500"}
                   sx={{
                     fontSize: {
+                      sm: 11,
                       md: 11,
                       lg: 15,
                       xl: 15,
@@ -605,6 +669,7 @@ export default class PopularActers extends Component {
                 fontFamily={"Qanelas"}
                 sx={{
                   fontSize: {
+                    sm: 15,
                     md: 15,
                     lg: 20,
                     xl: 20,
@@ -630,6 +695,7 @@ export default class PopularActers extends Component {
                   fontFamily={"Qanelas"}
                   sx={{
                     fontSize: {
+                      sm: 15,
                       md: 15,
                       lg: 20,
                       xl: 20,
@@ -645,6 +711,7 @@ export default class PopularActers extends Component {
                   fontFamily={"Qanelas"}
                   sx={{
                     fontSize: {
+                      sm: 11,
                       md: 11,
                       lg: 15,
                       xl: 15,
@@ -661,6 +728,7 @@ export default class PopularActers extends Component {
                   fontWeight={"500"}
                   sx={{
                     fontSize: {
+                      sm: 11,
                       md: 11,
                       lg: 15,
                       xl: 15,
@@ -677,6 +745,7 @@ export default class PopularActers extends Component {
                 fontFamily={"Qanelas"}
                 sx={{
                   fontSize: {
+                    sm: 15,
                     md: 15,
                     lg: 20,
                     xl: 20,

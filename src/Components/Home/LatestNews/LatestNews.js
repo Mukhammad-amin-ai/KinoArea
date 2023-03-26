@@ -94,6 +94,7 @@ export default class LatestNews extends Component {
             gap={"20px"}
             sx={{
               flexDirection:{
+                sm:'column',
                 md:'column',
                 lg:'unset',
                 xl:'unset'

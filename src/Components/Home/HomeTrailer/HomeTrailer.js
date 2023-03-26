@@ -44,7 +44,8 @@ export default class HomeTrailer extends Component {
               color={"#fff"}
               sx={{
                 fontSize: {
-                  md: "40",
+                  sm:40,
+                  md: "40px",
                   lg: "65px",
                   xl: "65px",
                 },
@@ -57,6 +58,7 @@ export default class HomeTrailer extends Component {
                 variant="p"
                 sx={{
                   fontSize: {
+                    sm:18,
                     md: "18px",
                     lg: "22px",
                     xl: "22px",
@@ -80,6 +82,7 @@ export default class HomeTrailer extends Component {
               height={"80%"}
               sx={{
                 height: {
+                  sm:352,
                   mf: "450px",
                   lh: "700px",
                   xl: "700px",
@@ -89,6 +92,7 @@ export default class HomeTrailer extends Component {
             >
               <img
                 width={"100%"}
+                height={'100%'}
                 style={{ borderRadius: "10px" }}
                 src={videoPlayer}
                 alt="#"
@@ -135,6 +139,7 @@ export default class HomeTrailer extends Component {
                     fontSize={"45px"}
                     sx={{
                       fontSize:{
+                        sm:25,
                         md:"34px",
                         lg:'45px',
                         xl:'45px'

@@ -70,7 +70,7 @@ export default class Home_head extends Component {
                 sx={{
                   width: {
                     sm: "100%",
-                    md: "615px",
+                    md: "100%",
                     lg: "765px",
                     xl: "765px",
                   },
@@ -83,7 +83,7 @@ export default class Home_head extends Component {
                     color: "#838D97",
                     flexWrap: {
                       sm: "wrap",
-                      md:'unset',
+                      md:'wrap',
                       lg:'unset',
                       xl:'unset'
                     },
@@ -159,6 +159,7 @@ export default class Home_head extends Component {
                   <ListItem  sx={{
                       width: {
                         sm: 100,
+                        
                       },
                     }}>
                     <ListItemButton

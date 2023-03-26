@@ -72,13 +72,18 @@ export default class Popular extends Component {
   };
   render() {
     return (
-      <Box width={"100%"} height={"800px"} bgcolor={"#1E2538"}>
+      <Box width={"100%"} height={"800px"} bgcolor={"#1E2538"} sx={{
+        height:{
+          sm:1000
+        }
+      }}>
         <Box
           width={"80%"}
           height={"100%"}
           marginLeft={"10%"}
           display={"flex"}
           flexDirection={"column"}
+          gap={'5%'}
           justifyContent={"center"}
         >
           <Box
@@ -88,11 +93,14 @@ export default class Popular extends Component {
             gap={"10px"}
             sx={{
               flexDirection: {
-                sm:'column',
+                sm: "column",
                 md: "column",
                 lg: "column",
                 xl: "unset",
               },
+              height:{
+                sm:200
+              }
             }}
           >
             <Box
@@ -109,7 +117,7 @@ export default class Popular extends Component {
                 fontWeight={"900"}
                 sx={{
                   fontSize: {
-                    sm:20,
+                    sm: 24,
                     md: "32px",
                     lg: "37px",
                     xl: "45px",
@@ -119,7 +127,18 @@ export default class Popular extends Component {
                 Популярные фильмы
               </Typography>
             </Box>
-            <Box width={"50%"} height={"100%"}>
+            <Box
+              width={"50%"}
+              height={"100%"}
+              sx={{
+                width: {
+                  sm: "100%",
+                  md: "50%",
+                  lg: "50%",
+                  xl: "50%",
+                },
+              }}
+            >
               <List
                 sx={{
                   width: "100%",
@@ -129,7 +148,13 @@ export default class Popular extends Component {
                   color: "rgba(255, 255, 255, 0.35)",
                 }}
               >
-                <ListItem>
+                <ListItem
+                  sx={{
+                    width: {
+                      sm: 110,
+                    },
+                  }}
+                >
                   <ListItemButton sx={{ width: "120px" }}>
                     <Typography
                       variant="h2"
@@ -137,7 +162,7 @@ export default class Popular extends Component {
                       fontWeight={"700"}
                       sx={{
                         fontSize: {
-                          sm:15,
+                          sm: 15,
                           md: "15px",
                           lg: "18px",
                           xl: "18px",
@@ -147,17 +172,21 @@ export default class Popular extends Component {
                       Всё время
                     </Typography>
                   </ListItemButton>
-                </ListItem>
+                </ListItem >
 
                 {this.state.listItemMassive.length !== 0
                   ? this.state.listItemMassive.map((item) => (
-                      <ListItem>
+                      <ListItem    sx={{
+                        width: {
+                          sm: 100,
+                        },
+                      }}>
                         <ListItemButton>
                           <Typography
                             variant="h2"
                             sx={{
                               fontSize: {
-                                sm:15,
+                                sm: 15,
                                 md: "15px",
                                 lg: "18px",
                                 xl: "18px",
@@ -185,10 +214,14 @@ export default class Popular extends Component {
             <Box
               width={"100%"}
               sx={{
-                height:{
-                  md:"50%",
-                  lg:'90%',
-                  xl:'90%'
+                height: {
+                  sm:'100%',
+                  md: "50%",
+                  lg: "90%",
+                  xl: "90%",
+                },
+                flexWrap:{
+                  sm:'wrap'
                 }
               }}
               height={"90%"}
@@ -221,7 +254,8 @@ export default class Popular extends Component {
                   count={5}
                   color={"primary"}
                   renderItem={(item) => (
-                    <PaginationItem sx={{color:'white'}}
+                    <PaginationItem
+                      sx={{ color: "white" }}
                       slots={{
                         previous: ArrowBackIcon,
                         next: ArrowForwardIcon,
