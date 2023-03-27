@@ -83,8 +83,8 @@ export default class HomeTrailer extends Component {
               sx={{
                 height: {
                   sm:352,
-                  mf: "450px",
-                  lh: "700px",
+                  md: "400px",
+                  lg: "600px",
                   xl: "700px",
                 },
               }}
@@ -140,8 +140,8 @@ export default class HomeTrailer extends Component {
                     sx={{
                       fontSize:{
                         sm:25,
-                        md:"34px",
-                        lg:'45px',
+                        md:"30px",
+                        lg:'40px',
                         xl:'45px'
                       }
                     }}

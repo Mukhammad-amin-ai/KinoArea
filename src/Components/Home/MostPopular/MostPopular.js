@@ -43,15 +43,21 @@ export default class MostPopular extends Component {
   };
   render() {
     return (
-      <Box width={"100%"} height={"300px"} sx={{
-        height:{
-          sm:800,
-          md:600,
-          lg:300,
-          xl:300
-        }
-      }} bgcolor={"#151A26"}>
+      <Box
+        width={"100%"}
+        height={"300px"}
+        sx={{
+          height: {
+            sm: 800,
+            md: 600,
+            lg: 500,
+            xl: 300,
+          },
+        }}
+        bgcolor={"#151A26"}
+      >
         <Box width={"80%"} height={"100%"} marginLeft={"10%"}>
+          {/* for large size */}
           <Box
             width={"100%"}
             height={"100px"}
@@ -59,12 +65,12 @@ export default class MostPopular extends Component {
             alignItems={"center"}
             justifyContent={"space-between"}
             sx={{
-              display:{
-                sm:'none',
-                md:'none',
-                lg:'flex',
-                xl:'flex'
-              }
+              display: {
+                sm: "none",
+                md: "none",
+                lg: "flex",
+                xl: "flex",
+              },
             }}
           >
             <Box
@@ -77,13 +83,30 @@ export default class MostPopular extends Component {
             >
               <Typography
                 variant="h1"
-                fontSize={"65px"}
                 fontFamily={"Qanales"}
                 fontWeight={"900"}
+                sx={{
+                  fontSize: {
+                    sm: 35,
+                    md: 40,
+                    lg: 50,
+                    xl: 65,
+                  },
+                }}
               >
                 Кассовые сборы
               </Typography>
-              <Typography variant="h1" fontSize={"20px"}>
+              <Typography
+                variant="h1"
+                sx={{
+                  fontSize: {
+                    sm: 15,
+                    md: 15,
+                    lg: 18,
+                    xl: 20,
+                  },
+                }}
+              >
                 13 марта — 15 марта
               </Typography>
             </Box>
@@ -104,7 +127,12 @@ export default class MostPopular extends Component {
                   variant="p"
                   color={"#6D717D"}
                   sx={{
-                    
+                    fontSize: {
+                      sm: 13,
+                      md: 13,
+                      lg: 15,
+                      xl: 18,
+                    },
                     ":hover": { color: "#fff" },
                   }}
                 >
@@ -114,9 +142,9 @@ export default class MostPopular extends Component {
               <Button
                 sx={{
                   width: {
-                    md:200,
-                    lg:160,
-                    xl:160
+                    md: 200,
+                    lg: 160,
+                    xl: 160,
                   },
                   height: "50px",
                 }}
@@ -126,8 +154,9 @@ export default class MostPopular extends Component {
                   color={"#6D717D"}
                   sx={{
                     fontSize: {
-                      md: 15,
-                      lg: 18,
+                      sm: 13,
+                      md: 13,
+                      lg: 15,
                       xl: 18,
                     },
                     ":hover": { color: "#fff" },
@@ -139,9 +168,9 @@ export default class MostPopular extends Component {
               <Button
                 sx={{
                   width: {
-                    md:260,
-                    lg:160,
-                    xl:160
+                    md: 260,
+                    lg: 180,
+                    xl: 160,
                   },
                   height: "50px",
                 }}
@@ -151,8 +180,9 @@ export default class MostPopular extends Component {
                   color={"#6D717D"}
                   sx={{
                     fontSize: {
-                      md: 15,
-                      lg: 18,
+                      sm: 13,
+                      md: 13,
+                      lg: 15,
                       xl: 18,
                     },
                     ":hover": { color: "#fff" },
@@ -163,148 +193,159 @@ export default class MostPopular extends Component {
               </Button>
             </Box>
           </Box>
-            <Box
+          {/* for medium size */}
+          <Box
             width={"100%"}
             height={"100px"}
             sx={{
-              display:{
-                sm:'flex',
-                md:'flex',
-                lg:'none',
-                xl:'none'
-              }
+              display: {
+                sm: "flex",
+                md: "flex",
+                lg: "none",
+                xl: "none",
+              },
             }}
             justifyContent={"space-between"}
           >
-            <Box width={'535px'} height={'100%'} display={'flex'} flexDirection={'column'}>
-
             <Box
-              width={"100%"}
+              width={"535px"}
               height={"100%"}
               display={"flex"}
-              alignItems={"center"}
-              gap={"10px"}
-              color={"#fff"}
-              >
-              <Typography
-              variant="h1"
-              fontSize={"65px"}
-              fontFamily={"Qanales"}
-              fontWeight={"900"}
-              sx={{
-                fontSize: {
-                  md: 40,
-                  lg: 65,
-                  xl: 65,
-                  },
-                }}
-                >
-                Кассовые сборы
-                </Typography>
-            </Box>
-            <Box
-              width={"100%"}
-              height={"100%"}
-              display={"flex"}
-              alignItems={"center"}
-              justifyContent={"start"}
+              flexDirection={"column"}
             >
-              <Button
-              sx={{
-                  width: "160px",
-                  height: "50px",
-                }}
+              <Box
+                width={"100%"}
+                height={"100%"}
+                display={"flex"}
+                alignItems={"center"}
+                gap={"10px"}
+                color={"#fff"}
               >
                 <Typography
-                variant="p"
-                  color={"#6D717D"}
+                  variant="h1"
+                  fontSize={"65px"}
+                  fontFamily={"Qanales"}
+                  fontWeight={"900"}
                   sx={{
                     fontSize: {
-                      md: 15,
-                      lg: 18,
-                      xl: 18,
+                      sm: 35,
+                      md: 40,
+                      lg: 50,
+                      xl: 65,
                     },
-                    ":hover": { color: "#fff" },
                   }}
                 >
-                  Россия
+                  Кассовые сборы
                 </Typography>
+              </Box>
+              <Box
+                width={"100%"}
+                height={"100%"}
+                display={"flex"}
+                alignItems={"center"}
+                justifyContent={"start"}
+              >
+                <Button
+                  sx={{
+                    width: "160px",
+                    height: "50px",
+                  }}
+                >
+                  <Typography
+                    variant="p"
+                    color={"#6D717D"}
+                    sx={{
+                      fontSize: {
+                        sm: 13,
+                        md: 13,
+                        lg: 15,
+                        xl: 18,
+                      },
+                      ":hover": { color: "#fff" },
+                    }}
+                  >
+                    Россия
+                  </Typography>
                 </Button>
                 <Button
-                sx={{
-                  width:'160px',
-                  height: "50px",
-                }}
-                >
-                <Typography
-                  variant="p"
-                  color={"#6D717D"}
                   sx={{
-                    fontSize: {
-                      md: 15,
-                      lg: 18,
-                      xl: 18,
-                    },
-                    ":hover": { color: "#fff" },
+                    width: "160px",
+                    height: "50px",
                   }}
+                >
+                  <Typography
+                    variant="p"
+                    color={"#6D717D"}
+                    sx={{
+                      fontSize: {
+                        sm: 13,
+                        md: 13,
+                        lg: 15,
+                        xl: 18,
+                      },
+                      ":hover": { color: "#fff" },
+                    }}
                   >
-                  Весь мир
-                </Typography>
+                    Весь мир
+                  </Typography>
                 </Button>
-              <Button
-              sx={{
-                width:'160px',
-                height: "50px",
-                }}
-              >
-                <Typography
-                  variant="p"
-                  color={"#6D717D"}
+                <Button
                   sx={{
-                    fontSize: {
-                      md: 15,
-                      lg: 18,
-                      xl: 18,
-                    },
-                    ":hover": { color: "#fff" },
+                    width: "160px",
+                    height: "50px",
                   }}
                 >
-                  США и Канада
-                </Typography>
-              </Button>
-            </Box>
-          </Box>
-                  <Typography variant="h1" fontSize={"20px"} color={'white'}>
-                    13 марта — 15 марта
+                  <Typography
+                    variant="p"
+                    color={"#6D717D"}
+                    sx={{
+                      fontSize: {
+                        sm: 13,
+                        md: 13,
+                        lg: 15,
+                        xl: 18,
+                      },
+                      ":hover": { color: "#fff" },
+                    }}
+                  >
+                    США и Канада
                   </Typography>
+                </Button>
+              </Box>
+            </Box>
+            <Typography variant="h1" fontSize={"20px"} color={"white"} sx={{
+              fontSize:{
+                sm:15,
+                md:17
+              }
+            }}>
+              13 марта — 15 марта
+            </Typography>
           </Box>
-         
-         
-         
+
           <Box
             width={"100%"}
-            height={"60%"}
             display={"flex"}
             alignItems={"center"}
             sx={{
-              height:{
-                sm:'90%',
-                md:'80%',
-                lg:'60%',
-                xl:'60%'
+              height: {
+                sm: "90%",
+                md: "80%",
+                lg: "70%",
+                xl: "60%",
               },
-              justifyContent:{
-                sm:'space-between',
-                md:'space-between',
-                lg:'unset',
-                xl:'unset'
+              justifyContent: {
+                sm: "space-between",
+                md: "space-between",
+                lg: "unset",
+                xl: "unset",
               },
-              flexWrap:{
-                sm:'wrap',
-                md:'wrap',
-                lg:'unset',
-                xl:'unset'
-              }
+              flexWrap: {
+                sm: "wrap",
+                md: "wrap",
+                lg: "wrap",
+                xl: "unset",
+              },
             }}
           >
             {this.state.mostPopular.length !== 0
@@ -318,9 +359,43 @@ export default class MostPopular extends Component {
                   >
                     <img src={item.img} alt="most" />
                     <Box>
-                      <Typography color={"#fff"}>{item.name1}</Typography>
-                      <Typography color={"#F2F60F"}>{item.money}</Typography>
-                      <Typography color={" rgba(255, 255, 255, 0.41)"}>
+                      <Typography
+                        color={"#fff"}
+                        sx={{
+                          fontSize: {
+                            sm: 13,
+                            md: 13,
+                            lg: 15,
+                            xl: 18,
+                          },
+                        }}
+                      >
+                        {item.name1}
+                      </Typography>
+                      <Typography
+                        color={"#F2F60F"}
+                        sx={{
+                          fontSize: {
+                            sm: 11,
+                            md: 11,
+                            lg: 13,
+                            xl: 15,
+                          },
+                        }}
+                      >
+                        {item.money}
+                      </Typography>
+                      <Typography
+                        color={" rgba(255, 255, 255, 0.41)"}
+                        sx={{
+                          fontSize: {
+                            sm: 11,
+                            md: 11,
+                            lg: 12,
+                            xl: 14,
+                          },
+                        }}
+                      >
                         {item.month}
                       </Typography>
                     </Box>

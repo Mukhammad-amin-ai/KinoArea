@@ -1,12 +1,12 @@
 import {
   Box,
-  Pagination,
-  PaginationItem,
-  Stack,
+  // Pagination,
+  // PaginationItem,
+  // Stack,
   Typography,
 } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+// import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+// import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import React, { Component } from "react";
 import Card from "../../../Assets/Card/Card";
 import waiTimg1 from "../../../Images/wait image 1.png";
@@ -62,6 +62,8 @@ export default class Waitlist extends Component {
               fontFamily={"Qanelas"}
               sx={{
                 fontSize:{
+                  xs:30,
+                  sm:40,
                   md:40,
                   lg:65,
                   xl:65

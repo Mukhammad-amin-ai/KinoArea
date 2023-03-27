@@ -687,7 +687,7 @@ export default class Navbar extends Component {
               </List>
             </Box>
           </Box>
-          <Box width={"100px"} height={"50px"} position={'absolute'} top={30} right={30}>
+          <Box width={"100px"} height={"50px"} position={'absolute'} top={30} right={50}>
 
           <Button
             variant="contained"

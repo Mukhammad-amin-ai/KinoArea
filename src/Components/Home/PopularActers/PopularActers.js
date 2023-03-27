@@ -467,8 +467,8 @@ export default class PopularActers extends Component {
                   sx={{
                     fontSize: {
                       sm: 15,
-                      md: 15,
-                      lg: 20,
+                      md: 13,
+                      lg: 18,
                       xl: 20,
                     },
                   }}
@@ -484,7 +484,7 @@ export default class PopularActers extends Component {
                     fontSize: {
                       sm: 11,
                       md: 11,
-                      lg: 15,
+                      lg: 13,
                       xl: 15,
                     },
                   }}
@@ -500,7 +500,7 @@ export default class PopularActers extends Component {
                     fontSize: {
                       sm: 11,
                       md: 11,
-                      lg: 15,
+                      lg: 13,
                       xl: 15,
                     },
                   }}
@@ -517,7 +517,7 @@ export default class PopularActers extends Component {
                   fontSize: {
                     sm: 15,
                     md: 15,
-                    lg: 20,
+                    lg: 18,
                     xl: 20,
                   },
                 }}
@@ -544,8 +544,8 @@ export default class PopularActers extends Component {
                   sx={{
                     fontSize: {
                       sm: 15,
-                      md: 15,
-                      lg: 20,
+                      md: 13,
+                      lg: 18,
                       xl: 20,
                     },
                   }}
@@ -561,7 +561,7 @@ export default class PopularActers extends Component {
                     fontSize: {
                       sm: 11,
                       md: 11,
-                      lg: 15,
+                      lg: 13,
                       xl: 15,
                     },
                   }}
@@ -577,7 +577,7 @@ export default class PopularActers extends Component {
                     fontSize: {
                       sm: 11,
                       md: 11,
-                      lg: 15,
+                      lg: 13,
                       xl: 15,
                     },
                   }}
@@ -594,7 +594,7 @@ export default class PopularActers extends Component {
                   fontSize: {
                     sm: 15,
                     md: 15,
-                    lg: 20,
+                    lg: 18,
                     xl: 20,
                   },
                 }}
@@ -620,8 +620,8 @@ export default class PopularActers extends Component {
                   sx={{
                     fontSize: {
                       sm: 15,
-                      md: 15,
-                      lg: 20,
+                      md: 13,
+                      lg: 18,
                       xl: 20,
                     },
                   }}
@@ -637,7 +637,7 @@ export default class PopularActers extends Component {
                     fontSize: {
                       sm: 11,
                       md: 11,
-                      lg: 15,
+                      lg: 13,
                       xl: 15,
                     },
                   }}
@@ -654,7 +654,7 @@ export default class PopularActers extends Component {
                     fontSize: {
                       sm: 11,
                       md: 11,
-                      lg: 15,
+                      lg: 13,
                       xl: 15,
                     },
                   }}
@@ -671,7 +671,7 @@ export default class PopularActers extends Component {
                   fontSize: {
                     sm: 15,
                     md: 15,
-                    lg: 20,
+                    lg: 18,
                     xl: 20,
                   },
                 }}
@@ -696,8 +696,8 @@ export default class PopularActers extends Component {
                   sx={{
                     fontSize: {
                       sm: 15,
-                      md: 15,
-                      lg: 20,
+                      md: 12,
+                      lg: 18,
                       xl: 20,
                     },
                   }}
@@ -713,7 +713,7 @@ export default class PopularActers extends Component {
                     fontSize: {
                       sm: 11,
                       md: 11,
-                      lg: 15,
+                      lg: 13,
                       xl: 15,
                     },
                   }}
@@ -730,7 +730,7 @@ export default class PopularActers extends Component {
                     fontSize: {
                       sm: 11,
                       md: 11,
-                      lg: 15,
+                      lg: 13,
                       xl: 15,
                     },
                   }}
@@ -747,7 +747,7 @@ export default class PopularActers extends Component {
                   fontSize: {
                     sm: 15,
                     md: 15,
-                    lg: 20,
+                    lg: 18,
                     xl: 20,
                   },
                 }}

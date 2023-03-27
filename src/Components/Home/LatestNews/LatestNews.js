@@ -93,17 +93,12 @@ export default class LatestNews extends Component {
             alignItems={"stretch"}
             gap={"20px"}
             sx={{
-              flexDirection:{
-                sm:'column',
-                md:'column',
-                lg:'unset',
-                xl:'unset'
+              flexDirection: {
+                sm: "column",
+                md: "column",
+                lg: "unset",
+                xl: "unset",
               },
-              // height:{
-              //   md:900,
-              //   lg:900,
-              //   xl:900
-              // }
             }}
           >
             <Box
@@ -137,11 +132,11 @@ export default class LatestNews extends Component {
                 color={"#fff"}
                 fontFamily={"Qanales"}
                 sx={{
-                  fontSize:{
-                    md:15,
-                    lg:15,
-                    xl:15
-                  }
+                  fontSize: {
+                    md: 15,
+                    lg: 15,
+                    xl: 15,
+                  },
                 }}
               >
                 15 Апр 2020
@@ -165,11 +160,13 @@ export default class LatestNews extends Component {
                   color={"#fff"}
                   fontFamily={"Qanales"}
                   sx={{
-                    fontSize:{
-                      md:25,
-                      lg:30,
-                      xl:30
-                    }
+                    fontSize: {
+                      xs: 18,
+                      sm: 20,
+                      md: 25,
+                      lg: 30,
+                      xl: 30,
+                    },
                   }}
                 >
                   Не время умирать. Перенос релиза фильма
@@ -182,11 +179,12 @@ export default class LatestNews extends Component {
                   color={"#fff"}
                   fontFamily={"Qanales"}
                   sx={{
-                    fontSize:{
-                      md:15,
-                      lg:18,
-                      xl:18
-                    }
+                    fontSize: {
+                      sm: 16,
+                      md: 15,
+                      lg: 18,
+                      xl: 18,
+                    },
                   }}
                 >
                   Но действия представителей оппозиции в равной степени
@@ -207,16 +205,16 @@ export default class LatestNews extends Component {
                   lg: 254,
                   xl: 254,
                 },
-                height:{
-                  md:'auto',
-                  lg:'100%',
-                  xl:'100%'
+                height: {
+                  md: "auto",
+                  lg: "100%",
+                  xl: "100%",
                 },
-                flexDirection:{
-                  md:'unset',
-                  lg:'column',
-                  xl:'column'
-                }
+                flexDirection: {
+                  md: "unset",
+                  lg: "column",
+                  xl: "column",
+                },
               }}
             >
               {this.state.newsData.length !== 0
@@ -263,27 +261,27 @@ export default class LatestNews extends Component {
                           bgcolor={"transparent"}
                           border={"3px solid #fff"}
                           sx={{
-                            width:{
-                              md:150,
-                              lg:180,
-                              xl:180
+                            width: {
+                              md: 150,
+                              lg: 180,
+                              xl: 180,
                             },
-                            height:{
-                              md:49,
-                              lg:53,
-                              xl:53
-                            }
+                            height: {
+                              md: 49,
+                              lg: 53,
+                              xl: 53,
+                            },
                           }}
                         >
                           <Typography
                             variant="h5"
                             fontFamily={"Qanelas"}
                             sx={{
-                              fontSize:{
-                                md:15,
-                                lg:18,
-                                xl:18
-                              }
+                              fontSize: {
+                                md: 15,
+                                lg: 18,
+                                xl: 18,
+                              },
                             }}
                           >
                             Читать новость
@@ -302,11 +300,11 @@ export default class LatestNews extends Component {
                         left={"10px"}
                         fontFamily={"Qanelas"}
                         sx={{
-                          fontSize:{
-                            md:13,
-                            lg:15,
-                            xl:15
-                          }
+                          fontSize: {
+                            md: 13,
+                            lg: 15,
+                            xl: 15,
+                          },
                         }}
                       >
                         {item.time}
@@ -318,11 +316,11 @@ export default class LatestNews extends Component {
                         fontSize={"18px"}
                         fontFamily={"Qanelas"}
                         sx={{
-                          fontSize:{
-                            md:15,
-                            lg:18,
-                            xl:18
-                          }
+                          fontSize: {
+                            md: 15,
+                            lg: 18,
+                            xl: 18,
+                          },
                         }}
                       >
                         {item.news}

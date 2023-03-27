@@ -44,13 +44,13 @@ export default class Card extends Component {
                   width:{
                     sm:166,
                     md:"160px",
-                    lg:'224px',
+                    lg:'180px',
                     xl:'224px'
                   },
                   height:{
                     sm:50,
                     md:"49px",
-                    lg:'71px',
+                    lg:'60px',
                     xl:'71px'
                   }
                 }}
@@ -64,7 +64,7 @@ export default class Card extends Component {
                   fontSize:{
                     sm:14,
                     md:'14px',
-                    lg:'18px',
+                    lg:'15px',
                     xl:'18px'
                   }
                 }}>Карточка фильма</Typography>
@@ -138,7 +138,7 @@ export default class Card extends Component {
               fontSize: {
                 sm:15,
                 md: "15px",
-                lg: "18px",
+                lg: "15px",
                 xl: "18px",
               },
             }}
@@ -154,7 +154,7 @@ export default class Card extends Component {
               fontSize: {
                 sm:12,
                 md: "12px",
-                lg: "15px",
+                lg: "13px",
                 xl: "15px",
               },
             }}

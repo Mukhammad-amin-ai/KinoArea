@@ -74,7 +74,9 @@ export default class Popular extends Component {
     return (
       <Box width={"100%"} height={"800px"} bgcolor={"#1E2538"} sx={{
         height:{
-          sm:1000
+          sm:1100,
+          md:1000,
+          lg:1500,
         }
       }}>
         <Box
@@ -99,7 +101,10 @@ export default class Popular extends Component {
                 xl: "unset",
               },
               height:{
-                sm:200
+                sm:200,
+                md:160,
+                lg:150,
+                xl:150,
               }
             }}
           >
@@ -118,7 +123,7 @@ export default class Popular extends Component {
                 sx={{
                   fontSize: {
                     sm: 24,
-                    md: "32px",
+                    md: "28px",
                     lg: "37px",
                     xl: "45px",
                   },
@@ -133,8 +138,8 @@ export default class Popular extends Component {
               sx={{
                 width: {
                   sm: "100%",
-                  md: "50%",
-                  lg: "50%",
+                  md: "100%",
+                  lg: "100%",
                   xl: "50%",
                 },
               }}
@@ -152,6 +157,9 @@ export default class Popular extends Component {
                   sx={{
                     width: {
                       sm: 110,
+                      md:140,
+                      lg:160,
+                      xl:180,
                     },
                   }}
                 >
@@ -206,22 +214,30 @@ export default class Popular extends Component {
           </Box>
           <Box
             width={"100%"}
-            height={"600px"}
+            // height={"600px"}
             display={"flex"}
             flexDirection={"column"}
             justifyContent={"center"}
+            sx={{
+              md:800,
+              lg:800,
+              xl:800
+            }}
           >
             <Box
               width={"100%"}
               sx={{
                 height: {
                   sm:'100%',
-                  md: "50%",
+                  md: "100%",
                   lg: "90%",
                   xl: "90%",
                 },
                 flexWrap:{
-                  sm:'wrap'
+                  sm:'wrap',
+                  md:"nowrap",
+                  lg:'nowrap',
+                  xl:'nowrap'
                 }
               }}
               height={"90%"}
