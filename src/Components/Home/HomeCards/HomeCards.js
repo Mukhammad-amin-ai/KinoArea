@@ -10,11 +10,11 @@ import img6 from "../../../Images/image 6.png";
 import img7 from "../../../Images/image 7.png";
 import img8 from "../../../Images/image 9.png";
 
-
 export default class HomeCards extends Component {
   state = {
     data: [
       {
+        // id:
         img: img1,
         ball: "6.70",
         filmName: "Побег из Претории",
@@ -70,14 +70,30 @@ export default class HomeCards extends Component {
         ganr: "Боевик, комедия, криминал",
         bgcolor: "#89CB36",
       },
-      
-      
-      
-      
+      {
+        img: img8,
+        ball: "6.90",
+        filmName: "Плохие парни навсегда",
+        ganr: "Боевик, комедия, криминал",
+        bgcolor: "#89CB36",
+      },
     ],
+    btnHide: "none",
+    // newData:[]
   };
 
+  showHideFunc = () => {
+    
+    if (this.state.data.length <= 10) {
+      let { btnHide } = this.state;
+      btnHide = "flex";
+      this.setState({
+        btnHide,
+      });
+    }
+  };
   render() {
+    const { btnHide } = this.state 
     return (
       <>
         <Box
@@ -98,24 +114,33 @@ export default class HomeCards extends Component {
                 />
               ))
             : ""}
-            <Box width={'100%'} height="200px" display={'flex'} alignItems={'center'} justifyContent={'center'} >
-              <Button sx={{ width:{
-                md:"164px",
-                lg:'200px',
-                xl:'200px'
-              },
-              height:{
-                md:"54px",
-                lg:'71px',
-                xl:'71px'
-              },
-              border:'1px solid white',color:'white'}}>
-                <Typography variant="p">
-                Все новинки
-                </Typography>
-              </Button>
-            </Box>
-            
+          <Box
+            width={"100%"}
+            height="200px"
+            display={btnHide}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
+            <Button
+              
+              sx={{
+                width: {
+                  md: "164px",
+                  lg: "200px",
+                  xl: "200px",
+                },
+                height: {
+                  md: "54px",
+                  lg: "71px",
+                  xl: "71px",
+                },
+                border: "1px solid white",
+                color: "white",
+              }}
+            >
+              <Typography variant="p">Все новинки</Typography>
+            </Button>
+          </Box>
         </Box>
       </>
     );
