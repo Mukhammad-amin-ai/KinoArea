@@ -5,9 +5,11 @@ import {
   ListItem,
   ListItemButton,
   Typography,
+  Modal,
+  TextField,
 } from "@mui/material";
 import React, { Component } from "react";
-import { Link, } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default class Navbar extends Component {
   state = {
@@ -17,6 +19,7 @@ export default class Navbar extends Component {
     borderNovosti: "",
     borderPodborka: "",
     borderKategotii: "",
+    modall: false,
   };
   afishaClick = () => {
     let {
@@ -191,10 +194,23 @@ export default class Navbar extends Component {
       borderAktyor,
     });
   };
+  modalShow = () => {
+    let { modall } = this.state;
+    modall = true;
+    this.setState({
+      modall,
+    });
+  };
+  closeModal=()=>{
+    let { modall } = this.state;
+    modall = false;
+    this.setState({
+      modall,
+    });
+  }
   render() {
     return (
       <>
-      
         <Box
           width={"100%"}
           height={"100%"}
@@ -418,6 +434,7 @@ export default class Navbar extends Component {
             </Box>
             <Box width={"180px"} height={"53px"} display={"flex"} gap={"10px"}>
               <Button
+                onClick={this.modalShow}
                 variant="contained"
                 sx={{
                   bgcolor: "white",
@@ -806,6 +823,70 @@ export default class Navbar extends Component {
             </Box>
           </Box>
         </Box>
+        <Modal
+          open={this.state.modall}
+          sx={{ display: "flex", justifyContent: "center", paddingTop: "10px" }}
+        >
+          <Box
+            width={900}
+            height={"auto"}
+            sx={{ borderRadius: "30px", display: "flex", gap: 5 }}
+          >
+            <Box
+              width={"100%"}
+              height={70}
+              bgcolor={"#fff"}
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                borderRadius: "10px",
+                gap:2
+              }}
+            >
+              <TextField
+                sx={{
+                  width: 600,
+                  height: 70,
+                  bgcolor: "#fff",
+                  padding: "35px 0px 0px 10px ",
+                }}
+                id="standard-basic"
+                variant="standard"
+              />
+              <Button    sx={{
+                  width: "55px",
+                  height: "52px",
+                }}>
+                <Typography sx={{ color: "#000", fontSize: 25 }}>
+                <i class='bx bx-equalizer'></i>
+                </Typography>
+              </Button>
+              <Button
+                sx={{
+                  width: "55px",
+                  height: "52px",
+                  bgcolor: "#F2F60F",
+                }}
+              >
+                <Typography sx={{ color: "#000", fontSize: 25 }}>
+                  <i class="bx bx-search"></i>
+                </Typography>
+              </Button>
+            </Box>
+            <Button onClick={this.closeModal} sx={{ width: 10, height: 70 }}>
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontSize: 30,
+                }}
+              >
+               
+                <i class="bx bx-x"></i>{" "}
+              </Typography>
+            </Button>
+          </Box>
+        </Modal>
       </>
     );
   }

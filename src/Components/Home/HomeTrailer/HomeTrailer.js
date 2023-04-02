@@ -44,7 +44,7 @@ export default class HomeTrailer extends Component {
               color={"#fff"}
               sx={{
                 fontSize: {
-                  sm:40,
+                  sm: 40,
                   md: "40px",
                   lg: "65px",
                   xl: "65px",
@@ -58,7 +58,7 @@ export default class HomeTrailer extends Component {
                 variant="p"
                 sx={{
                   fontSize: {
-                    sm:18,
+                    sm: 18,
                     md: "18px",
                     lg: "22px",
                     xl: "22px",
@@ -82,7 +82,7 @@ export default class HomeTrailer extends Component {
               height={"80%"}
               sx={{
                 height: {
-                  sm:352,
+                  sm: 352,
                   md: "400px",
                   lg: "600px",
                   xl: "700px",
@@ -92,7 +92,7 @@ export default class HomeTrailer extends Component {
             >
               <img
                 width={"100%"}
-                height={'100%'}
+                height={"100%"}
                 style={{ borderRadius: "10px" }}
                 src={videoPlayer}
                 alt="#"
@@ -138,12 +138,12 @@ export default class HomeTrailer extends Component {
                     variant="hp"
                     fontSize={"45px"}
                     sx={{
-                      fontSize:{
-                        sm:25,
-                        md:"30px",
-                        lg:'40px',
-                        xl:'45px'
-                      }
+                      fontSize: {
+                        sm: 25,
+                        md: "30px",
+                        lg: "40px",
+                        xl: "45px",
+                      },
                     }}
                     fontFamily={"Qaneles"}
                     fontWeight={"900"}
@@ -160,28 +160,28 @@ export default class HomeTrailer extends Component {
                 >
                   <Link style={{ textDecoration: "none" }}>
                     <Button>
-                      <Typography sx={{color: '#6D7792',fontSize:20}}>
+                      <Typography sx={{ color: "#6D7792", fontSize: 20 }}>
                         <i class="bx bxl-vk"></i>
                       </Typography>
                     </Button>
                   </Link>
-                  <Link >
+                  <Link>
                     <Button>
-                      <Typography  sx={{color: '#6D7792',fontSize:20}} >
+                      <Typography sx={{ color: "#6D7792", fontSize: 20 }}>
                         <i class="bx bxl-instagram"></i>
                       </Typography>
                     </Button>
                   </Link>
                   <Link>
                     <Button>
-                      <Typography  sx={{color: '#6D7792',fontSize:20}}>
+                      <Typography sx={{ color: "#6D7792", fontSize: 20 }}>
                         <i class="bx bxl-facebook"></i>
                       </Typography>
                     </Button>
                   </Link>
                   <Link>
                     <Button>
-                      <Typography  sx={{color: '#6D7792',fontSize:20}}>
+                      <Typography sx={{ color: "#6D7792", fontSize: 20 }}>
                         <i class="bx bxl-twitter"></i>
                       </Typography>
                     </Button>
@@ -201,9 +201,8 @@ export default class HomeTrailer extends Component {
                     height: "58.87px",
                     borderRadius: "10px",
                     bgcolor: "#1B2133",
-                    color:'#fff',
-                    fontSize:'20px'
-                    
+                    color: "#fff",
+                    fontSize: "20px",
                   }}
                 >
                   <i class="bx bx-like"></i>
@@ -214,8 +213,8 @@ export default class HomeTrailer extends Component {
                     height: "58.87px",
                     borderRadius: "10px",
                     bgcolor: "#1B2133",
-                    color:'#fff',
-                    fontSize:'20px'
+                    color: "#fff",
+                    fontSize: "20px",
                   }}
                 >
                   <i class="bx bx-dislike"></i>
@@ -223,65 +222,9 @@ export default class HomeTrailer extends Component {
               </Box>
             </Box>
           </Box>
-          {/* <Box width={"100%"} height={"300px"}>
-            <Box
-              width={"100%"}
-              height={"100%"}
-              display={"flex"}
-              overflow={"auto"}
-              gap={'12px'}
-              padding={'10px'}
-              sx={{scrollSnapType:'x mandatory',scrollPadding:'10px'}}
-            >
-              {this.state.dataScroll.length !== 0
-                ? this.state.dataScroll.map((item) => (
-                    <Box
-                      width={"342px"}
-                      height={"245px"}
-                      position={"relative"}
-                      sx={{
-                        flex:"0 0 100%",
-                        scrollSnapAlign:"start",
-                        scrollSnapStop:"always",
-                        borderRadius: "10px",
-                        "&:hover div": { display: "flex" },
-                      }}
-                    >
-                      <Box
-                        width={"100%"}
-                        height={"245px"}
-                        borderRadius={"10px"}
-                        position={"absolute"}
-                        bgcolor={"rgba(54, 87, 203, 0.65)"}
-                        zIndex={2}
-                        display={"none"}
-                      >
-                        <Typography
-                          position={"absolute"}
-                          top={"35%"}
-                          left={"35%"}
-                        >
-                          <Button sx={{ borderRadius: "50%" }}>
-                            <PlayArrowIcon
-                              sx={{
-                                fontSize: "80px",
-                                color: "#fff",
-                              }}
-                            />
-                          </Button>
-                        </Typography>
-                      </Box>
-                      <img
-                        
-                        style={{borderRadius: "10px" }}
-                        src={item.img}
-                        alt="#"
-                      />
-                    </Box>
-                  ))
-                : ""}
-            </Box>
-          </Box> */}
+       
+
+       
         </Box>
       </Box>
     );

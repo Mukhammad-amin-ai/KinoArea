@@ -14,7 +14,6 @@ export default class HomeCards extends Component {
   state = {
     data: [
       {
-        // id:
         img: img1,
         ball: "6.70",
         filmName: "Побег из Претории",
@@ -70,30 +69,41 @@ export default class HomeCards extends Component {
         ganr: "Боевик, комедия, криминал",
         bgcolor: "#89CB36",
       },
-      {
-        img: img8,
-        ball: "6.90",
-        filmName: "Плохие парни навсегда",
-        ganr: "Боевик, комедия, криминал",
-        bgcolor: "#89CB36",
-      },
     ],
-    btnHide: "none",
+    btnHide: "flex",
     // newData:[]
   };
 
-  showHideFunc = () => {
-    
-    if (this.state.data.length <= 10) {
-      let { btnHide } = this.state;
-      btnHide = "flex";
-      this.setState({
-        btnHide,
-      });
+  // showHideFunc = () => {
+
+  //   if (this.state.data.length <= 10) {
+  //     let { btnHide } = this.state;
+  //     btnHide = "flex";
+  //     this.setState({
+  //       btnHide,
+  //     });
+  //   }
+  // };
+  btnObject = () => {
+    let { data,btnHide } = this.state;
+    let obj ={
+      img: img8,
+      ball: "6.90",
+      filmName: "Плохие парни навсегда",
+      ganr: "Боевик, комедия, криминал",
+      bgcolor: "#89CB36",
     }
+   
+    
+    // btnHide='none'
+    data.push(obj,obj,obj,obj)
+    this.setState({
+      data,btnHide,
+    })
+    
   };
   render() {
-    const { btnHide } = this.state 
+    const { btnHide } = this.state;
     return (
       <>
         <Box
@@ -122,7 +132,7 @@ export default class HomeCards extends Component {
             justifyContent={"center"}
           >
             <Button
-              
+              onClick={this.btnObject}
               sx={{
                 width: {
                   md: "164px",

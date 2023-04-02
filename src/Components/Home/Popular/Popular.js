@@ -163,7 +163,7 @@ export default class Popular extends Component {
                     },
                   }}
                 >
-                  <ListItemButton sx={{ width: "120px" }}>
+                  {/* <ListItemButton sx={{ width: "120px" }}> */}
                     <Typography
                       variant="h2"
                       fontFamily={"Qanelas"}
@@ -179,7 +179,7 @@ export default class Popular extends Component {
                     >
                       Всё время
                     </Typography>
-                  </ListItemButton>
+                  {/* </ListItemButton> */}
                 </ListItem >
 
                 {this.state.listItemMassive.length !== 0
@@ -189,7 +189,7 @@ export default class Popular extends Component {
                           sm: 100,
                         },
                       }}>
-                        <ListItemButton>
+                        {/* <ListItemButton> */}
                           <Typography
                             variant="h2"
                             sx={{
@@ -205,7 +205,7 @@ export default class Popular extends Component {
                           >
                             {item.Typography}
                           </Typography>
-                        </ListItemButton>
+                        {/* </ListItemButton> */}
                       </ListItem>
                     ))
                   : ""}
@@ -268,18 +268,21 @@ export default class Popular extends Component {
               <Stack spacing={2}>
                 <Pagination
                   count={5}
+                  showFirstButton
+                  showLastButton
                   color={"primary"}
-                  renderItem={(item) => (
-                    <PaginationItem
-                      sx={{ color: "white" }}
-                      slots={{
-                        previous: ArrowBackIcon,
-                        next: ArrowForwardIcon,
-                      }}
-                      {...item}
-                    />
-                  )}
-                />
+                  // renderItem={(item) => (
+                    //   <PaginationItem
+                    //     sx={{ color: "white" }}
+                    //     slots={{
+                      //       previous: ArrowBackIcon,
+                      //       next: ArrowForwardIcon,
+                      //     }}
+                      //     {...item}
+                      //   />
+                      // )}
+                      />
+                   
               </Stack>
             </Box>
           </Box>

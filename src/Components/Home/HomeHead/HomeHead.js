@@ -35,15 +35,15 @@ export default class Home_head extends Component {
               }}
             >
               <Box
-                height={"100%"}
+                height={100}
                 display={"flex"}
-                justifyContent={"center"}
+                justifyContent={"start"}
                 alignItems={"center"}
                 sx={{
                   width: {
                     md: "310px",
                     lg: "433px",
-                    xl: "433px",
+                    xl: "400px",
                   },
                 }}
               >
@@ -96,65 +96,65 @@ export default class Home_head extends Component {
                       },
                     }}
                   >
-                    <ListItemButton
+                    {/* <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
                       }}
-                    >
-                      <Typography>Все</Typography>
-                    </ListItemButton>
+                    > */}
+                      <Typography  >Все</Typography>
+                    {/* </ListItemButton> */}
                   </ListItem>
                   <ListItem  sx={{
                       width: {
                         sm: 130,
                       },
                     }}>
-                    <ListItemButton
+                    {/* <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
                       }}
-                    >
+                    > */}
                       <Typography>Боевики </Typography>
-                    </ListItemButton>
+                    {/* </ListItemButton> */}
                   </ListItem>
                   <ListItem  sx={{
                       width: {
                         sm: 180,
                       },
                     }}>
-                    <ListItemButton
+                    {/* <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
                       }}
-                    >
+                    > */}
                       <Typography>Приключения </Typography>
-                    </ListItemButton>
+                    {/* </ListItemButton> */}
                   </ListItem>
                   <ListItem  sx={{
                       width: {
                         sm: 150,
                       },
                     }}>
-                    <ListItemButton
+                    {/* <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
                       }}
-                    >
+                    > */}
                       <Typography>Комедии</Typography>
-                    </ListItemButton>
+                    {/* </ListItemButton> */}
                   </ListItem>
                   <ListItem  sx={{
                       width: {
                         sm: 150,
                       },
                     }}>
-                    <ListItemButton
+                    {/* <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
                       }}
-                    >
+                    > */}
                       <Typography>Фантастика </Typography>
-                    </ListItemButton>
+                    {/* </ListItemButton> */}
                   </ListItem>
                   <ListItem  sx={{
                       width: {
@@ -162,26 +162,26 @@ export default class Home_head extends Component {
                         
                       },
                     }}>
-                    <ListItemButton
+                    {/* <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
                       }}
-                    >
+                    > */}
                       <Typography >Триллеры </Typography>
-                    </ListItemButton>
+                    {/* </ListItemButton> */}
                   </ListItem>
                   <ListItem  sx={{
                       width: {
                         sm: 100,
                       },
                     }}>
-                    <ListItemButton
+                    {/* <ListItemButton
                       sx={{
                         ":hover": { color: "#fff", background: "transparent" },
                       }}
-                    >
+                    > */}
                       <Typography>Драма </Typography>
-                    </ListItemButton>
+                    {/* </ListItemButton> */}
                   </ListItem>
                 </List>
               </Box>

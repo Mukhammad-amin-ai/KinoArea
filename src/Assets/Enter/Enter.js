@@ -1,10 +1,12 @@
 import { Box, Button, Input, Typography } from "@mui/material";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, } from "react-router-dom";
 
 export default class Enter extends Component {
   render() {
     return (
+      <>
+      
       <Box
         width={"100%"}
         height={"100vh"}
@@ -18,8 +20,7 @@ export default class Enter extends Component {
       >
         <Box width={"200px"} height={"50px"}>
           <Link
-            to={"./"}
-            onClick={this.logoClick}
+            to={"/"}
             style={{ textDecoration: "none", color: "white" }}
           >
             <Box
@@ -38,6 +39,7 @@ export default class Enter extends Component {
             </Box>
           </Link>
         </Box>
+
         <Box
           width={"100%"}
           height={"100px"}
@@ -52,13 +54,16 @@ export default class Enter extends Component {
             alignItems={"center"}
             justifyContent={"center"}
           >
-            <Button>
-              <Typography fontSize={"30px"} color={"#fff"}>
-                ✖
-              </Typography>
-            </Button>
+            <Link style={{textDecoration:'none'}} to={'/'} >
+              <Button>
+                <Typography fontSize={"30px"} color={"#fff"}>
+                  ✖
+                </Typography>
+              </Button>
+            </Link>
           </Box>
         </Box>
+
         <Box
           width={"815px"}
           height={"562px"}
@@ -127,7 +132,7 @@ export default class Enter extends Component {
             </Button>
 
             <Box width={"176px"} height={"28px"}>
-              <Link>
+              <Link style={{ color: "#3657CB" }}>
                 <Typography fontSize={"17px"}>Восстановить пароль</Typography>
               </Link>
             </Box>
@@ -199,6 +204,7 @@ export default class Enter extends Component {
           </Box>
         </Box>
       </Box>
+      </>
     );
   }
 }
