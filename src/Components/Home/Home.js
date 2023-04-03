@@ -8,6 +8,7 @@ import Kategotii from "../Kategorii/Kategotii";
 import Novosti from "../Novosti/Novosti";
 import Podborka from "../Podborka/Podborka";
 import HomeHead from "./HomeHead/HomeHead";
+import SignUp from "../../Assets/Enter/SignUp";
 
 export default class Home extends Component {
   render() {
@@ -22,10 +23,8 @@ export default class Home extends Component {
           <Route path="/podborka" element={<Podborka />} />
           <Route path="/kategorii" element={<Kategotii />} />
           <Route path="/enter" element={<Enter />} />
+          <Route path="/SignUp" element={<SignUp />} />
         </Routes>
-        {/* <HomeTrailer/> */}
-        {/* <Popular/>/ */}
-        {/* <PopularActers/> */}
       </>
     );
   }

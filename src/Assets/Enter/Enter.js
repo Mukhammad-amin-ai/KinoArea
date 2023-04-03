@@ -1,6 +1,7 @@
 import { Box, Button, Input, Typography } from "@mui/material";
 import React, { Component } from "react";
-import { Link, } from "react-router-dom";
+import { Link, Route, Routes, } from "react-router-dom";
+import SignUp from "./SignUp";
 
 export default class Enter extends Component {
   render() {
@@ -119,6 +120,7 @@ export default class Enter extends Component {
             >
               <Typography>Войти</Typography>
             </Button>
+            <Link to='/SignUp'style={{ textDecoration: "none" }}>
             <Button
               sx={{
                 width: 464,
@@ -127,9 +129,10 @@ export default class Enter extends Component {
                 borderRadius: "10px",
               }}
               variant="soft"
-            >
+              >
               <Typography color={"#fff"}>Зарегистрироваться</Typography>
             </Button>
+              </Link>
 
             <Box width={"176px"} height={"28px"}>
               <Link style={{ color: "#3657CB" }}>

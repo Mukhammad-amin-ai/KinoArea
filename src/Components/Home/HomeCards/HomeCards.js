@@ -71,34 +71,43 @@ export default class HomeCards extends Component {
       },
     ],
     btnHide: "flex",
-    // newData:[]
-  };
-
-  // showHideFunc = () => {
-
-  //   if (this.state.data.length <= 10) {
-  //     let { btnHide } = this.state;
-  //     btnHide = "flex";
-  //     this.setState({
-  //       btnHide,
-  //     });
-  //   }
-  // };
-  btnObject = () => {
-    let { data,btnHide } = this.state;
-    let obj ={
+    newData:[{
       img: img8,
       ball: "6.90",
       filmName: "Плохие парни навсегда",
       ganr: "Боевик, комедия, криминал",
       bgcolor: "#89CB36",
-    }
-   
-    
-    // btnHide='none'
-    data.push(obj,obj,obj,obj)
+    },
+    {
+      img: img8,
+      ball: "6.90",
+      filmName: "Плохие парни навсегда",
+      ganr: "Боевик, комедия, криминал",
+      bgcolor: "#89CB36",
+    },
+    {
+      img: img8,
+      ball: "6.90",
+      filmName: "Плохие парни навсегда",
+      ganr: "Боевик, комедия, криминал",
+      bgcolor: "#89CB36",
+    },
+    {
+      img: img8,
+      ball: "6.90",
+      filmName: "Плохие парни навсегда",
+      ganr: "Боевик, комедия, криминал",
+      bgcolor: "#89CB36",
+    }],
+    films:''
+  };
+
+  btnObject = () => {
+    let { data,btnHide,newData,films} = this.state;
+    films=data.concat(newData)
+    console.log(films);
     this.setState({
-      data,btnHide,
+      data,btnHide,films
     })
     
   };
