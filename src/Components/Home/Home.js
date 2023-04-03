@@ -9,6 +9,8 @@ import Novosti from "../Novosti/Novosti";
 import Podborka from "../Podborka/Podborka";
 import HomeHead from "./HomeHead/HomeHead";
 import SignUp from "../../Assets/Enter/SignUp";
+import Recover from "../../Assets/Enter/Recover";
+import RecoverPassword from "../../Assets/Enter/RecoverPassword";
 
 export default class Home extends Component {
   render() {
@@ -24,6 +26,8 @@ export default class Home extends Component {
           <Route path="/kategorii" element={<Kategotii />} />
           <Route path="/enter" element={<Enter />} />
           <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/recover" element={<Recover/>}/>
+          <Route path="/recoverPassword" element={<RecoverPassword/>}/>
         </Routes>
       </>
     );

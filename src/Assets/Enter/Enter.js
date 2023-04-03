@@ -135,7 +135,7 @@ export default class Enter extends Component {
               </Link>
 
             <Box width={"176px"} height={"28px"}>
-              <Link style={{ color: "#3657CB" }}>
+              <Link style={{ color: "#3657CB", }} to='/recover' >
                 <Typography fontSize={"17px"}>Восстановить пароль</Typography>
               </Link>
             </Box>
