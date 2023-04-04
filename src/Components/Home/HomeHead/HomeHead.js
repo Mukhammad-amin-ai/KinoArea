@@ -31,6 +31,9 @@ export default class Home_head extends Component {
                 },
                 alignItems: {
                   sm: "center",
+                  md: "center",
+                  lg: "unset",
+                  xl: "unset",
                 },
               }}
             >
@@ -41,7 +44,7 @@ export default class Home_head extends Component {
                 alignItems={"center"}
                 sx={{
                   width: {
-                    md: "310px",
+                    md: "84%",
                     lg: "433px",
                     xl: "400px",
                   },
@@ -54,6 +57,8 @@ export default class Home_head extends Component {
                   color={"#fff"}
                   sx={{
                     fontSize: {
+                      xs: 38,
+                      sm: 40,
                       md: "40px",
                       lg: "45px",
                       xl: "50px",
@@ -69,11 +74,15 @@ export default class Home_head extends Component {
                 display={"flex"}
                 sx={{
                   width: {
-                    sm: "100%",
-                    md: "100%",
+                    sm: "87%",
+                    md: "87%",
                     lg: "765px",
                     xl: "765px",
                   },
+                  justifyContent:{
+                    sm:'start',
+                    md:'start'
+                  }
                 }}
               >
                 <List
@@ -83,105 +92,146 @@ export default class Home_head extends Component {
                     color: "#838D97",
                     flexWrap: {
                       sm: "wrap",
-                      md:'wrap',
-                      lg:'unset',
-                      xl:'unset'
+                      md: "wrap",
+                      lg: "unset",
+                      xl: "unset",
                     },
                   }}
                 >
                   <ListItem
                     sx={{
-                      width: {
-                        sm: 100,
-                      },
+                      width: "auto",
                     }}
                   >
-                    {/* <ListItemButton
+                    <Typography
                       sx={{
-                        ":hover": { color: "#fff", background: "transparent" },
+                        fontSize: {
+                          xs: 13,
+                          sm: 13,
+                          md: 15,
+                          lg: 15,
+                          xl: 18,
+                        },
                       }}
-                    > */}
-                      <Typography  >Все</Typography>
-                    {/* </ListItemButton> */}
+                    >
+                      Все
+                    </Typography>
                   </ListItem>
-                  <ListItem  sx={{
-                      width: {
-                        sm: 130,
-                      },
-                    }}>
-                    {/* <ListItemButton
+                  <ListItem
                       sx={{
-                        ":hover": { color: "#fff", background: "transparent" },
+                        width: "auto",
                       }}
-                    > */}
-                      <Typography>Боевики </Typography>
-                    {/* </ListItemButton> */}
+                   
+                  >
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: 13,
+                          sm: 13,
+                          md: 15,
+                          lg: 15,
+                          xl: 18,
+                        },
+                      }}
+                    >
+                      Боевики{" "}
+                    </Typography>
                   </ListItem>
-                  <ListItem  sx={{
-                      width: {
-                        sm: 180,
-                      },
-                    }}>
-                    {/* <ListItemButton
+                  <ListItem
                       sx={{
-                        ":hover": { color: "#fff", background: "transparent" },
+                        width: "auto",
                       }}
-                    > */}
-                      <Typography>Приключения </Typography>
-                    {/* </ListItemButton> */}
+                  >
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: 13,
+                          sm: 13,
+                          md: 15,
+                          lg: 15,
+                          xl: 18,
+                        },
+                      }}
+                    >
+                      Приключения{" "}
+                    </Typography>
                   </ListItem>
-                  <ListItem  sx={{
-                      width: {
-                        sm: 150,
-                      },
-                    }}>
-                    {/* <ListItemButton
+                  <ListItem
+                     sx={{
+                      width: "auto",
+                    }}
+                  >
+                    <Typography
                       sx={{
-                        ":hover": { color: "#fff", background: "transparent" },
+                        fontSize: {
+                          xs: 13,
+                          sm: 13,
+                          md: 15,
+                          lg: 15,
+                          xl: 18,
+                        },
                       }}
-                    > */}
-                      <Typography>Комедии</Typography>
-                    {/* </ListItemButton> */}
+                    >
+                      Комедии
+                    </Typography>
                   </ListItem>
-                  <ListItem  sx={{
-                      width: {
-                        sm: 150,
-                      },
-                    }}>
-                    {/* <ListItemButton
+                  <ListItem
                       sx={{
-                        ":hover": { color: "#fff", background: "transparent" },
+                        width: "auto",
                       }}
-                    > */}
-                      <Typography>Фантастика </Typography>
-                    {/* </ListItemButton> */}
+                  >
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: 13,
+                          sm: 13,
+                          md: 15,
+                          lg: 15,
+                          xl: 18,
+                        },
+                      }}
+                    >
+                      Фантастика{" "}
+                    </Typography>
                   </ListItem>
-                  <ListItem  sx={{
-                      width: {
-                        sm: 100,
-                        
-                      },
-                    }}>
-                    {/* <ListItemButton
+                  <ListItem
                       sx={{
-                        ":hover": { color: "#fff", background: "transparent" },
+                        width: "auto",
                       }}
-                    > */}
-                      <Typography >Триллеры </Typography>
-                    {/* </ListItemButton> */}
+                     
+                  >
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: 13,
+                          sm: 13,
+                          md: 15,
+                          lg: 15,
+                          xl: 18,
+                        },
+                      }}
+                    >
+                      Триллеры{" "}
+                    </Typography>
                   </ListItem>
-                  <ListItem  sx={{
-                      width: {
-                        sm: 100,
-                      },
-                    }}>
-                    {/* <ListItemButton
+                  <ListItem
                       sx={{
-                        ":hover": { color: "#fff", background: "transparent" },
+                        width: "auto",
                       }}
-                    > */}
-                      <Typography>Драма </Typography>
-                    {/* </ListItemButton> */}
+                  >
+                    <Typography
+                      sx={{
+                        fontSize: {
+                          xs: 13,
+                          sm: 13,
+                          md: 15,
+                          lg: 15,
+                          xl: 18,
+                        },
+                      }}
+                    >
+                      Драма{" "}
+                    </Typography>
                   </ListItem>
                 </List>
               </Box>

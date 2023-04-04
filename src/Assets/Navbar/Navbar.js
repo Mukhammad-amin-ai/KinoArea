@@ -201,13 +201,13 @@ export default class Navbar extends Component {
       modall,
     });
   };
-  closeModal=()=>{
+  closeModal = () => {
     let { modall } = this.state;
     modall = false;
     this.setState({
       modall,
     });
-  }
+  };
   render() {
     return (
       <>
@@ -476,7 +476,6 @@ export default class Navbar extends Component {
             }}
             width={"100%"}
             height={"10%"}
-            // marginLeft={"10%"}
             display={"flex"}
             justifyContent={"space-evenly"}
             alignItems={"center"}
@@ -493,18 +492,26 @@ export default class Navbar extends Component {
                 variant="contained"
                 sx={{
                   width: {
+                    sm:40,
                     md: "44px",
                     lg: "53px",
                     xl: "53px",
                   },
                   height: {
+                    sm:38,
                     md: "44px",
                     lg: "53px",
                     xl: "53px",
                   },
                   bgcolor: "white",
                   color: "black",
-                  fontSize: "30px",
+                  fontSize: {
+                    xs:20,
+                    sm:20,
+                    md:25,
+                    lg:28,
+                    xl:30,
+                  },
                 }}
               >
                 <i class="bx bx-search"></i>
@@ -591,7 +598,9 @@ export default class Navbar extends Component {
                 alignItems={"center"}
                 sx={{
                   width: {
-                    sm: 500,
+                    sm: 600,
+                    md: 900,
+                    lg: 1200,
                   },
                 }}
               >
@@ -601,25 +610,20 @@ export default class Navbar extends Component {
                       to={"/afisha"}
                       style={{ textDecoration: "none", color: "white" }}
                     >
-                      <ListItemButton
-                        onClick={this.afishaClick}
-                        sx={{ borderBottom: this.state.borderBottom }}
+                      <Typography
+                        fontFamily={"Qanelas"}
+                        fontWeight={"700"}
+                        sx={{
+                          fontSize: {
+                            sm: 12,
+                            md: 15,
+                            lg: 17,
+                            xl: 17,
+                          },
+                        }}
                       >
-                        <Typography
-                          fontFamily={"Qanelas"}
-                          fontWeight={"700"}
-                          sx={{
-                            fontSize: {
-                              sm: 12,
-                              md: 15,
-                              lg: 17,
-                              xl: 17,
-                            },
-                          }}
-                        >
-                          Афиша
-                        </Typography>
-                      </ListItemButton>
+                        Афиша
+                      </Typography>
                     </Link>
                   </ListItem>
                   <ListItem>
@@ -627,25 +631,20 @@ export default class Navbar extends Component {
                       to={"/film"}
                       style={{ textDecoration: "none", color: "white" }}
                     >
-                      <ListItemButton
-                        onClick={this.filmClick}
-                        sx={{ borderBottom: this.state.borderFilm }}
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            sm: 12,
+                            md: 15,
+                            lg: 17,
+                            xl: 17,
+                          },
+                        }}
+                        fontFamily={"Qanelas"}
+                        fontWeight={"700"}
                       >
-                        <Typography
-                          sx={{
-                            fontSize: {
-                              sm: 12,
-                              md: 15,
-                              lg: 17,
-                              xl: 17,
-                            },
-                          }}
-                          fontFamily={"Qanelas"}
-                          fontWeight={"700"}
-                        >
-                          Медиа
-                        </Typography>
-                      </ListItemButton>
+                        Медиа
+                      </Typography>
                     </Link>
                   </ListItem>
                   <ListItem>
@@ -653,25 +652,20 @@ export default class Navbar extends Component {
                       to={"/film"}
                       style={{ textDecoration: "none", color: "white" }}
                     >
-                      <ListItemButton
-                        onClick={this.filmClick}
-                        sx={{ borderBottom: this.state.borderFilm }}
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            sm: 12,
+                            md: 15,
+                            lg: 17,
+                            xl: 17,
+                          },
+                        }}
+                        fontFamily={"Qanelas"}
+                        fontWeight={"700"}
                       >
-                        <Typography
-                          sx={{
-                            fontSize: {
-                              sm: 12,
-                              md: 15,
-                              lg: 17,
-                              xl: 17,
-                            },
-                          }}
-                          fontFamily={"Qanelas"}
-                          fontWeight={"700"}
-                        >
-                          Фильмы
-                        </Typography>
-                      </ListItemButton>
+                        Фильмы
+                      </Typography>
                     </Link>
                   </ListItem>
                   <ListItem>
@@ -679,25 +673,20 @@ export default class Navbar extends Component {
                       to={"/aktyori"}
                       style={{ textDecoration: "none", color: "white" }}
                     >
-                      <ListItemButton
-                        onClick={this.aktyorClick}
-                        sx={{ borderBottom: this.state.borderAktyor }}
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            sm: 12,
+                            md: 15,
+                            lg: 17,
+                            xl: 17,
+                          },
+                        }}
+                        fontFamily={"Qanelas"}
+                        fontWeight={"700"}
                       >
-                        <Typography
-                          sx={{
-                            fontSize: {
-                              sm: 12,
-                              md: 15,
-                              lg: 17,
-                              xl: 17,
-                            },
-                          }}
-                          fontFamily={"Qanelas"}
-                          fontWeight={"700"}
-                        >
-                          Актёры
-                        </Typography>
-                      </ListItemButton>
+                        Актёры
+                      </Typography>
                     </Link>
                   </ListItem>
                   <ListItem>
@@ -705,25 +694,20 @@ export default class Navbar extends Component {
                       to={"/novosti"}
                       style={{ textDecoration: "none", color: "white" }}
                     >
-                      <ListItemButton
-                        onClick={this.novostiClick}
-                        sx={{ borderBottom: this.state.borderNovosti }}
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            sm: 12,
+                            md: 15,
+                            lg: 17,
+                            xl: 17,
+                          },
+                        }}
+                        fontFamily={"Qanelas"}
+                        fontWeight={"700"}
                       >
-                        <Typography
-                          sx={{
-                            fontSize: {
-                              sm: 12,
-                              md: 15,
-                              lg: 17,
-                              xl: 17,
-                            },
-                          }}
-                          fontFamily={"Qanelas"}
-                          fontWeight={"700"}
-                        >
-                          Новости
-                        </Typography>
-                      </ListItemButton>
+                        Новости
+                      </Typography>
                     </Link>
                   </ListItem>
                   <ListItem>
@@ -731,25 +715,20 @@ export default class Navbar extends Component {
                       to={"/podborka"}
                       style={{ textDecoration: "none", color: "white" }}
                     >
-                      <ListItemButton
-                        onClick={this.podborkaClick}
-                        sx={{ borderBottom: this.state.borderPodborka }}
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            sm: 12,
+                            md: 15,
+                            lg: 17,
+                            xl: 17,
+                          },
+                        }}
+                        fontFamily={"Qanelas"}
+                        fontWeight={"700"}
                       >
-                        <Typography
-                          sx={{
-                            fontSize: {
-                              sm: 12,
-                              md: 15,
-                              lg: 17,
-                              xl: 17,
-                            },
-                          }}
-                          fontFamily={"Qanelas"}
-                          fontWeight={"700"}
-                        >
-                          Подборки
-                        </Typography>
-                      </ListItemButton>
+                        Подборки
+                      </Typography>
                     </Link>
                   </ListItem>
                   <ListItem>
@@ -757,25 +736,20 @@ export default class Navbar extends Component {
                       to={"/kategorii"}
                       style={{ textDecoration: "none", color: "white" }}
                     >
-                      <ListItemButton
-                        onClick={this.kategoriiClick}
-                        sx={{ borderBottom: this.state.borderKategotii }}
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            sm: 12,
+                            md: 15,
+                            lg: 17,
+                            xl: 17,
+                          },
+                        }}
+                        fontFamily={"Qanelas"}
+                        fontWeight={"700"}
                       >
-                        <Typography
-                          sx={{
-                            fontSize: {
-                              sm: 12,
-                              md: 15,
-                              lg: 17,
-                              xl: 17,
-                            },
-                          }}
-                          fontFamily={"Qanelas"}
-                          fontWeight={"700"}
-                        >
-                          Категории
-                        </Typography>
-                      </ListItemButton>
+                        Категории
+                      </Typography>
                     </Link>
                   </ListItem>
                 </List>
@@ -841,7 +815,7 @@ export default class Navbar extends Component {
                 justifyContent: "center",
                 alignItems: "center",
                 borderRadius: "10px",
-                gap:2
+                gap: 2,
               }}
             >
               <TextField
@@ -854,12 +828,14 @@ export default class Navbar extends Component {
                 id="standard-basic"
                 variant="standard"
               />
-              <Button    sx={{
+              <Button
+                sx={{
                   width: "55px",
                   height: "52px",
-                }}>
+                }}
+              >
                 <Typography sx={{ color: "#000", fontSize: 25 }}>
-                <i class='bx bx-equalizer'></i>
+                  <i class="bx bx-equalizer"></i>
                 </Typography>
               </Button>
               <Button
@@ -881,7 +857,6 @@ export default class Navbar extends Component {
                   fontSize: 30,
                 }}
               >
-               
                 <i class="bx bx-x"></i>{" "}
               </Typography>
             </Button>
