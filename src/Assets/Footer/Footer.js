@@ -4,7 +4,6 @@ import {
   Checkbox,
   List,
   ListItem,
-  ListItemButton,
   TextField,
   Typography,
 } from "@mui/material";
@@ -96,10 +95,18 @@ export default class Footer extends Component {
               </Typography>
 
               <Box
-                width={"615px"}
                 height={"70px"}
                 display={"flex"}
                 justifyContent={"space-evenly"}
+                sx={{
+                  width: {
+                    xs: 400,
+                    sm: 500,
+                    md: 615,
+                    lg: 615,
+                    xl: 615,
+                  },
+                }}
               >
                 <TextField
                   variant="filled"
@@ -272,21 +279,19 @@ export default class Footer extends Component {
                     to={"/afisha"}
                     style={{ textDecoration: "none", color: "white" }}
                   >
-                    <ListItemButton onClick={this.afishaClick}>
-                      <Typography
-                        fontFamily={"Qanelas"}
-                        fontWeight={"700"}
-                        sx={{
-                          fontSize: {
-                            md: 13,
-                            lg: 15,
-                            xl: 17,
-                          },
-                        }}
-                      >
-                        Афиша
-                      </Typography>
-                    </ListItemButton>
+                    <Typography
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                      sx={{
+                        fontSize: {
+                          md: 13,
+                          lg: 15,
+                          xl: 17,
+                        },
+                      }}
+                    >
+                      Афиша
+                    </Typography>
                   </Link>
                 </ListItem>
                 <ListItem>
@@ -294,21 +299,19 @@ export default class Footer extends Component {
                     to={"/film"}
                     style={{ textDecoration: "none", color: "white" }}
                   >
-                    <ListItemButton onClick={this.filmClick}>
-                      <Typography
-                        fontFamily={"Qanelas"}
-                        fontWeight={"700"}
-                        sx={{
-                          fontSize: {
-                            md: 13,
-                            lg: 15,
-                            xl: 17,
-                          },
-                        }}
-                      >
-                        Фильмы
-                      </Typography>
-                    </ListItemButton>
+                    <Typography
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                      sx={{
+                        fontSize: {
+                          md: 13,
+                          lg: 15,
+                          xl: 17,
+                        },
+                      }}
+                    >
+                      Фильмы
+                    </Typography>
                   </Link>
                 </ListItem>
                 <ListItem>
@@ -316,21 +319,19 @@ export default class Footer extends Component {
                     to={"/aktyori"}
                     style={{ textDecoration: "none", color: "white" }}
                   >
-                    <ListItemButton onClick={this.aktyorClick}>
-                      <Typography
-                        fontFamily={"Qanelas"}
-                        fontWeight={"700"}
-                        sx={{
-                          fontSize: {
-                            md: 13,
-                            lg: 15,
-                            xl: 17,
-                          },
-                        }}
-                      >
-                        Актёры
-                      </Typography>
-                    </ListItemButton>
+                    <Typography
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                      sx={{
+                        fontSize: {
+                          md: 13,
+                          lg: 15,
+                          xl: 17,
+                        },
+                      }}
+                    >
+                      Актёры
+                    </Typography>
                   </Link>
                 </ListItem>
                 <ListItem>
@@ -338,21 +339,19 @@ export default class Footer extends Component {
                     to={"/novosti"}
                     style={{ textDecoration: "none", color: "white" }}
                   >
-                    <ListItemButton onClick={this.novostiClick}>
-                      <Typography
-                        fontFamily={"Qanelas"}
-                        fontWeight={"700"}
-                        sx={{
-                          fontSize: {
-                            md: 13,
-                            lg: 15,
-                            xl: 17,
-                          },
-                        }}
-                      >
-                        Новости
-                      </Typography>
-                    </ListItemButton>
+                    <Typography
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                      sx={{
+                        fontSize: {
+                          md: 13,
+                          lg: 15,
+                          xl: 17,
+                        },
+                      }}
+                    >
+                      Новости
+                    </Typography>
                   </Link>
                 </ListItem>
                 <ListItem>
@@ -360,21 +359,19 @@ export default class Footer extends Component {
                     to={"/podborka"}
                     style={{ textDecoration: "none", color: "white" }}
                   >
-                    <ListItemButton onClick={this.podborkaClick}>
-                      <Typography
-                        fontFamily={"Qanelas"}
-                        fontWeight={"700"}
-                        sx={{
-                          fontSize: {
-                            md: 13,
-                            lg: 15,
-                            xl: 17,
-                          },
-                        }}
-                      >
-                        Подборки
-                      </Typography>
-                    </ListItemButton>
+                    <Typography
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                      sx={{
+                        fontSize: {
+                          md: 13,
+                          lg: 15,
+                          xl: 17,
+                        },
+                      }}
+                    >
+                      Подборки
+                    </Typography>
                   </Link>
                 </ListItem>
                 <ListItem>
@@ -382,21 +379,19 @@ export default class Footer extends Component {
                     to={"/kategorii"}
                     style={{ textDecoration: "none", color: "white" }}
                   >
-                    <ListItemButton onClick={this.kategoriiClick}>
-                      <Typography
-                        fontFamily={"Qanelas"}
-                        fontWeight={"700"}
-                        sx={{
-                          fontSize: {
-                            md: 13,
-                            lg: 15,
-                            xl: 17,
-                          },
-                        }}
-                      >
-                        Категории
-                      </Typography>
-                    </ListItemButton>
+                    <Typography
+                      fontFamily={"Qanelas"}
+                      fontWeight={"700"}
+                      sx={{
+                        fontSize: {
+                          md: 13,
+                          lg: 15,
+                          xl: 17,
+                        },
+                      }}
+                    >
+                      Категории
+                    </Typography>
                   </Link>
                 </ListItem>
               </List>

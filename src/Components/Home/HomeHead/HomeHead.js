@@ -29,12 +29,7 @@ export default class Home_head extends Component {
                   lg: "column",
                   xl: "unset",
                 },
-                alignItems: {
-                  sm: "center",
-                  md: "center",
-                  lg: "unset",
-                  xl: "unset",
-                },
+                alignItems:'center'
               }}
             >
               <Box

@@ -157,13 +157,15 @@ export default class PopularActers extends Component {
             <Box
               sx={{
                 width: {
-                  sm: 321,
+                  xs: 179,
+                  sm:280,
                   md: 266,
                   lg: 380,
                   xl: 444,
                 },
                 height: {
-                  sm: 321,
+                  xs: 179,
+                  sm: 280,
                   md: 266,
                   lg: 380,
                   xl: 444,
@@ -173,13 +175,15 @@ export default class PopularActers extends Component {
               <Card
                 sx={{
                   width: {
-                    sm: 321,
+                    xs: 179,
+                    sm: 280,
                     md: 266,
                     lg: 380,
                     xl: 444,
                   },
                   height: {
-                    sm: 321,
+                    xs: 179,
+                    sm: 280,
                     md: 266,
                     lg: 380,
                     xl: 444,
@@ -191,13 +195,15 @@ export default class PopularActers extends Component {
                   component="img"
                   sx={{
                     width: {
-                      sm: 321,
+                      xs: 179,
+                      sm: 280,
                       md: 266,
                       lg: 380,
                       xl: 444,
                     },
                     height: {
-                      sm: 321,
+                      xs: 179,
+                      sm: 280,
                       md: 266,
                       lg: 380,
                       xl: 444,
@@ -294,13 +300,15 @@ export default class PopularActers extends Component {
             <Box
               sx={{
                 width: {
-                  sm: 321,
+                  xs: 179,
+                  sm: 280,
                   md: 266,
                   lg: 380,
                   xl: 444,
                 },
                 height: {
-                  sm: 321,
+                  xs: 179,
+                  sm: 280,
                   md: 266,
                   lg: 380,
                   xl: 444,
@@ -310,13 +318,15 @@ export default class PopularActers extends Component {
               <Card
                 sx={{
                   width: {
-                    sm: 321,
+                    xs: 179,
+                    sm: 280,
                     md: 266,
                     lg: 380,
                     xl: 444,
                   },
                   height: {
-                    sm: 321,
+                    xs: 179,
+                    sm: 280,
                     md: 266,
                     lg: 380,
                     xl: 444,
@@ -328,15 +338,15 @@ export default class PopularActers extends Component {
                   component="img"
                   sx={{
                     width: {
-                      sm: 321,
-
+                      xs: 179,
+                      sm: 280,
                       md: 266,
                       lg: 380,
                       xl: 444,
                     },
                     height: {
-                      sm: 321,
-
+                      xs: 179,
+                      sm: 280,
                       md: 266,
                       lg: 380,
                       xl: 444,
@@ -432,7 +442,7 @@ export default class PopularActers extends Component {
           <Box
             sx={{
               width: {
-                sm: 661,
+                sm: 560,
                 md: 296,
                 lg: 496,
                 xl: 496,
