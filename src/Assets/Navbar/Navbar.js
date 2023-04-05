@@ -492,13 +492,13 @@ export default class Navbar extends Component {
                 variant="contained"
                 sx={{
                   width: {
-                    sm:40,
+                    sm: 40,
                     md: "44px",
                     lg: "53px",
                     xl: "53px",
                   },
                   height: {
-                    sm:38,
+                    sm: 38,
                     md: "44px",
                     lg: "53px",
                     xl: "53px",
@@ -506,11 +506,11 @@ export default class Navbar extends Component {
                   bgcolor: "white",
                   color: "black",
                   fontSize: {
-                    xs:20,
-                    sm:20,
-                    md:25,
-                    lg:28,
-                    xl:30,
+                    xs: 20,
+                    sm: 20,
+                    md: 25,
+                    lg: 28,
+                    xl: 30,
                   },
                 }}
               >
@@ -762,38 +762,40 @@ export default class Navbar extends Component {
               top={30}
               right={50}
             >
-              <Button
-                variant="contained"
-                sx={{
-                  width: {
-                    sm: 93,
-                    md: "100px",
-                    lg: "138px",
-                    xl: "138px",
-                  },
-                  height: {
-                    sm: 38,
-                    md: "42px",
-                    lg: "53px",
-                    xl: "53px",
-                  },
-                  bgcolor: "#3657CB",
-                }}
-              >
-                <Typography
+              <Link to="/enter" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="contained"
                   sx={{
-                    fontSize: {
-                      md: "14px",
-                      lg: "17px",
-                      xl: "17px",
+                    width: {
+                      sm: 93,
+                      md: "100px",
+                      lg: "138px",
+                      xl: "138px",
                     },
+                    height: {
+                      sm: 38,
+                      md: "42px",
+                      lg: "53px",
+                      xl: "53px",
+                    },
+                    bgcolor: "#3657CB",
                   }}
-                  fontFamily={"Qanelas"}
-                  fontWeight={"700"}
                 >
-                  Войти
-                </Typography>
-              </Button>
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        md: "14px",
+                        lg: "17px",
+                        xl: "17px",
+                      },
+                    }}
+                    fontFamily={"Qanelas"}
+                    fontWeight={"700"}
+                  >
+                    Войти
+                  </Typography>
+                </Button>
+                </Link>
             </Box>
           </Box>
         </Box>

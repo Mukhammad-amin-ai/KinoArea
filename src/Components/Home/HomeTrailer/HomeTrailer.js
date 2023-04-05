@@ -7,6 +7,7 @@ import pagImg1 from "../../../Images/pagination image 1.png";
 import pagImg4 from "../../../Images/pagination image 3.png";
 import pagImg3 from "../../../Images/pagination  image 4.png";
 import pagImg2 from "../../../Images/pagination  image 5.png";
+import HomeTrailerAlbum from "./HomeTrailerAlbum";
 
 export default class HomeTrailer extends Component {
   state = {
@@ -222,9 +223,8 @@ export default class HomeTrailer extends Component {
               </Box>
             </Box>
           </Box>
-       
 
-       
+                  <HomeTrailerAlbum/>
         </Box>
       </Box>
     );
