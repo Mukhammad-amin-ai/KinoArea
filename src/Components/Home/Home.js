@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Enter from "../../Assets/Enter/Enter";
 import Afisha from "../Afisha/Afisha";
@@ -13,31 +13,31 @@ import Recover from "../../Assets/Enter/Recover";
 import RecoverPassword from "../../Assets/Enter/RecoverPassword";
 import NotFound from "../../Assets/NotFound/NotFound";
 import CardOfFilm from "../CardOfFilm/CardOfFilm";
+import Data from "./Data/Data";
+import HomeCards from "./HomeCards/HomeCards";
 
-export default class Home extends Component {
+export default function Home() {
 
+  
 
-  render() {
-    const {data}=this.state
-    
-    return (
-      <>
-        <Routes>
-          <Route path="/" element={<HomeHead />} />
-          <Route path="/afisha" element={<Afisha />} />
-          <Route path="/film" element={<Film />} />
-          {/* <Route path="/film/:filmid" element={<CardOfFilm data={data}  />} /> */}
-          <Route path="/aktyori" element={<Aktyori />} />
-          <Route path="/novosti" element={<Novosti />} />
-          <Route path="/podborka" element={<Podborka />} />
-          <Route path="/kategorii" element={<Kategotii />} />
-          <Route path="/enter" element={<Enter />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/recover" element={<Recover/>}/>
-          <Route path="/recoverPassword" element={<RecoverPassword/>}/>
-          <Route path="*" element={<NotFound/>} />
-        </Routes>
-      </>
-    );
-  }
+  return (
+    <>
+    <Routes>
+      <Route path="/" element={<Data />} />
+      <Route path="/afisha" element={<Afisha />} />
+      <Route path="/film" element={<Film />} />
+      {/* <Route path="/film/:filmid" element={<CardOfFilm data={data}  />} /> */}
+      <Route path="/aktyori" element={<Aktyori />} />
+      <Route path="/novosti" element={<Novosti />} />
+      <Route path="/podborka" element={<Podborka />} />
+      <Route path="/kategorii" element={<Kategotii />} />
+      <Route path="/enter" element={<Enter />} />
+      <Route path="/SignUp" element={<SignUp />} />
+      <Route path="/recover" element={<Recover/>}/>
+      <Route path="/recoverPassword" element={<RecoverPassword/>}/>
+      <Route path="*" element={<NotFound/>} />
+    </Routes>
+    {/* <Data/> */}
+  </>
+  )
 }

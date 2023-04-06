@@ -1,124 +1,248 @@
-import { Box, Button, Typography } from "@mui/material";
-import React, { Component } from "react";
+import {
+  Box,
+  Button,
+  List,
+  ListItem,
+  Paper,
+  Stack,
+  Typography,
+} from "@mui/material";
+import React, { useEffect, useState } from "react";
 import Card from "../../../Assets/Card/Card";
-import img1 from "../../../Images/image 1.png";
-import img2 from "../../../Images/image 2.png";
-import img3 from "../../../Images/image 3.png";
-import img4 from "../../../Images/image 4.png";
-import img5 from "../../../Images/image 5.png";
-import img6 from "../../../Images/image 6.png";
-import img7 from "../../../Images/image 7.png";
-import img8 from "../../../Images/image 9.png";
-import Home from "../Home";
+import Navbar from "../../../Assets/Navbar/Navbar";
 
-export default class HomeCards extends Component {
-  state = {
-    data: [
-      {
-        img: img1,
-        ball: "6.70",
-        filmName: "Побег из Претории",
-        ganr: "Триллер",
-        bgcolor: " #89CB36",
-      },
-      {
-        img: img2,
-        ball: "8.50",
-        filmName: "Джокер",
-        ganr: "Триллер, драма, криминалр",
-        bgcolor: " #4BCB36",
-      },
-      {
-        img: img3,
-        ball: "6.70",
-        filmName: "Звёздные войны: Скайуокер...",
-        ganr: "Фантастика, фэнтези, боевик...",
-        bgcolor: "#89CB36",
-      },
-      {
-        img: img4,
-        ball: "8.00",
-        filmName: "Джентльмены",
-        ganr: "Боевик, комедия, криминал",
-        bgcolor: "#4BCB36",
-      },
-      {
-        img: img5,
-        ball: "8.10",
-        filmName: "Ford против Ferrari",
-        ganr: "Биография, спорт, драма, боевик",
-        bgcolor: " #4BCB36",
-      },
-      {
-        img: img6,
-        ball: "4.90",
-        filmName: "3022",
-        ganr: "Триллер",
-        bgcolor: "#CB3F36",
-      },
-      {
-        img: img7,
-        ball: "6.20",
-        filmName: "Хищные птицы: Потрясающая история Харли Квинн",
-        ganr: "Боевик, криминал, комедия",
-        bgcolor: "#89CB36",
-      },
-      {
-        img: img8,
-        ball: "6.90",
-        filmName: "Плохие парни навсегда",
-        ganr: "Боевик, комедия, криминал",
-        bgcolor: "#89CB36",
-      },
-    ],
-    btnHide: "flex",
-    newData:[{
-      img: img8,
-      ball: "6.90",
-      filmName: "Плохие парни навсегда",
-      ganr: "Боевик, комедия, криминал",
-      bgcolor: "#89CB36",
-    },
-    {
-      img: img8,
-      ball: "6.90",
-      filmName: "Плохие парни навсегда",
-      ganr: "Боевик, комедия, криминал",
-      bgcolor: "#89CB36",
-    },
-    {
-      img: img8,
-      ball: "6.90",
-      filmName: "Плохие парни навсегда",
-      ganr: "Боевик, комедия, криминал",
-      bgcolor: "#89CB36",
-    },
-    {
-      img: img8,
-      ball: "6.90",
-      filmName: "Плохие парни навсегда",
-      ganr: "Боевик, комедия, криминал",
-      bgcolor: "#89CB36",
-    }],
-    films:''
-  };
-
-  // btnObject = () => {
-  //   let { data,btnHide,newData,films} = this.state;
-  //   films=data.concat(newData)
-  //   console.log(films);
-  //   this.setState({
-  //     data,btnHide,films
-  //   })
+export default function HomeCards({ cards }) {
+  let [btnHide, setbtnHide] = useState("");
+  // let [newcard,setnewcard]=useState(cards)
+ 
+  return (
+    <>
     
-  // };
+      <Box
+        sx={{
+          width: "100%",
+          height: "auto",
+          backgroundImage: `url('../../../Images/А 1.jpg')`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundColor: "#202434",
+        }}
+      >
+        <Box width={"100%"} height={"30%"}>
+        <Navbar />
+          <Box
+            width={"100%"}
+            height={"100%"}
+            display={"flex"}
+            justifyContent={"center"}
+            sx={{
+              flexDirection: {
+                sm: "column",
+                md: "column",
+                lg: "column",
+                xl: "unset",
+              },
+              alignItems: "center",
+            }}
+          >
+            <Box
+              height={100}
+              display={"flex"}
+              justifyContent={"start"}
+              alignItems={"center"}
+              sx={{
+                width: {
+                  md: "84%",
+                  lg: "433px",
+                  xl: "400px",
+                },
+              }}
+            >
+              <Typography
+                variant="h2"
+                fontFamily={"Qanelas"}
+                fontWeight={"900"}
+                color={"#fff"}
+                sx={{
+                  fontSize: {
+                    xs: 38,
+                    sm: 40,
+                    md: "40px",
+                    lg: "45px",
+                    xl: "50px",
+                  },
+                }}
+              >
+                Сейчас в кино
+              </Typography>
+            </Box>
 
-
-
-  render() {
-    const { btnHide } = this.state;
-    return (
-      <>
+            <Box
+              height={"100%"}
+              display={"flex"}
+              sx={{
+                width: {
+                  sm: "87%",
+                  md: "87%",
+                  lg: "765px",
+                  xl: "765px",
+                },
+                justifyContent: {
+                  sm: "start",
+                  md: "start",
+                },
+              }}
+            >
+              <List
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  color: "#838D97",
+                  flexWrap: {
+                    sm: "wrap",
+                    md: "wrap",
+                    lg: "unset",
+                    xl: "unset",
+                  },
+                }}
+              >
+                <ListItem
+                  sx={{
+                    width: "auto",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: 13,
+                        sm: 13,
+                        md: 15,
+                        lg: 15,
+                        xl: 18,
+                      },
+                    }}
+                  >
+                    Все
+                  </Typography>
+                </ListItem>
+                <ListItem
+                  sx={{
+                    width: "auto",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: 13,
+                        sm: 13,
+                        md: 15,
+                        lg: 15,
+                        xl: 18,
+                      },
+                    }}
+                  >
+                    Боевики{" "}
+                  </Typography>
+                </ListItem>
+                <ListItem
+                  sx={{
+                    width: "auto",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: 13,
+                        sm: 13,
+                        md: 15,
+                        lg: 15,
+                        xl: 18,
+                      },
+                    }}
+                  >
+                    Приключения{" "}
+                  </Typography>
+                </ListItem>
+                <ListItem
+                  sx={{
+                    width: "auto",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: 13,
+                        sm: 13,
+                        md: 15,
+                        lg: 15,
+                        xl: 18,
+                      },
+                    }}
+                  >
+                    Комедии
+                  </Typography>
+                </ListItem>
+                <ListItem
+                  sx={{
+                    width: "auto",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: 13,
+                        sm: 13,
+                        md: 15,
+                        lg: 15,
+                        xl: 18,
+                      },
+                    }}
+                  >
+                    Фантастика{" "}
+                  </Typography>
+                </ListItem>
+                <ListItem
+                  sx={{
+                    width: "auto",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: 13,
+                        sm: 13,
+                        md: 15,
+                        lg: 15,
+                        xl: 18,
+                      },
+                    }}
+                  >
+                    Триллеры{" "}
+                  </Typography>
+                </ListItem>
+                <ListItem
+                  sx={{
+                    width: "auto",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: 13,
+                        sm: 13,
+                        md: 15,
+                        lg: 15,
+                        xl: 18,
+                      },
+                    }}
+                  >
+                    Драма{" "}
+                  </Typography>
+                </ListItem>
+              </List>
+            </Box>
+          </Box>
+        </Box>
         <Box
           width={"90%"}
           height={"100%"}
@@ -126,18 +250,17 @@ export default class HomeCards extends Component {
           display={"flex"}
           flexWrap={"wrap"}
         >
-          {this.state.data.length !== 0
-            ? this.state.data.map((item,index) => (
-                <Card
-                  key={index}
-                  ball={item.ball}
-                  img={item.img}
-                  filmName={item.filmName}
-                  ganr={item.ganr}
-                  bgcolor={item.bgcolor}
-                />
-              ))
-            : ""}
+          {cards.length !== 0 
+            ? cards.map((item, index) => (
+            <Card
+              key={index}
+              ball={item.ball}
+              img={item.img}
+              filmName={item.filmName}
+              ganr={item.ganr}
+              bgcolor={item.bgcolor}
+            />
+          )):""}
           <Box
             width={"100%"}
             height="200px"
@@ -146,7 +269,7 @@ export default class HomeCards extends Component {
             justifyContent={"center"}
           >
             <Button
-              onClick={this.btnObject}
+              // onClick={btnObject}
               sx={{
                 width: {
                   md: "164px",
@@ -166,8 +289,7 @@ export default class HomeCards extends Component {
             </Button>
           </Box>
         </Box>
-        <Home data={this.props.data}/>
-      </>
-    );
-  }
+      </Box>
+    </>
+  );
 }

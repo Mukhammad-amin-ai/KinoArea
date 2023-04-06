@@ -216,6 +216,8 @@ export default class Navbar extends Component {
           height={"100%"}
           display={"flex"}
           flexDirection={"column"}
+          // justifyContent={'center'}
+          // alignItems={'center'}
         >
           <Box
             sx={{
@@ -227,10 +229,11 @@ export default class Navbar extends Component {
                 xl: "flex",
               },
             }}
-            width={"80%"}
+            width={"100%"}
             height={"10%"}
-            marginLeft={"10%"}
+            // marginLeft={"10%"}
             display={"flex"}
+            justifyContent={'center'}
             alignItems={"center"}
             gap={"100px"}
           >
