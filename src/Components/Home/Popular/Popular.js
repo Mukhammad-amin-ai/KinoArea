@@ -72,20 +72,25 @@ export default class Popular extends Component {
   };
   render() {
     return (
-      <Box width={"100%"} height={"800px"} bgcolor={"#1E2538"} sx={{
-        height:{
-          sm:1100,
-          md:1000,
-          lg:1500,
-        }
-      }}>
+      <Box
+        width={"100%"}
+        height={"800px"}
+        bgcolor={"#1E2538"}
+        sx={{
+          height: {
+            sm: 1100,
+            md: 1000,
+            lg: 1500,
+          },
+        }}
+      >
         <Box
           width={"80%"}
           height={"100%"}
           marginLeft={"10%"}
           display={"flex"}
           flexDirection={"column"}
-          gap={'5%'}
+          gap={"5%"}
           justifyContent={"center"}
         >
           <Box
@@ -100,12 +105,12 @@ export default class Popular extends Component {
                 lg: "column",
                 xl: "unset",
               },
-              height:{
-                sm:200,
-                md:160,
-                lg:150,
-                xl:150,
-              }
+              height: {
+                sm: 200,
+                md: 160,
+                lg: 150,
+                xl: 150,
+              },
             }}
           >
             <Box
@@ -157,54 +162,57 @@ export default class Popular extends Component {
                   sx={{
                     width: {
                       sm: 110,
-                      md:140,
-                      lg:160,
-                      xl:180,
+                      md: 140,
+                      lg: 160,
+                      xl: 180,
                     },
                   }}
                 >
                   {/* <ListItemButton sx={{ width: "120px" }}> */}
-                    <Typography
-                      variant="h2"
-                      fontFamily={"Qanelas"}
-                      fontWeight={"700"}
-                      sx={{
-                        fontSize: {
-                          sm: 15,
-                          md: "15px",
-                          lg: "18px",
-                          xl: "18px",
-                        },
-                      }}
-                    >
-                      Всё время
-                    </Typography>
+                  <Typography
+                    variant="h2"
+                    fontFamily={"Qanelas"}
+                    fontWeight={"700"}
+                    sx={{
+                      fontSize: {
+                        sm: 15,
+                        md: "15px",
+                        lg: "18px",
+                        xl: "18px",
+                      },
+                    }}
+                  >
+                    Всё время
+                  </Typography>
                   {/* </ListItemButton> */}
-                </ListItem >
+                </ListItem>
 
                 {this.state.listItemMassive.length !== 0
-                  ? this.state.listItemMassive.map((item) => (
-                      <ListItem    sx={{
-                        width: {
-                          sm: 100,
-                        },
-                      }}>
+                  ? this.state.listItemMassive.map((item,index) => (
+                      <ListItem
+                        key={index}
+                        sx={{
+                          width: {
+                            sm: 100,
+                          },
+                        }}
+                      >
                         {/* <ListItemButton> */}
-                          <Typography
-                            variant="h2"
-                            sx={{
-                              fontSize: {
-                                sm: 15,
-                                md: "15px",
-                                lg: "18px",
-                                xl: "18px",
-                              },
-                            }}
-                            fontFamily={"Qanelas"}
-                            fontWeight={"700"}
-                          >
-                            {item.Typography}
-                          </Typography>
+                        <Typography
+                          variant="h2"
+                          sx={{
+                            fontSize: {
+                              sm: 15,
+                              md: "15px",
+                              lg: "18px",
+                              xl: "18px",
+                            },
+                          }}
+                          fontFamily={"Qanelas"}
+                          fontWeight={"700"}
+                        >
+                          {item.Typography}
+                        </Typography>
                         {/* </ListItemButton> */}
                       </ListItem>
                     ))
@@ -219,26 +227,26 @@ export default class Popular extends Component {
             flexDirection={"column"}
             justifyContent={"center"}
             sx={{
-              md:800,
-              lg:800,
-              xl:800
+              md: 800,
+              lg: 800,
+              xl: 800,
             }}
           >
             <Box
               width={"100%"}
               sx={{
                 height: {
-                  sm:'100%',
+                  sm: "100%",
                   md: "100%",
                   lg: "90%",
                   xl: "90%",
                 },
-                flexWrap:{
-                  sm:'wrap',
-                  md:"nowrap",
-                  lg:'nowrap',
-                  xl:'nowrap'
-                }
+                flexWrap: {
+                  sm: "wrap",
+                  md: "nowrap",
+                  lg: "nowrap",
+                  xl: "nowrap",
+                },
               }}
               height={"90%"}
               display={"flex"}
@@ -246,8 +254,9 @@ export default class Popular extends Component {
               justifyContent={"space-evenly"}
             >
               {this.state.dataPaginationCard.length !== 0
-                ? this.state.dataPaginationCard.map((item) => (
+                ? this.state.dataPaginationCard.map((item,index) => (
                     <Card
+                      key={index}
                       ball={item.ball}
                       img={item.img}
                       filmName={item.filmName}
@@ -272,17 +281,16 @@ export default class Popular extends Component {
                   showLastButton
                   color={"primary"}
                   // renderItem={(item) => (
-                    //   <PaginationItem
-                    //     sx={{ color: "white" }}
-                    //     slots={{
-                      //       previous: ArrowBackIcon,
-                      //       next: ArrowForwardIcon,
-                      //     }}
-                      //     {...item}
-                      //   />
-                      // )}
-                      />
-                   
+                  //   <PaginationItem
+                  //     sx={{ color: "white" }}
+                  //     slots={{
+                  //       previous: ArrowBackIcon,
+                  //       next: ArrowForwardIcon,
+                  //     }}
+                  //     {...item}
+                  //   />
+                  // )}
+                />
               </Stack>
             </Box>
           </Box>

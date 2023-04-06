@@ -97,8 +97,9 @@ export default class Waitlist extends Component {
             justifyContent={"space-evenly"}
           >
             {this.state.waitData.length !== 0
-              ? this.state.waitData.map((item) => (
+              ? this.state.waitData.map((item,index) => (
                   <Card
+                    key={index}
                     ball={item.ball}
                     img={item.img}
                     filmName={item.filmName}

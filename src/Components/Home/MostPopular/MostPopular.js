@@ -349,8 +349,9 @@ export default class MostPopular extends Component {
             }}
           >
             {this.state.mostPopular.length !== 0
-              ? this.state.mostPopular.map((item) => (
+              ? this.state.mostPopular.map((item,index) => (
                   <Box
+                    key={index}
                     width={"300px"}
                     height={"141px"}
                     display={"flex"}

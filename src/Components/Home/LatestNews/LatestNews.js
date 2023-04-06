@@ -218,8 +218,9 @@ export default class LatestNews extends Component {
               }}
             >
               {this.state.newsData.length !== 0
-                ? this.state.newsData.map((item) => (
+                ? this.state.newsData.map((item,index) => (
                     <Box
+                     key={index}
                       borderRadius={"10px"}
                       overflow={"hidden"}
                       position={"relative"}

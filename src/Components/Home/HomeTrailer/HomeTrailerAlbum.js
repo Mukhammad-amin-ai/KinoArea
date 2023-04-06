@@ -21,7 +21,7 @@ export default function HomeTrailerAlbum() {
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState(null);
     const [scrollStart, setScrollStart] = useState(null);
-    const [right,setRight]=useState('30px')
+    // const [right,setRight]=useState('30px')
     const handleMouseDown = (event) => {
       setIsDragging(true); // Set isDragging to true when mouse is down
       setDragStart(event.clientX);
@@ -59,13 +59,13 @@ export default function HomeTrailerAlbum() {
         }}
       >
         <Button 
-           
+           onClick={scrolBtn}
           sx={{
             width: "422px",
             height: "10px",
             bgcolor: "#3657CB",
             position: "absolute",
-            left:right,
+            // left:right,
           }}
         ></Button>
       </Box>

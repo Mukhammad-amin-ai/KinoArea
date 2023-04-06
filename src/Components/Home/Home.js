@@ -11,15 +11,22 @@ import HomeHead from "./HomeHead/HomeHead";
 import SignUp from "../../Assets/Enter/SignUp";
 import Recover from "../../Assets/Enter/Recover";
 import RecoverPassword from "../../Assets/Enter/RecoverPassword";
+import NotFound from "../../Assets/NotFound/NotFound";
+import CardOfFilm from "../CardOfFilm/CardOfFilm";
 
 export default class Home extends Component {
+
+
   render() {
+    const {data}=this.state
+    
     return (
       <>
         <Routes>
           <Route path="/" element={<HomeHead />} />
           <Route path="/afisha" element={<Afisha />} />
           <Route path="/film" element={<Film />} />
+          {/* <Route path="/film/:filmid" element={<CardOfFilm data={data}  />} /> */}
           <Route path="/aktyori" element={<Aktyori />} />
           <Route path="/novosti" element={<Novosti />} />
           <Route path="/podborka" element={<Podborka />} />
@@ -28,6 +35,7 @@ export default class Home extends Component {
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/recover" element={<Recover/>}/>
           <Route path="/recoverPassword" element={<RecoverPassword/>}/>
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       </>
     );

@@ -9,6 +9,7 @@ import img5 from "../../../Images/image 5.png";
 import img6 from "../../../Images/image 6.png";
 import img7 from "../../../Images/image 7.png";
 import img8 from "../../../Images/image 9.png";
+import Home from "../Home";
 
 export default class HomeCards extends Component {
   state = {
@@ -102,15 +103,18 @@ export default class HomeCards extends Component {
     films:''
   };
 
-  btnObject = () => {
-    let { data,btnHide,newData,films} = this.state;
-    films=data.concat(newData)
-    console.log(films);
-    this.setState({
-      data,btnHide,films
-    })
+  // btnObject = () => {
+  //   let { data,btnHide,newData,films} = this.state;
+  //   films=data.concat(newData)
+  //   console.log(films);
+  //   this.setState({
+  //     data,btnHide,films
+  //   })
     
-  };
+  // };
+
+
+
   render() {
     const { btnHide } = this.state;
     return (
@@ -123,8 +127,9 @@ export default class HomeCards extends Component {
           flexWrap={"wrap"}
         >
           {this.state.data.length !== 0
-            ? this.state.data.map((item) => (
+            ? this.state.data.map((item,index) => (
                 <Card
+                  key={index}
                   ball={item.ball}
                   img={item.img}
                   filmName={item.filmName}
@@ -161,6 +166,7 @@ export default class HomeCards extends Component {
             </Button>
           </Box>
         </Box>
+        <Home data={this.props.data}/>
       </>
     );
   }
