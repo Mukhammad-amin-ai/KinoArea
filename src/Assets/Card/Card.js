@@ -4,11 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 
 
 
-export default function Card({img,ball,bgcolor,ganr,filmName}) {
+export default function Card({img,ball,bgcolor,ganr,filmName,id}) {
   let navigate=useNavigate()
-  const cardOfFilm=(item)=>{
-    navigate("/films/" + item.id)
+  const cardOfFilm=()=>{
+    navigate("/film/"+ id)
   }
+  console.log(navigate);
+
   return (
     <Box
       position={"relative"}
@@ -43,7 +45,7 @@ export default function Card({img,ball,bgcolor,ganr,filmName}) {
           alignItems={"center"}
           justifyContent={"center"}
         >
-          <Link to={"/film"} style={{ textDecoration: "none", color: "blue" }}>
+          {/* <Link to={"/film"} style={{ textDecoration: "none", color: "blue" }}> */}
             <Box
               sx={{
                 width: {
@@ -65,7 +67,7 @@ export default function Card({img,ball,bgcolor,ganr,filmName}) {
               alignItems={"center"}
               justifyContent={"center"}
             >
-              <Button onClick={() =>cardOfFilm}>
+              <Button onClick={() =>cardOfFilm(id)}>
                 <Typography
                   variant="p"
                   sx={{
@@ -81,7 +83,7 @@ export default function Card({img,ball,bgcolor,ganr,filmName}) {
                 </Typography>
               </Button>
             </Box>
-          </Link>
+          {/* </Link> */}
         </Box>
         <img
           width={"90%"}

@@ -3,29 +3,37 @@ import {
   Button,
   List,
   ListItem,
-  Paper,
   Stack,
   Typography,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Card from "../../../Assets/Card/Card";
 import Navbar from "../../../Assets/Navbar/Navbar";
+import img from '../../../Images/bgsvg.svg'
+import HomeTrailer from "../HomeTrailer/HomeTrailer";
+import Popular from "../Popular/Popular";
+import PopularActers from "../PopularActers/PopularActers";
+import LatestNews from "../LatestNews/LatestNews";
+import Waitlist from "../Waitlist/Waitlist";
+import MostPopular from "../MostPopular/MostPopular";
+import Footer from "../../../Assets/Footer/Footer";
 
 export default function HomeCards({ cards }) {
-  let [btnHide, setbtnHide] = useState("");
-  // let [newcard,setnewcard]=useState(cards)
- 
+
+  
+
+
   return (
     <>
     
-      <Box
+      <Stack
         sx={{
           width: "100%",
           height: "auto",
-          backgroundImage: `url('../../../Images/А 1.jpg')`,
+          backgroundColor:"#202434",
+          backgroundImage: `url(${img})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundColor: "#202434",
+          backgroundSize:'fixed',
         }}
       >
         <Box width={"100%"} height={"30%"}>
@@ -253,7 +261,8 @@ export default function HomeCards({ cards }) {
           {cards.length !== 0 
             ? cards.map((item, index) => (
             <Card
-              key={index}
+            key={index}
+              id={item.id}
               ball={item.ball}
               img={item.img}
               filmName={item.filmName}
@@ -264,7 +273,7 @@ export default function HomeCards({ cards }) {
           <Box
             width={"100%"}
             height="200px"
-            display={btnHide}
+            display='flex'
             alignItems={"center"}
             justifyContent={"center"}
           >
@@ -289,7 +298,14 @@ export default function HomeCards({ cards }) {
             </Button>
           </Box>
         </Box>
-      </Box>
+      </Stack>
+      <HomeTrailer/>
+      <Popular/>
+      <PopularActers/>
+      <LatestNews/>
+      <Waitlist/>
+      <MostPopular/>
+      <Footer/>
     </>
   );
 }

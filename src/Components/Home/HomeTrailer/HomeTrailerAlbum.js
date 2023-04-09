@@ -78,6 +78,7 @@ export default function HomeTrailerAlbum() {
           width: "100%",
           height: "400px",
           overflowX: "scroll",
+          overflow:'hidden',
           scrollbarWidth: "none",
           msOverflowStyle: 'none',
           WebkitOverflowScrolling: 'touch',
